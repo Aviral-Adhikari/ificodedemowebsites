@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sobisha Agrawal - BScIT Student, Cybersecurity Learner, UI/UX Designer & Front-End Developer based in Kathmandu, Nepal.">
+    <title>Sobisha Agrawal | Cybersecurity Learner &amp; Tech Professional</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600;700&amp;family=Poppins:wght@500;600&amp;display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --navy: #163A5F;
+            --slate: #2F4858;
+            --teal: #0F766E;
+            --gold: #C7A76C;
+            --white: #FFFFFF;
+            --gray: #F8FAFC;
+            --light-bg: #F1F5F9;
+            --text-primary: #1E293B;
+            --text-secondary: #64748B;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Manrope', system-ui, sans-serif;
+            font-weight: 600;
+        }
+        
+        .heading-font {
+            font-family: 'Poppins', system-ui, sans-serif;
+        }
+        
+        .section {
+            padding: 100px 0;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e2e8f0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 24px;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--teal);
+        }
+        
+        .nav-cta {
+            background: var(--navy);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-cta:hover {
+            background: var(--teal);
+            transform: translateY(-2px);
+        }
+        
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #F8FAFC 0%, #FFFFFF 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-left h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+        
+        .hero-left .badge {
+            display: inline-block;
+            background: #E0F2FE;
+            color: var(--teal);
+            padding: 6px 16px;
+            border-radius: 9999px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-left .subheading {
+            font-size: 1.35rem;
+            color: var(--slate);
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-left p {
+            color: var(--text-secondary);
+            max-width: 420px;
+            margin-bottom: 2.5rem;
+        }
+        
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: var(--navy);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: var(--teal);
+            transform: translateY(-3px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--navy);
+            padding: 14px 32px;
+            border: 2px solid var(--navy);
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .hero-right {
+            position: relative;
+        }
+        
+        .profile-frame {
+            width: 100%;
+            max-width: 420px;
+            aspect-ratio: 1/1;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+            border: 8px solid white;
+        }
+        
+        .profile-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Highlights */
+        .highlights {
+            background: var(--light-bg);
+        }
+        
+        .highlight-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .highlight-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .highlight-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .highlight-card h3 {
+            font-size: 2rem;
+            color: var(--navy);
+            margin: 1rem 0 0.5rem;
+        }
+        
+        /* Sections */
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.75rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* About */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        /* Education Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #e2e8f0;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 80px;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 22px;
+            width: 18px;
+            height: 18px;
+            background: var(--teal);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px #e2e8f0;
+        }
+        
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05);
+        }
+        
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background: #e2e8f0;
+            border-radius: 9999px;
+            flex: 1;
+            margin: 0 1rem;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background: linear-gradient(to right, var(--teal), var(--navy));
+            border-radius: 9999px;
+            transition: width 1.5s ease;
+        }
+        
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+        
+        .project-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        
+        .project-info {
+            padding: 1.75rem;
+        }
+        
+        /* Cybersecurity Journey */
+        .roadmap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        /* Creator Section */
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .brand-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        /* Testimonials */
+        .testimonial-slider {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 24px;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05);
+        }
+        
+        /* Contact */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 14px 20px;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            margin-bottom: 1.25rem;
+            font-family: inherit;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: white;
+            padding: 80px 0 40px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .section {
+                padding: 70px 0;
+            }
+        }
+        
+        /* Scroll animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Sobisha.</a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#cyber-journey">Cybersecurity</a></li>
+                <li><a href="#creator">Creator</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <a href="#contact" class="nav-cta">Connect With Me</a>
+            
+            <button class="mobile-menu-toggle" id="mobileToggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <div class="badge">Cybersecurity Learner</div>
+                    <h1 class="heading-font">Sobisha Agrawal</h1>
+                    <p class="subheading">BScIT Student • UI/UX Designer • Front-End Developer</p>
+                    <p>A passionate Information Technology student pursuing a Bachelor of Science in Information Technology at Presidential Graduate School. Focused on cybersecurity, user experience design, and building secure, intuitive digital experiences.</p>
+                    
+                    <div class="hero-ctas">
+                        <a href="#projects" class="btn-primary">View My Work</a>
+                        <a href="https://www.linkedin.com/in/sobisha-agrawal-bb8879393/" target="_blank" class="btn-secondary">LinkedIn Profile</a>
+                    </div>
+                </div>
+                
+                <div class="hero-right">
+                    <div class="profile-frame">
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQHaAapaVTPG4A/profile-displayphoto-scale_400_400/B56ZsA.POZL8Ag-/0/1765247876475?e=1782345600&amp;v=beta&amp;t=AHnlzkQcAQxqtDOLlqi2pBVlIY8xKFH-h-oFO-eL42M" 
+                             alt="Sobisha Agrawal Profile" 
+                             onerror="this.src='https://picsum.photos/id/64/600/600';">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Highlights -->
+    <section class="highlights section">
+        <div class="container">
+            <div class="highlight-cards">
+                <div class="highlight-card reveal">
+                    <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18 9.246 18 10.832 18.477 12 19.253zm0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18 14.754 18 13.168 18.477 12 19.253z"/></svg>
+                    <h3>BScIT</h3>
+                    <p>Presidential Graduate School</p>
+                </div>
+                <div class="highlight-card reveal">
+                    <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 8.944 11.922.42.095.858.143 1.295.143a3 3 0 01.435-.008"/></svg>
+                    <h3>30+</h3>
+                    <p>Brand Collaborations</p>
+                </div>
+                <div class="highlight-card reveal">
+                    <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2 2 2 0 01-2-2 2 2 0 012-2 2 2 0 01-2-2 2 2 0 012-2 2 2 0 01-2-2 2 2 0 012-2z"/></svg>
+                    <h3>UI/UX</h3>
+                    <p>Design Projects</p>
+                </div>
+                <div class="highlight-card reveal">
+                    <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2 2 2 0 01-2-2 2 2 0 01-2-2 2 2 0 012-2zm10-10v12a2 2 0 01-2 2h-2a2 2 0 01-2-2v-6"/></svg>
+                    <h3>Learning</h3>
+                    <p>Cybersecurity Path</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-grid">
+                <div>
+                    <img src="https://picsum.photos/id/1011/600/700" alt="Sobisha Agrawal" style="width:100%; border-radius:24px; box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);">
+                </div>
+                <div>
+                    <p style="font-size:1.15rem; margin-bottom:1.5rem;">I am a dedicated BScIT student with a strong passion for technology, cybersecurity, and human-centered design. My academic journey has equipped me with foundational knowledge in networking, information security, and software development.</p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
+                        <div>
+                            <h4 style="color:var(--teal);">Academic Focus</h4>
+                            <ul style="margin-top:0.75rem; color:var(--text-secondary);">
+                                <li>Cybersecurity Fundamentals</li>
+                                <li>UI/UX Principles</li>
+                                <li>Web Development</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="color:var(--teal);">Strengths</h4>
+                            <ul style="margin-top:0.75rem; color:var(--text-secondary);">
+                                <li>Problem Solving</li>
+                                <li>Design Thinking</li>
+                                <li>Continuous Learning</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: 2.5rem;">I aim to contribute to the development of secure, accessible, and user-friendly digital solutions while growing as a cybersecurity professional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section" style="background: var(--gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Academic Journey</h2>
+                <p>Bachelor of Science in Information Technology</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div>
+                        <h3>Presidential Graduate School</h3>
+                        <p style="color: var(--teal); font-weight:600;">Bachelor of Science in Information Technology (BScIT) • 2023 — Present</p>
+                        <ul style="margin-top:1rem; padding-left:1.25rem; color:var(--text-secondary);">
+                            <li>Cybersecurity &amp; Information Security</li>
+                            <li>Networking Concepts</li>
+                            <li>Web Development &amp; Front-End Engineering</li>
+                            <li>Human-Computer Interaction</li>
+                            <li>Software Engineering Principles</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Skills &amp; Expertise</h2>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Cybersecurity -->
+                <div class="skill-category">
+                    <h3 style="margin-bottom:1.5rem; color:var(--navy);">Cybersecurity</h3>
+                    <div class="skill-item">
+                        <span>Cybersecurity Fundamentals</span>
+                        <div class="progress-bar"><div class="progress" style="width:75%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Networking Concepts</span>
+                        <div class="progress-bar"><div class="progress" style="width:70%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Information Security</span>
+                        <div class="progress-bar"><div class="progress" style="width:65%"></div></div>
+                    </div>
+                </div>
+                
+                <!-- UI/UX -->
+                <div class="skill-category">
+                    <h3 style="margin-bottom:1.5rem; color:var(--navy);">UI/UX Design</h3>
+                    <div class="skill-item">
+                        <span>Figma</span>
+                        <div class="progress-bar"><div class="progress" style="width:85%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Wireframing &amp; Prototyping</span>
+                        <div class="progress-bar"><div class="progress" style="width:80%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>User Research</span>
+                        <div class="progress-bar"><div class="progress" style="width:70%"></div></div>
+                    </div>
+                </div>
+                
+                <!-- Development -->
+                <div class="skill-category">
+                    <h3 style="margin-bottom:1.5rem; color:var(--navy);">Front-End Development</h3>
+                    <div class="skill-item">
+                        <span>HTML, CSS, JavaScript</span>
+                        <div class="progress-bar"><div class="progress" style="width:90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Responsive Design</span>
+                        <div class="progress-bar"><div class="progress" style="width:85%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section" style="background: var(--gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Selected Projects</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://picsum.photos/id/201/600/400" alt="Portfolio Website">
+                    <div class="project-info">
+                        <h3>Personal Portfolio</h3>
+                        <p style="color:var(--text-secondary); margin:12px 0;">Modern responsive portfolio built with HTML, CSS &amp; JS showcasing technical and creative skills.</p>
+                        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:1rem;">
+                            <span style="background:#f1f5f9; padding:4px 12px; border-radius:9999px; font-size:0.85rem;">HTML</span>
+                            <span style="background:#f1f5f9; padding:4px 12px; border-radius:9999px; font-size:0.85rem;">CSS</span>
+                            <span style="background:#f1f5f9; padding:4px 12px; border-radius:9999px; font-size:0.85rem;">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="https://picsum.photos/id/237/600/400" alt="UI/UX Case Study">
+                    <div class="project-info">
+                        <h3>Banking App Redesign</h3>
+                        <p style="color:var(--text-secondary); margin:12px 0;">End-to-end UI/UX case study for a secure mobile banking application.</p>
+                        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:1rem;">
+                            <span style="background:#f1f5f9; padding:4px 12px; border-radius:9999px; font-size:0.85rem;">Figma</span>
+                            <span style="background:#f1f5f9; padding:4px 12px; border-radius:9999px; font-size:0.85rem;">User Research</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="https://picsum.photos/id/180/600/400" alt="Cybersecurity Project">
+                    <div class="project-info">
+                        <h3>Network Security Demo</h3>
+                        <p style="color:var(--text-secondary); margin:12px 0;">Educational tool demonstrating common network vulnerabilities and mitigation strategies.</p>
+                        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:1rem;">
+                            <span style="background:#f1f5f9; padding:4px 12px; border-radius:9999px; font-size:0.85rem;">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cybersecurity Journey -->
+    <section id="cyber-journey" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Cybersecurity Learning Path</h2>
+                <p>Continuous learning journey towards becoming a cybersecurity professional.</p>
+            </div>
+            
+            <div class="roadmap">
+                <div class="skill-category">
+                    <h3 style="color:var(--navy);">Completed</h3>
+                    <ul style="margin-top:1.5rem; line-height:2;">
+                        <li>✅ Networking Fundamentals</li>
+                        <li>✅ Security Principles</li>
+                        <li>✅ Security Awareness Training</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3 style="color:var(--navy);">In Progress</h3>
+                    <ul style="margin-top:1.5rem; line-height:2;">
+                        <li>🔄 Ethical Hacking Concepts</li>
+                        <li>🔄 Risk Assessment Basics</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3 style="color:var(--navy);">Next Goals</h3>
+                    <ul style="margin-top:1.5rem; line-height:2;">
+                        <li>→ CompTIA Security+ Certification</li>
+                        <li>→ Advanced Web Application Security</li>
+                        <li>→ CTF Participation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creator Portfolio -->
+    <section id="creator" class="section" style="background: var(--gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2>UGC Creator &amp; Brand Collaborations</h2>
+                <p>Authentic storytelling and strategic social media campaigns that drive engagement.</p>
+            </div>
+            
+            <div style="text-align:center; margin-bottom:3rem;">
+                <div style="display:inline-flex; gap:3rem; justify-content:center; flex-wrap:wrap;">
+                    <div style="text-align:center;">
+                        <div style="font-size:2.5rem; font-weight:700; color:var(--navy);">30+</div>
+                        <div style="color:var(--text-secondary);">Brand Collaborations</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="text-align:center; margin:2.5rem 0 1.5rem; color:var(--slate);">Featured Brands</h3>
+            <div class="brand-grid">
+                <div class="brand-card">KSECRET</div>
+                <div class="brand-card">Celimax</div>
+                <div class="brand-card">SKIN1004</div>
+                <div class="brand-card">Medicube</div>
+                <div class="brand-card">Hilife</div>
+                <div class="brand-card">iFiCode</div>
+            </div>
+            
+            <p style="text-align:center; margin-top:3rem; color:var(--text-secondary); font-style:italic;">Additional brand collaborations available upon request.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Testimonials</h2>
+            </div>
+            
+            <div class="testimonial-slider" id="testimonialSlider">
+                <div class="testimonial-card" id="testimonial">
+                    <p style="font-size:1.15rem; font-style:italic; margin-bottom:1.5rem;">"Sobisha demonstrates exceptional attention to detail and creative problem-solving skills. Her work consistently exceeds expectations."</p>
+                    <div style="display:flex; align-items:center; gap:1rem;">
+                        <div style="width:48px; height:48px; background:#cbd5e1; border-radius:50%;"></div>
+                        <div>
+                            <div style="font-weight:600;">Prof. Rajesh Sharma</div>
+                            <div style="color:var(--text-secondary); font-size:0.9rem;">Presidential Graduate School</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section" style="background: var(--gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Let's Connect</h2>
+                <p>Kathmandu, Nepal</p>
+            </div>
+            
+            <div class="contact-form">
+                <form id="contactForm">
+                    <input type="text" id="name" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                    <input type="text" id="subject" placeholder="Subject" required>
+                    <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">Send Message</button>
+                </form>
+            </div>
+            
+            <div style="margin-top:3rem; text-align:center; display:flex; justify-content:center; gap:2rem; flex-wrap:wrap;">
+                <a href="https://www.linkedin.com/in/sobisha-agrawal-bb8879393/" target="_blank" style="color:var(--navy);">LinkedIn</a>
+                <a href="https://www.instagram.com/sobisha__/" target="_blank" style="color:var(--navy);">Instagram</a>
+                <a href="https://www.tiktok.com/@sobisha__/" target="_blank" style="color:var(--navy);">TikTok</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo" style="color:white; margin-bottom:1rem;">Sobisha.</div>
+                    <p style="max-width:280px; opacity:0.8;">Aspiring cybersecurity professional and creative technologist passionate about secure, beautiful digital experiences.</p>
+                </div>
+                
+                <div>
+                    <h4 style="margin-bottom:1rem;">Quick Links</h4>
+                    <ul style="list-style:none; opacity:0.8;">
+                        <li><a href="#about" style="color:white; text-decoration:none;">About</a></li>
+                        <li><a href="#skills" style="color:white; text-decoration:none;">Skills</a></li>
+                        <li><a href="#projects" style="color:white; text-decoration:none;">Projects</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 style="margin-bottom:1rem;">Resources</h4>
+                    <ul style="list-style:none; opacity:0.8;">
+                        <li><a href="#" style="color:white; text-decoration:none;">Cybersecurity Blog</a></li>
+                        <li><a href="#" style="color:white; text-decoration:none;">Design Case Studies</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 style="margin-bottom:1rem;">Connect</h4>
+                    <div style="display:flex; gap:1rem;">
+                        <a href="https://www.linkedin.com/in/sobisha-agrawal-bb8879393/" target="_blank" style="color:white; font-size:1.5rem;">in</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="border-top:1px solid rgba(255,255,255,0.2); margin-top:4rem; padding-top:2rem; text-align:center; opacity:0.7; font-size:0.9rem;">
+                © 2026 Sobisha Agrawal. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed; bottom:30px; right:30px; background:var(--teal); color:white; width:50px; height:50px; border-radius:50%; border:none; cursor:pointer; box-shadow:0 10px 15px -3px rgb(0 0 0 / 0.2); display:none;" id="backToTop">↑</button>
+
+    <script>
+        // Mobile Menu
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileToggle.addEventListener('click', () => {
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'white';
+                navLinks.style.padding = '1rem';
+            }
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Active nav link
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Back to top
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+        
+        // Form validation & submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            if (name && email) {
+                alert('Thank you for your message, ' + name + '! I will get back to you soon.');
+                contactForm.reset();
+            }
+        });
+        
+        // Scroll reveal
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(reveal => {
+                const windowHeight = window.innerHeight;
+                const revealTop = reveal.getBoundingClientRect().top;
+                if (revealTop < windowHeight - 100) {
+                    reveal.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', revealOnScroll);
+        
+        // Animate progress bars when visible
+        function animateProgress() {
+            const progressBars = document.querySelectorAll('.progress');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 800);
+            });
+        }
+        
+        // Trigger on scroll
+        let progressAnimated = false;
+        window.addEventListener('scroll', () => {
+            if (!progressAnimated && window.scrollY > 800) {
+                animateProgress();
+                progressAnimated = true;
+            }
+        });
+        
+        // Keyboard navigation support
+        document.addEventListener('keydown', (e) => {
+            if (e.key === '/' && document.activeElement.tagName !== "INPUT" && document.activeElement.tagName !== "TEXTAREA") {
+                e.preventDefault();
+                document.getElementById('name').focus();
+            }
+        });
+        
+        // Initialize
+        window.onload = function() {
+            // Trigger initial reveals
+            setTimeout(() => {
+                revealOnScroll();
+            }, 300);
+            
+            console.log('%c✅ Sobisha Agrawal Portfolio loaded successfully.', 'color: #0F766E; font-family: monospace;');
+        };
+    </script>
+</body>
+</html>

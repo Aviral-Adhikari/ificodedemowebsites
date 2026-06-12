@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="ne-NP">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Avi's — Kathmandu's most celebrated artisan café. Single-origin Nepali coffee, elevated hospitality, and curated moments in Jhamsikhel, Lalitpur.">
+<meta property="og:title" content="Avi's Artisan Café | Jhamsikhel, Lalitpur">
+<meta property="og:description" content="Crafted Coffee. Elevated Experiences. Where the mountains meet your cup.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1B1714">
+<title>Avi's | Artisan Café · Jhamsikhel, Lalitpur</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════
+   TOKENS
+═══════════════════════════════════════════════ */
+:root {
+  --c-ink:      #0D0B09;
+  --c-dark:     #1B1714;
+  --c-walnut:   #3D2B22;
+  --c-mocha:    #6F4E37;
+  --c-gold:     #C9A85C;
+  --c-gold-lt:  #E2C98A;
+  --c-bronze:   #9E7B4A;
+  --c-ivory:    #F5F0E8;
+  --c-cream:    #EDE5D8;
+  --c-stone:    #C8BFB3;
+  --c-mist:     #8A8178;
+  --c-char:     #272320;
+
+  --ff-disp: 'Playfair Display', Georgia, serif;
+  --ff-body: 'DM Sans', system-ui, sans-serif;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --r-sm: 10px;
+  --r-md: 18px;
+  --r-lg: 28px;
+
+  --section-pad: clamp(80px, 10vw, 140px);
+}
+
+/* ═══════════════════════════════════════════════
+   RESET
+═══════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden}
+body{font-family:var(--ff-body);background:var(--c-dark);color:var(--c-ivory);overflow-x:hidden;-webkit-font-smoothing:antialiased;moz-osx-font-smoothing:grayscale}
+img{max-width:100%;display:block;height:auto}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+input,select{font-family:inherit}
+
+/* ═══════════════════════════════════════════════
+   SCROLLBAR
+═══════════════════════════════════════════════ */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--c-dark)}
+::-webkit-scrollbar-thumb{background:var(--c-gold);border-radius:2px}
+
+/* ═══════════════════════════════════════════════
+   GLOBAL GRAIN OVERLAY
+═══════════════════════════════════════════════ */
+body::after{
+  content:'';position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:9999;opacity:0.7
+}
+
+/* ═══════════════════════════════════════════════
+   UTILITIES
+═══════════════════════════════════════════════ */
+.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,60px)}
+.tag{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;font-weight:500;
+  color:var(--c-gold)
+}
+.tag-line{width:28px;height:1px;background:var(--c-gold);flex-shrink:0}
+.heading-xl{font-family:var(--ff-disp);font-size:clamp(2.8rem,5vw,5.2rem);font-weight:400;line-height:1.08;letter-spacing:-0.01em}
+.heading-lg{font-family:var(--ff-disp);font-size:clamp(2rem,3.5vw,3.6rem);font-weight:400;line-height:1.12}
+.heading-md{font-family:var(--ff-disp);font-size:clamp(1.6rem,2.5vw,2.4rem);font-weight:400;line-height:1.2}
+.body-lg{font-size:1.05rem;line-height:1.78;font-weight:300;color:rgba(245,240,232,0.65)}
+.body-sm{font-size:0.85rem;line-height:1.7;font-weight:300;color:var(--c-mist)}
+em{font-style:italic;color:var(--c-gold)}
+
+/* scroll reveal */
+.sr{opacity:0;transform:translateY(36px);transition:opacity 0.9s var(--ease-out),transform 0.9s var(--ease-out)}
+.sr.in{opacity:1;transform:none}
+.sr-l{opacity:0;transform:translateX(-36px);transition:opacity 0.9s var(--ease-out),transform 0.9s var(--ease-out)}
+.sr-l.in{opacity:1;transform:none}
+.sr-r{opacity:0;transform:translateX(36px);transition:opacity 0.9s var(--ease-out),transform 0.9s var(--ease-out)}
+.sr-r.in{opacity:1;transform:none}
+.d1{transition-delay:0.1s}.d2{transition-delay:0.2s}.d3{transition-delay:0.3s}
+.d4{transition-delay:0.4s}.d5{transition-delay:0.5s}.d6{transition-delay:0.6s}
+
+/* ═══════════════════════════════════════════════
+   CURSOR DOT
+═══════════════════════════════════════════════ */
+.cursor-dot{
+  width:8px;height:8px;border-radius:50%;background:var(--c-gold);
+  position:fixed;top:0;left:0;pointer-events:none;z-index:10000;
+  transform:translate(-50%,-50%);transition:transform 0.1s,opacity 0.3s;
+}
+.cursor-ring{
+  width:36px;height:36px;border-radius:50%;border:1px solid rgba(201,168,92,0.5);
+  position:fixed;top:0;left:0;pointer-events:none;z-index:9999;
+  transform:translate(-50%,-50%);transition:all 0.18s var(--ease-out),opacity 0.3s;
+}
+
+/* ═══════════════════════════════════════════════
+   NAVIGATION
+═══════════════════════════════════════════════ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:28px 60px;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:all 0.5s var(--ease-out);
+}
+.nav::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(13,11,9,0.8),transparent);
+  pointer-events:none;opacity:1;transition:opacity 0.5s;
+}
+.nav.solid{
+  padding:16px 60px;
+  background:rgba(13,11,9,0.88);
+  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border-bottom:1px solid rgba(201,168,92,0.1);
+}
+.nav.solid::before{opacity:0}
+.logo{position:relative;z-index:1}
+.logo-name{
+  font-family:var(--ff-disp);font-size:1.5rem;font-weight:500;
+  color:var(--c-ivory);letter-spacing:0.04em;line-height:1
+}
+.logo-sub{
+  font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;
+  color:var(--c-gold);font-weight:500;margin-top:3px
+}
+.nav-menu{display:flex;align-items:center;gap:40px;position:relative;z-index:1}
+.nav-menu a{
+  font-size:0.75rem;letter-spacing:0.14em;text-transform:uppercase;font-weight:500;
+  color:rgba(245,240,232,0.6);transition:color 0.3s;position:relative;
+}
+.nav-menu a::after{
+  content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;
+  background:var(--c-gold);transition:width 0.3s var(--ease-out)
+}
+.nav-menu a:hover{color:var(--c-ivory)}
+.nav-menu a:hover::after,.nav-menu a.act{color:var(--c-gold)}
+.nav-menu a.act::after{width:100%}
+.nav-book{
+  background:transparent;border:1px solid var(--c-gold);
+  color:var(--c-gold);padding:10px 24px;border-radius:50px;
+  font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;font-weight:500;
+  transition:all 0.3s;
+}
+.nav-book:hover{background:var(--c-gold);color:var(--c-dark)}
+.ham{display:none;flex-direction:column;gap:6px;z-index:1}
+.ham span{width:22px;height:1px;background:var(--c-ivory);transition:all 0.3s;display:block}
+
+/* Mobile drawer */
+.drawer{
+  position:fixed;inset:0;background:var(--c-ink);z-index:2000;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;
+  transform:translateX(100%);transition:transform 0.5s var(--ease-out);
+}
+.drawer.open{transform:none}
+.drawer a{font-family:var(--ff-disp);font-size:2rem;color:var(--c-ivory);transition:color 0.3s}
+.drawer a:hover{color:var(--c-gold)}
+.drawer-close{position:absolute;top:28px;right:32px;font-size:1.4rem;color:rgba(245,240,232,0.5);cursor:pointer;transition:color 0.3s}
+.drawer-close:hover{color:var(--c-gold)}
+
+/* ═══════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════ */
+.hero{
+  position:relative;min-height:100svh;display:grid;
+  place-items:center;overflow:hidden;background:var(--c-ink);
+}
+.hero-reel{
+  position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&q=85') center/cover no-repeat;
+  will-change:transform;
+}
+.hero-vignette{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 80% 80% at 50% 50%, transparent 30%, rgba(13,11,9,0.7) 100%),
+    linear-gradient(180deg, rgba(13,11,9,0.5) 0%, rgba(13,11,9,0.2) 40%, rgba(13,11,9,0.75) 100%);
+  z-index:1;
+}
+.hero-body{
+  position:relative;z-index:2;text-align:center;max-width:860px;
+  padding:120px 24px 200px;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:14px;margin-bottom:32px;
+  opacity:0;animation:riseIn 1s var(--ease-out) 0.4s forwards;
+}
+.hero-eyebrow-gem{
+  width:6px;height:6px;background:var(--c-gold);transform:rotate(45deg);flex-shrink:0
+}
+.hero-eyebrow span{
+  font-size:0.7rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--c-gold);font-weight:500
+}
+.hero-title{
+  font-family:var(--ff-disp);
+  font-size:clamp(3.2rem,6.5vw,6.8rem);
+  font-weight:400;line-height:1.02;
+  color:var(--c-ivory);
+  margin-bottom:28px;
+  opacity:0;animation:riseIn 1s var(--ease-out) 0.65s forwards;
+}
+.hero-title .italic{font-style:italic;color:var(--c-gold)}
+.hero-sub{
+  font-size:clamp(1rem,1.5vw,1.15rem);color:rgba(245,240,232,0.6);
+  line-height:1.75;max-width:580px;margin:0 auto 52px;font-weight:300;
+  opacity:0;animation:riseIn 1s var(--ease-out) 0.9s forwards;
+}
+.hero-ctas{
+  display:flex;gap:16px;justify-content:center;flex-wrap:wrap;
+  opacity:0;animation:riseIn 1s var(--ease-out) 1.1s forwards;
+}
+.btn-fill{
+  background:var(--c-gold);color:var(--c-dark);
+  padding:16px 38px;border-radius:50px;
+  font-size:0.78rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;
+  transition:all 0.35s var(--ease-out);display:inline-flex;align-items:center;gap:8px;
+}
+.btn-fill:hover{background:var(--c-gold-lt);transform:translateY(-2px);box-shadow:0 14px 40px rgba(201,168,92,0.35)}
+.btn-ghost{
+  border:1px solid rgba(245,240,232,0.3);color:var(--c-ivory);
+  padding:16px 38px;border-radius:50px;
+  font-size:0.78rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;
+  backdrop-filter:blur(8px);
+  transition:all 0.35s var(--ease-out);display:inline-flex;align-items:center;gap:8px;
+}
+.btn-ghost:hover{border-color:var(--c-gold);color:var(--c-gold);transform:translateY(-2px)}
+
+/* Hero badges — floating pills */
+.hero-badges{
+  position:absolute;right:clamp(20px,4vw,64px);top:50%;transform:translateY(-50%);
+  z-index:3;display:flex;flex-direction:column;gap:14px;
+  opacity:0;animation:slideInR 1s var(--ease-out) 1.4s forwards;
+}
+.hbadge{
+  background:rgba(13,11,9,0.55);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border:1px solid rgba(201,168,92,0.2);border-radius:var(--r-md);
+  padding:16px 20px;min-width:210px;
+}
+.hbadge-stars{color:var(--c-gold);font-size:0.75rem;letter-spacing:3px;margin-bottom:5px}
+.hbadge-main{color:var(--c-ivory);font-size:0.88rem;font-weight:600;line-height:1.3}
+.hbadge-note{color:rgba(245,240,232,0.4);font-size:0.68rem;letter-spacing:0.1em;margin-top:3px}
+
+/* Scroll line */
+.hero-scroll-hint{
+  position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:3;
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  opacity:0;animation:riseIn 1s var(--ease-out) 1.6s forwards;
+}
+.hero-scroll-hint span{font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(245,240,232,0.35)}
+.scroll-pipe{width:1px;height:48px;background:linear-gradient(to bottom,var(--c-gold),transparent);animation:drip 2.2s ease-in-out infinite}
+
+/* Stat bar */
+.hero-bar{
+  position:absolute;bottom:0;left:0;right:0;z-index:3;
+  background:rgba(13,11,9,0.65);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-top:1px solid rgba(201,168,92,0.1);
+  display:flex;justify-content:center;
+  opacity:0;animation:riseIn 0.8s var(--ease-out) 1.2s forwards;
+}
+.hero-stat{
+  padding:20px clamp(24px,4vw,60px);text-align:center;
+  border-right:1px solid rgba(245,240,232,0.06);
+}
+.hero-stat:last-child{border-right:none}
+.hs-num{
+  font-family:var(--ff-disp);font-size:2rem;color:var(--c-gold);
+  display:block;line-height:1;font-weight:400
+}
+.hs-lbl{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,240,232,0.35);margin-top:4px;display:block}
+
+/* ═══════════════════════════════════════════════
+   TICKER
+═══════════════════════════════════════════════ */
+.ticker{
+  background:var(--c-gold);padding:12px 0;overflow:hidden;
+  border-top:1px solid rgba(13,11,9,0.15);border-bottom:1px solid rgba(13,11,9,0.15);
+}
+.ticker-inner{display:flex;white-space:nowrap;animation:ticker 30s linear infinite}
+.ticker-item{
+  display:inline-flex;align-items:center;gap:20px;padding:0 40px;
+  font-size:0.72rem;letter-spacing:0.22em;text-transform:uppercase;font-weight:600;color:var(--c-dark)
+}
+.ticker-diamond{font-size:0.5rem;opacity:0.4}
+
+/* ═══════════════════════════════════════════════
+   BRAND STORY
+═══════════════════════════════════════════════ */
+.story{padding:var(--section-pad) 0;background:var(--c-dark)}
+.story-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,100px);align-items:center
+}
+.story-visual{position:relative}
+.story-img-main{
+  width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r-lg);
+  background:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=900&q=85') center/cover;
+}
+.story-img-accent{
+  position:absolute;bottom:-28px;right:-28px;
+  width:48%;aspect-ratio:1;border-radius:var(--r-md);
+  background:url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=500&q=80') center/cover;
+  border:5px solid var(--c-dark);box-shadow:0 20px 60px rgba(0,0,0,0.5)
+}
+.story-award{
+  position:absolute;top:24px;left:-24px;
+  background:var(--c-gold);color:var(--c-dark);
+  border-radius:var(--r-sm);padding:14px 18px;
+  box-shadow:0 12px 36px rgba(201,168,92,0.35);
+}
+.story-award-num{font-family:var(--ff-disp);font-size:1.6rem;line-height:1;font-weight:500}
+.story-award-txt{font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;margin-top:2px}
+.story-text{padding-left:clamp(0px,3vw,40px)}
+.story-lede{
+  font-size:1.1rem;line-height:1.8;color:rgba(245,240,232,0.7);
+  font-weight:300;margin-bottom:20px;
+}
+.story-body{font-size:0.92rem;line-height:1.85;color:var(--c-mist);margin-bottom:16px}
+.story-divider{width:48px;height:1px;background:linear-gradient(to right,var(--c-gold),transparent);margin:28px 0}
+.story-pillars{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.pillar{
+  background:rgba(255,255,255,0.035);border:1px solid rgba(255,255,255,0.06);
+  border-radius:var(--r-sm);padding:20px;transition:border-color 0.3s;
+}
+.pillar:hover{border-color:rgba(201,168,92,0.25)}
+.pillar-icon{font-size:1.4rem;margin-bottom:10px}
+.pillar-title{font-size:0.82rem;font-weight:600;color:var(--c-ivory);margin-bottom:4px}
+.pillar-desc{font-size:0.76rem;line-height:1.6;color:var(--c-mist)}
+
+/* ═══════════════════════════════════════════════
+   MENU
+═══════════════════════════════════════════════ */
+.menu-sec{padding:var(--section-pad) 0;background:var(--c-walnut);position:relative;overflow:hidden}
+.menu-sec::before{
+  content:'';position:absolute;top:-300px;left:50%;transform:translateX(-50%);
+  width:800px;height:800px;
+  background:radial-gradient(circle,rgba(201,168,92,0.07) 0%,transparent 70%);
+  pointer-events:none;
+}
+.sec-head{text-align:center;margin-bottom:clamp(48px,6vw,80px)}
+.menu-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.mcrd{
+  background:rgba(13,11,9,0.5);border:1px solid rgba(255,255,255,0.06);
+  border-radius:var(--r-md);overflow:hidden;cursor:pointer;
+  transition:all 0.45s var(--ease-out);position:relative;
+}
+.mcrd:hover{border-color:rgba(201,168,92,0.3);transform:translateY(-8px);box-shadow:0 32px 72px rgba(0,0,0,0.45)}
+.mcrd-img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform 0.6s var(--ease-out)}
+.mcrd:hover .mcrd-img{transform:scale(1.06)}
+.mcrd-img-wrap{overflow:hidden;position:relative}
+.mcrd-pill{
+  position:absolute;top:12px;left:12px;z-index:1;
+  background:var(--c-gold);color:var(--c-dark);
+  font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  padding:4px 12px;border-radius:50px;
+}
+.mcrd-body{padding:22px 24px}
+.mcrd-name{font-family:var(--ff-disp);font-size:1.35rem;color:var(--c-ivory);margin-bottom:8px}
+.mcrd-desc{font-size:0.8rem;color:var(--c-mist);line-height:1.65;margin-bottom:18px}
+.mcrd-foot{display:flex;justify-content:space-between;align-items:center}
+.mcrd-price{font-family:var(--ff-disp);font-size:1.3rem;color:var(--c-gold)}
+.mcrd-add{
+  width:34px;height:34px;border-radius:50%;border:1px solid rgba(201,168,92,0.3);
+  color:var(--c-gold);font-size:1.1rem;display:grid;place-items:center;
+  transition:all 0.3s;
+}
+.mcrd:hover .mcrd-add{background:var(--c-gold);color:var(--c-dark);border-color:var(--c-gold)}
+
+/* ═══════════════════════════════════════════════
+   EXPERIENCES
+═══════════════════════════════════════════════ */
+.exp-sec{padding:var(--section-pad) 0;background:var(--c-dark)}
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ecrd{
+  padding:36px 30px 32px;border-radius:var(--r-md);
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);
+  position:relative;overflow:hidden;transition:all 0.4s var(--ease-out);
+}
+.ecrd::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(201,168,92,0.05) 0%,transparent 60%);
+  opacity:0;transition:opacity 0.4s;pointer-events:none;
+}
+.ecrd:hover{border-color:rgba(201,168,92,0.2);transform:translateY(-5px);box-shadow:0 24px 64px rgba(0,0,0,0.35)}
+.ecrd:hover::after{opacity:1}
+.ecrd-num{
+  font-family:var(--ff-disp);font-size:4.5rem;color:rgba(201,168,92,0.08);
+  line-height:1;position:absolute;top:16px;right:20px;font-weight:400;
+}
+.ecrd-icon{font-size:1.8rem;margin-bottom:18px;display:block}
+.ecrd-title{font-family:var(--ff-disp);font-size:1.45rem;color:var(--c-ivory);margin-bottom:10px}
+.ecrd-desc{font-size:0.82rem;color:var(--c-mist);line-height:1.72;margin-bottom:22px}
+.ecrd-link{
+  font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--c-gold);font-weight:500;display:inline-flex;align-items:center;gap:6px;
+  transition:gap 0.3s;
+}
+.ecrd:hover .ecrd-link{gap:12px}
+
+/* ═══════════════════════════════════════════════
+   GALLERY
+═══════════════════════════════════════════════ */
+.gal-sec{padding:var(--section-pad) 0;background:var(--c-char)}
+.gal-grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  grid-template-rows:240px 240px;
+  gap:12px;margin-top:clamp(40px,5vw,72px);
+}
+.gal-item{
+  overflow:hidden;border-radius:var(--r-sm);position:relative;cursor:pointer;
+  transition:box-shadow 0.4s;
+}
+.gal-item:nth-child(1){grid-column:1/6;grid-row:1/3}
+.gal-item:nth-child(2){grid-column:6/9;grid-row:1/2}
+.gal-item:nth-child(3){grid-column:9/13;grid-row:1/2}
+.gal-item:nth-child(4){grid-column:6/10;grid-row:2/3}
+.gal-item:nth-child(5){grid-column:10/13;grid-row:2/3}
+.gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s var(--ease-out)}
+.gal-item:hover img{transform:scale(1.08)}
+.gal-item:hover{box-shadow:0 0 0 2px var(--c-gold)}
+.gal-cap{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(13,11,9,0.7) 0%,transparent 55%);
+  display:flex;align-items:flex-end;padding:18px;
+  opacity:0;transition:opacity 0.4s;
+}
+.gal-item:hover .gal-cap{opacity:1}
+.gal-cap span{font-size:0.78rem;color:var(--c-ivory);font-weight:500;letter-spacing:0.06em}
+
+/* Lightbox */
+.lbx{
+  position:fixed;inset:0;background:rgba(0,0,0,0.96);z-index:8000;
+  display:grid;place-items:center;
+  opacity:0;pointer-events:none;transition:opacity 0.4s;
+}
+.lbx.show{opacity:1;pointer-events:all}
+.lbx-wrap{position:relative;max-width:90vw}
+.lbx img{max-height:84vh;max-width:90vw;border-radius:var(--r-sm);object-fit:contain}
+.lbx-x{
+  position:absolute;top:-44px;right:0;width:36px;height:36px;
+  border:1px solid rgba(255,255,255,0.2);border-radius:50%;
+  color:rgba(255,255,255,0.6);font-size:1rem;display:grid;place-items:center;cursor:pointer;
+  transition:all 0.3s;
+}
+.lbx-x:hover{border-color:var(--c-gold);color:var(--c-gold)}
+
+/* ═══════════════════════════════════════════════
+   CRAFT PROCESS
+═══════════════════════════════════════════════ */
+.craft-sec{padding:var(--section-pad) 0;background:var(--c-walnut);position:relative}
+.craft-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  margin-top:clamp(40px,5vw,72px);
+  border:1px solid rgba(255,255,255,0.07);border-radius:var(--r-lg);overflow:hidden;
+}
+.craft-step{
+  padding:48px 32px;border-right:1px solid rgba(255,255,255,0.07);
+  background:rgba(13,11,9,0.35);transition:background 0.4s;position:relative;
+}
+.craft-step:last-child{border-right:none}
+.craft-step:hover{background:rgba(201,168,92,0.07)}
+.cs-n{
+  font-family:var(--ff-disp);font-size:5rem;
+  color:rgba(201,168,92,0.08);line-height:1;margin-bottom:24px;
+}
+.cs-icon{font-size:1.7rem;display:block;margin-bottom:14px}
+.cs-title{font-family:var(--ff-disp);font-size:1.2rem;color:var(--c-ivory);margin-bottom:10px}
+.cs-text{font-size:0.8rem;color:var(--c-mist);line-height:1.72}
+
+/* ═══════════════════════════════════════════════
+   SEASONAL
+═══════════════════════════════════════════════ */
+.season-sec{padding:var(--section-pad) 0;background:var(--c-dark)}
+.season-row{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:20px;
+  margin-top:clamp(40px,5vw,72px);
+}
+.scard{
+  border-radius:var(--r-md);overflow:hidden;position:relative;min-height:420px;cursor:pointer;
+}
+.scard-bg{
+  position:absolute;inset:0;background-size:cover;background-position:center;
+  transition:transform 0.7s var(--ease-out);
+}
+.scard:hover .scard-bg{transform:scale(1.07)}
+.scard::after{
+  content:'';position:absolute;inset:0;z-index:1;
+  background:linear-gradient(to top,rgba(13,11,9,0.9) 0%,rgba(13,11,9,0.25) 55%,transparent 100%);
+}
+.scard-body{position:absolute;bottom:0;left:0;right:0;padding:28px 24px;z-index:2}
+.stag{
+  display:inline-block;background:var(--c-gold);color:var(--c-dark);
+  font-size:0.62rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;
+  padding:4px 12px;border-radius:50px;margin-bottom:10px;
+}
+.scard-title{font-family:var(--ff-disp);font-size:1.6rem;color:var(--c-ivory);line-height:1.2;margin-bottom:8px}
+.scard:nth-child(2) .scard-title,.scard:nth-child(3) .scard-title{font-size:1.25rem}
+.scard-desc{font-size:0.78rem;color:rgba(245,240,232,0.6);line-height:1.6;margin-bottom:12px}
+.scard-price{font-family:var(--ff-disp);font-size:1.2rem;color:var(--c-gold)}
+
+/* ═══════════════════════════════════════════════
+   TESTIMONIALS
+═══════════════════════════════════════════════ */
+.testi-sec{padding:var(--section-pad) 0;background:var(--c-char);overflow:hidden}
+.testi-track-wrap{overflow:hidden;margin-top:clamp(40px,5vw,72px)}
+.testi-track{display:flex;gap:20px;transition:transform 0.65s var(--ease-out)}
+.tcrd{
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);
+  border-radius:var(--r-md);padding:36px;
+  min-width:calc(33.333% - 14px);flex-shrink:0;
+  transition:border-color 0.3s;
+}
+.tcrd:hover{border-color:rgba(201,168,92,0.2)}
+.tcrd-q{
+  font-family:Georgia,serif;font-size:3.5rem;color:var(--c-gold);
+  opacity:0.25;line-height:0.8;margin-bottom:18px;display:block;
+}
+.tcrd-stars{color:var(--c-gold);font-size:0.78rem;letter-spacing:3px;margin-bottom:12px}
+.tcrd-text{
+  font-family:var(--ff-disp);font-size:1.05rem;font-style:italic;
+  color:rgba(245,240,232,0.72);line-height:1.75;margin-bottom:26px;
+}
+.tcrd-author{display:flex;align-items:center;gap:13px}
+.tcrd-avi{
+  width:42px;height:42px;border-radius:50%;
+  background:var(--c-walnut);display:grid;place-items:center;
+  font-size:1rem;border:2px solid var(--c-gold);flex-shrink:0;
+  font-family:var(--ff-disp);color:var(--c-gold-lt);
+}
+.tcrd-name{font-size:0.85rem;font-weight:600;color:var(--c-ivory)}
+.tcrd-city{font-size:0.72rem;color:var(--c-mist);margin-top:2px}
+.testi-controls{
+  display:flex;justify-content:center;align-items:center;gap:14px;margin-top:44px;
+}
+.tbtn{
+  width:42px;height:42px;border-radius:50%;
+  border:1px solid rgba(255,255,255,0.12);color:rgba(245,240,232,0.5);
+  display:grid;place-items:center;font-size:1rem;
+  transition:all 0.3s;cursor:pointer;
+}
+.tbtn:hover{border-color:var(--c-gold);color:var(--c-gold)}
+.tdots{display:flex;gap:8px;align-items:center}
+.tdot{width:6px;height:6px;border-radius:3px;background:rgba(245,240,232,0.15);transition:all 0.3s;cursor:pointer}
+.tdot.on{background:var(--c-gold);width:22px}
+
+/* ═══════════════════════════════════════════════
+   RESERVATION
+═══════════════════════════════════════════════ */
+.res-sec{
+  padding:var(--section-pad) 0;background:var(--c-dark);
+  position:relative;overflow:hidden;
+}
+.res-sec::before{
+  content:'';position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1400&q=50') center/cover;
+  opacity:0.05;
+}
+.res-grid{
+  display:grid;grid-template-columns:1fr 1.3fr;
+  gap:clamp(40px,7vw,100px);align-items:center;
+  position:relative;z-index:1;
+}
+.res-info-title{
+  font-family:var(--ff-disp);font-size:clamp(1.8rem,3vw,2.8rem);
+  color:var(--c-ivory);font-weight:400;line-height:1.2;margin-bottom:20px;
+}
+.res-info-body{font-size:0.9rem;line-height:1.8;color:var(--c-mist);margin-bottom:36px}
+.hours{border-top:1px solid rgba(255,255,255,0.08)}
+.hour-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);
+  font-size:0.83rem;
+}
+.hour-day{color:var(--c-ivory);font-weight:500}
+.hour-time{color:var(--c-mist)}
+/* Form card */
+.res-card{
+  background:rgba(245,240,232,0.06);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border:1px solid rgba(245,240,232,0.1);border-radius:var(--r-lg);
+  padding:clamp(32px,4vw,52px);
+}
+.res-card-title{font-family:var(--ff-disp);font-size:1.7rem;color:var(--c-ivory);margin-bottom:4px}
+.res-card-sub{font-size:0.75rem;color:var(--c-mist);letter-spacing:0.08em;margin-bottom:30px}
+.fg{margin-bottom:14px}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.flabel{
+  display:block;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--c-mist);font-weight:600;margin-bottom:7px;
+}
+.finput{
+  width:100%;padding:13px 16px;
+  background:rgba(13,11,9,0.5);
+  border:1.5px solid rgba(255,255,255,0.1);border-radius:var(--r-sm);
+  color:var(--c-ivory);font-size:0.88rem;outline:none;
+  transition:border-color 0.3s,box-shadow 0.3s;
+  -webkit-appearance:none;
+}
+.finput:focus{
+  border-color:var(--c-gold);
+  box-shadow:0 0 0 3px rgba(201,168,92,0.12);
+}
+.finput::placeholder{color:rgba(245,240,232,0.2)}
+.btn-reserve{
+  width:100%;padding:16px;margin-top:8px;
+  background:linear-gradient(135deg,var(--c-gold),var(--c-bronze));
+  border-radius:var(--r-sm);
+  font-size:0.78rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--c-dark);transition:all 0.35s var(--ease-out);
+  cursor:pointer;border:none;font-family:var(--ff-body);
+}
+.btn-reserve:hover{filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 14px 40px rgba(201,168,92,0.3)}
+
+/* ═══════════════════════════════════════════════
+   INSTAGRAM
+═══════════════════════════════════════════════ */
+.insta-sec{padding:var(--section-pad) 0;background:var(--c-dark);text-align:center}
+.insta-grid{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:8px;
+  margin:clamp(32px,4vw,56px) 0;
+}
+.iitem{aspect-ratio:1;overflow:hidden;border-radius:var(--r-sm);position:relative;cursor:pointer}
+.iitem img{width:100%;height:100%;object-fit:cover;transition:transform 0.55s var(--ease-out)}
+.iitem:hover img{transform:scale(1.12)}
+.iover{
+  position:absolute;inset:0;background:rgba(13,11,9,0.55);
+  display:grid;place-items:center;font-size:1.3rem;
+  opacity:0;transition:opacity 0.35s;
+}
+.iitem:hover .iover{opacity:1}
+.btn-follow{
+  display:inline-flex;align-items:center;gap:10px;
+  border:1.5px solid rgba(245,240,232,0.2);color:var(--c-ivory);
+  padding:14px 36px;border-radius:50px;
+  font-size:0.78rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;
+  transition:all 0.35s;
+}
+.btn-follow:hover{border-color:var(--c-gold);color:var(--c-gold)}
+
+/* ═══════════════════════════════════════════════
+   CONTACT
+═══════════════════════════════════════════════ */
+.ct-sec{padding:var(--section-pad) 0;background:var(--c-ink)}
+.ct-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:clamp(40px,5vw,72px)}
+.ctcard{
+  background:rgba(255,255,255,0.035);border:1px solid rgba(255,255,255,0.07);
+  border-radius:var(--r-md);padding:32px 26px;transition:border-color 0.3s;
+}
+.ctcard:hover{border-color:rgba(201,168,92,0.2)}
+.ctcard-icon{font-size:1.5rem;margin-bottom:18px}
+.ctcard-label{
+  font-size:0.62rem;letter-spacing:0.24em;text-transform:uppercase;
+  color:var(--c-gold);font-weight:600;margin-bottom:10px;
+}
+.ctcard-main{font-family:var(--ff-disp);font-size:1.1rem;color:var(--c-ivory);margin-bottom:6px;line-height:1.4}
+.ctcard-sub{font-size:0.8rem;color:var(--c-mist);line-height:1.65}
+.soc-row{display:flex;gap:10px;margin-top:18px}
+.soc-btn{
+  width:34px;height:34px;border-radius:50%;
+  border:1px solid rgba(255,255,255,0.1);
+  color:rgba(245,240,232,0.4);font-size:0.85rem;
+  display:grid;place-items:center;transition:all 0.3s;
+}
+.soc-btn:hover{border-color:var(--c-gold);color:var(--c-gold);transform:translateY(-2px)}
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════ */
+.footer{background:var(--c-ink);border-top:1px solid rgba(255,255,255,0.05);padding:72px 0 0}
+.footer-top{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;
+  gap:clamp(32px,5vw,72px);padding-bottom:56px;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+.f-brand-name{font-family:var(--ff-disp);font-size:1.8rem;color:var(--c-ivory);margin-bottom:2px}
+.f-brand-tag{font-size:0.6rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--c-gold);margin-bottom:18px}
+.f-brand-desc{font-size:0.82rem;line-height:1.8;color:var(--c-mist);margin-bottom:26px}
+.f-newsletter{display:flex;gap:8px}
+.f-newsletter input{
+  flex:1;padding:11px 16px;
+  background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);
+  border-radius:var(--r-sm);color:var(--c-ivory);
+  font-family:var(--ff-body);font-size:0.8rem;outline:none;
+  transition:border-color 0.3s;
+}
+.f-newsletter input:focus{border-color:var(--c-gold)}
+.f-newsletter input::placeholder{color:rgba(245,240,232,0.2)}
+.f-newsletter button{
+  padding:11px 20px;background:var(--c-gold);color:var(--c-dark);
+  border-radius:var(--r-sm);font-weight:600;font-size:0.78rem;
+  cursor:pointer;border:none;transition:filter 0.3s;font-family:var(--ff-body);
+}
+.f-newsletter button:hover{filter:brightness(1.1)}
+.f-col-title{
+  font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:rgba(245,240,232,0.3);font-weight:600;margin-bottom:18px;
+}
+.f-links{display:flex;flex-direction:column;gap:10px}
+.f-links a{font-size:0.85rem;color:rgba(245,240,232,0.45);transition:color 0.3s}
+.f-links a:hover{color:var(--c-gold)}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 0;
+}
+.f-copy{font-size:0.74rem;color:rgba(245,240,232,0.18)}
+.f-motto{font-family:var(--ff-disp);font-style:italic;font-size:0.88rem;color:rgba(201,168,92,0.4)}
+
+/* ═══════════════════════════════════════════════
+   BACK TO TOP
+═══════════════════════════════════════════════ */
+.btt{
+  position:fixed;bottom:28px;right:28px;z-index:500;
+  width:46px;height:46px;border-radius:50%;
+  background:var(--c-gold);color:var(--c-dark);
+  display:grid;place-items:center;font-size:1rem;
+  opacity:0;transform:translateY(16px);pointer-events:none;
+  transition:all 0.35s var(--ease-out);
+  box-shadow:0 8px 28px rgba(201,168,92,0.3);cursor:pointer;
+}
+.btt.show{opacity:1;transform:none;pointer-events:all}
+.btt:hover{background:var(--c-gold-lt);transform:translateY(-2px)}
+
+/* ═══════════════════════════════════════════════
+   TOAST
+═══════════════════════════════════════════════ */
+.toast{
+  position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);
+  background:var(--c-dark);color:var(--c-ivory);
+  padding:14px 32px;border-radius:50px;
+  font-size:0.82rem;border:1px solid var(--c-gold);
+  box-shadow:0 12px 40px rgba(0,0,0,0.5);
+  opacity:0;pointer-events:none;
+  transition:all 0.4s var(--ease-out);z-index:7000;white-space:nowrap;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ═══════════════════════════════════════════════
+   KEYFRAMES
+═══════════════════════════════════════════════ */
+@keyframes riseIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes slideInR{from{opacity:0;transform:translateX(32px)}to{opacity:1;transform:none}}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes drip{0%,100%{transform:scaleY(0.6) translateY(0);transform-origin:top;opacity:0.4}50%{transform:scaleY(1) translateY(0);transform-origin:top;opacity:1}}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════ */
+@media(max-width:1100px){
+  .menu-grid{grid-template-columns:repeat(2,1fr)}
+  .exp-grid{grid-template-columns:repeat(2,1fr)}
+  .craft-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr;gap:36px}
+  .hero-badges{display:none}
+  .gal-grid{grid-template-columns:repeat(2,1fr);grid-template-rows:auto}
+  .gal-item{grid-column:auto!important;grid-row:auto!important}
+  .gal-item img{min-height:200px}
+}
+@media(max-width:768px){
+  .nav{padding:20px 24px}
+  .nav.solid{padding:14px 24px}
+  .nav-menu{display:none}
+  .ham{display:flex}
+  .story-grid{grid-template-columns:1fr}
+  .story-img-accent,.story-award{display:none}
+  .exp-grid{grid-template-columns:1fr}
+  .season-row{grid-template-columns:1fr}
+  .res-grid{grid-template-columns:1fr}
+  .insta-grid{grid-template-columns:repeat(3,1fr)}
+  .ct-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:10px;text-align:center}
+  .hero-bar{display:none}
+  .fg-row{grid-template-columns:1fr}
+  .menu-grid{grid-template-columns:1fr}
+  .craft-grid{grid-template-columns:1fr}
+  .tcrd{min-width:calc(100% - 0px)}
+}
+</style>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor-dot" id="cdot"></div>
+<div class="cursor-ring" id="cring"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#" class="logo" aria-label="Avi's Artisan Café Home">
+    <div class="logo-name">Avi's</div>
+    <div class="logo-sub">Artisan Café · Jhamsikhel</div>
+  </a>
+  <ul class="nav-menu" role="navigation" aria-label="Primary navigation">
+    <li><a href="#story">Story</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#experiences">Experiences</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#reservation" class="nav-book">Reserve</a></li>
+  </ul>
+  <button class="ham" id="ham" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- DRAWER -->
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <button class="drawer-close" id="dclose" aria-label="Close menu">✕</button>
+  <a href="#story">Story</a>
+  <a href="#menu">Menu</a>
+  <a href="#experiences">Experiences</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#reservation">Reserve</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home" aria-label="Hero">
+  <div class="hero-reel" id="heroReel" aria-hidden="true"></div>
+  <div class="hero-vignette" aria-hidden="true"></div>
+
+  <div class="hero-body">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-gem"></div>
+      <span>Est. 2016 &nbsp;·&nbsp; Jhamsikhel, Lalitpur</span>
+      <div class="hero-eyebrow-gem"></div>
+    </div>
+    <h1 class="hero-title">Crafted Coffee.<br><span class="italic">Elevated</span> Experiences.</h1>
+    <p class="hero-sub">Where the finest Nepali single-origin beans, Himalayan warmth, and genuine craftsmanship meet — in the heart of Lalitpur.</p>
+    <div class="hero-ctas">
+      <a href="#reservation" class="btn-fill">Reserve a Table &nbsp;→</a>
+      <a href="#menu" class="btn-ghost">Explore Our Menu</a>
+    </div>
+  </div>
+
+  <!-- Floating badges -->
+  <div class="hero-badges" aria-hidden="true">
+    <div class="hbadge">
+      <div class="hbadge-stars">★★★★★</div>
+      <div class="hbadge-main">4.9 · 1,800+ Reviews</div>
+      <div class="hbadge-note">Lalitpur's Most Loved Café</div>
+    </div>
+    <div class="hbadge">
+      <div class="hbadge-stars">🏆</div>
+      <div class="hbadge-main">Nepal Hospitality Award</div>
+      <div class="hbadge-note">Best Specialty Café 2023 & 2024</div>
+    </div>
+    <div class="hbadge">
+      <div class="hbadge-stars">☕</div>
+      <div class="hbadge-main">Freshly Roasted Daily</div>
+      <div class="hbadge-note">Gulmi & Lamjung Single-Origin</div>
+    </div>
+  </div>
+
+  <!-- Stats bar -->
+  <div class="hero-bar" aria-label="Quick statistics">
+    <div class="hero-stat">
+      <span class="hs-num" data-count="8">0</span>
+      <span class="hs-lbl">Years of Craft</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hs-num" data-count="28">0</span>
+      <span class="hs-lbl">Signature Blends</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hs-num" data-count="1500">0</span>
+      <span class="hs-lbl">Guests / Month</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hs-num" data-count="14">0</span>
+      <span class="hs-lbl">Farm Partners</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hs-num" data-count="6">0</span>
+      <span class="hs-lbl">Origin Regions</span>
+    </div>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-pipe"></div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-inner" id="ticker">
+    <span class="ticker-item">Single-Origin Nepali Beans <span class="ticker-diamond">◆</span></span>
+    <span class="ticker-item">Himalayan Spring Water Brews <span class="ticker-diamond">◆</span></span>
+    <span class="ticker-item">Freshly Roasted at our Patan Roastery <span class="ticker-diamond">◆</span></span>
+    <span class="ticker-item">Award-Winning Specialty Coffee <span class="ticker-diamond">◆</span></span>
+    <span class="ticker-item">Jhamsikhel · Lalitpur · Nepal <span class="ticker-diamond">◆</span></span>
+    <span class="ticker-item">Ethically Sourced · Zero Waste <span class="ticker-diamond">◆</span></span>
+    <span class="ticker-item">Single-Origin Nepali Beans <span class="ticker-diamond">◆</span></span>
+    <span class="ticker-item">Himalayan Spring Water Brews <span class="ticker-diamond">◆</span></span>
+    <span class="ticker-item">Freshly Roasted at our Patan Roastery <span class="ticker-diamond">◆</span></span>
+    <span class="ticker-item">Award-Winning Specialty Coffee <span class="ticker-diamond">◆</span></span>
+    <span class="ticker-item">Jhamsikhel · Lalitpur · Nepal <span class="ticker-diamond">◆</span></span>
+    <span class="ticker-item">Ethically Sourced · Zero Waste <span class="ticker-diamond">◆</span></span>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="story" id="story" aria-labelledby="story-h">
+  <div class="wrap">
+    <div class="story-grid">
+
+      <div class="story-visual sr-l">
+        <div class="story-img-main" role="img" aria-label="A barista carefully crafting espresso at Avi's café"></div>
+        <div class="story-img-accent" role="img" aria-label="Close-up of freshly roasted Nepali coffee beans"></div>
+        <div class="story-award" aria-label="Eight-time award winner">
+          <div class="story-award-num">8×</div>
+          <div class="story-award-txt">Award Winner</div>
+        </div>
+      </div>
+
+      <div class="story-text">
+        <div class="tag sr d1"><div class="tag-line"></div> Our Philosophy</div>
+        <h2 class="heading-lg sr d2" id="story-h" style="color:var(--c-ivory);margin:16px 0 24px">
+          More Than<br>a <em>Café</em>
+        </h2>
+        <p class="story-lede sr d2">
+          Founded in 2016 by <strong style="color:var(--c-ivory)">Avi Shrestha</strong> and <strong style="color:var(--c-ivory)">Sobi Agrawal</strong>, Avi's began as a quiet conviction: that Nepal grows some of the world's most extraordinary coffee — and that it deserves to be celebrated, not overlooked.
+        </p>
+        <p class="story-body sr d3">
+          Our beans come from the misty highlands of Gulmi, Lamjung, Arghakhanchi, and Kaski — sourced directly from 14 smallholder farming families we've known for years. Every harvest, our team travels to cup and hand-select each lot.
+        </p>
+        <p class="story-body sr d3">
+          At our Patan roastery, head roaster <strong style="color:var(--c-ivory)">Dipesh Maharjan</strong> develops individual roast profiles for each origin — honouring the terroir that makes Nepali coffee so unique.
+        </p>
+        <div class="story-divider sr d4"></div>
+        <div class="story-pillars sr d4">
+          <div class="pillar">
+            <div class="pillar-icon">🌱</div>
+            <div class="pillar-title">Direct Farm Sourcing</div>
+            <div class="pillar-desc">14 partner farms across Gulmi, Lamjung &amp; Arghakhanchi</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🔥</div>
+            <div class="pillar-title">In-House Roastery</div>
+            <div class="pillar-desc">Roasted fresh daily at our Patan facility</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🏔️</div>
+            <div class="pillar-title">Himalayan Heritage</div>
+            <div class="pillar-desc">Brewed with certified Himalayan spring water</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">♻️</div>
+            <div class="pillar-title">Zero Waste Pledge</div>
+            <div class="pillar-desc">Spent grounds composted back to our partner farms</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-sec" id="menu" aria-labelledby="menu-h">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <div class="tag" style="justify-content:center;margin-bottom:14px"><div class="tag-line"></div>Signature Collection<div class="tag-line"></div></div>
+      <h2 class="heading-lg" id="menu-h" style="color:var(--c-ivory)">Our Signature <em>Coffees</em></h2>
+      <p class="body-lg" style="max-width:520px;margin:16px auto 0">Each blend traces its origin to Nepal's extraordinary highland farms — tasted, selected, and roasted for your cup.</p>
+    </div>
+    <div class="menu-grid">
+
+      <div class="mcrd sr d1">
+        <div class="mcrd-img-wrap">
+          <img class="mcrd-img" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80" alt="Himalayan Espresso Reserve — double shot" loading="lazy">
+          <span class="mcrd-pill">Most Popular</span>
+        </div>
+        <div class="mcrd-body">
+          <div class="mcrd-name">Himalayan Espresso Reserve</div>
+          <div class="mcrd-desc">Double shot. Single-origin Gulmi beans, naturally processed. Notes of dark chocolate, dried fig, and mountain herbs.</div>
+          <div class="mcrd-foot">
+            <span class="mcrd-price">रू ३२०</span>
+            <button class="mcrd-add" aria-label="Add Himalayan Espresso Reserve to order">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mcrd sr d2">
+        <div class="mcrd-img-wrap">
+          <img class="mcrd-img" src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&q=80" alt="Annapurna Cappuccino" loading="lazy">
+          <span class="mcrd-pill">Signature</span>
+        </div>
+        <div class="mcrd-body">
+          <div class="mcrd-name">Annapurna Cappuccino</div>
+          <div class="mcrd-desc">Silky microfoam poured atop our house blend. Named for the morning mists of the Annapurna massif. Light, bright, ethereal.</div>
+          <div class="mcrd-foot">
+            <span class="mcrd-price">रू ३६०</span>
+            <button class="mcrd-add" aria-label="Add Annapurna Cappuccino to order">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mcrd sr d3">
+        <div class="mcrd-img-wrap">
+          <img class="mcrd-img" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80" alt="Khumbu Salted Caramel Latte" loading="lazy">
+        </div>
+        <div class="mcrd-body">
+          <div class="mcrd-name">Khumbu Caramel Latte</div>
+          <div class="mcrd-desc">House-made Himalayan rock-salt caramel, slow-steamed Chitwan buffalo milk, double espresso. Rich and deeply comforting.</div>
+          <div class="mcrd-foot">
+            <span class="mcrd-price">रू ३९०</span>
+            <button class="mcrd-add" aria-label="Add Khumbu Caramel Latte to order">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mcrd sr d1">
+        <div class="mcrd-img-wrap">
+          <img class="mcrd-img" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80" alt="Lamjung Pour Over" loading="lazy">
+          <span class="mcrd-pill">Chef's Pick</span>
+        </div>
+        <div class="mcrd-body">
+          <div class="mcrd-name">Lamjung Pour Over</div>
+          <div class="mcrd-desc">Washed-process Lamjung beans. Jasmine blossom, ripe peach, delicate citrus. Brewed to order via Hario V60.</div>
+          <div class="mcrd-foot">
+            <span class="mcrd-price">रू ४८०</span>
+            <button class="mcrd-add" aria-label="Add Lamjung Pour Over to order">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mcrd sr d2">
+        <div class="mcrd-img-wrap">
+          <img class="mcrd-img" src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600&q=80" alt="Cold Brew Kathmandu" loading="lazy">
+        </div>
+        <div class="mcrd-body">
+          <div class="mcrd-name">Cold Brew Kathmandu</div>
+          <div class="mcrd-desc">18-hour cold steep in Himalayan spring water. Naturally sweet, low-acid, extraordinarily smooth. Served over glacier stone ice.</div>
+          <div class="mcrd-foot">
+            <span class="mcrd-price">रू ४२०</span>
+            <button class="mcrd-add" aria-label="Add Cold Brew to order">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mcrd sr d3">
+        <div class="mcrd-img-wrap">
+          <img class="mcrd-img" src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&q=80" alt="Monsoon Ilam Seasonal Special" loading="lazy">
+          <span class="mcrd-pill">Seasonal</span>
+        </div>
+        <div class="mcrd-body">
+          <div class="mcrd-name">Monsoon Ilam Special</div>
+          <div class="mcrd-desc">Cardamom-spiked espresso with Eastern Nepal's prized Ilam black tea reduction and condensed buffalo milk. Limited run.</div>
+          <div class="mcrd-foot">
+            <span class="mcrd-price">रू ५२०</span>
+            <button class="mcrd-add" aria-label="Add Monsoon Ilam Special to order">+</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCES -->
+<section class="exp-sec" id="experiences" aria-labelledby="exp-h">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <div class="tag" style="justify-content:center;margin-bottom:14px"><div class="tag-line"></div>Curated Moments<div class="tag-line"></div></div>
+      <h2 class="heading-lg" id="exp-h" style="color:var(--c-ivory)">Beyond the <em>Cup</em></h2>
+      <p class="body-lg" style="max-width:520px;margin:16px auto 0">We design experiences as deliberately as we craft our coffee. Every visit to Avi's is an invitation to slow down.</p>
+    </div>
+    <div class="exp-grid">
+      <div class="ecrd sr d1">
+        <div class="ecrd-num">01</div>
+        <span class="ecrd-icon">🌄</span>
+        <h3 class="ecrd-title">Morning Ritual</h3>
+        <p class="ecrd-desc">Begin your day with our curated morning menu — freshly baked sel roti, single-origin pour over, and the quiet beauty of Jhamsikhel at dawn.</p>
+        <span class="ecrd-link">Discover more →</span>
+      </div>
+      <div class="ecrd sr d2">
+        <div class="ecrd-num">02</div>
+        <span class="ecrd-icon">💻</span>
+        <h3 class="ecrd-title">Remote Work Lounge</h3>
+        <p class="ecrd-desc">Our dedicated second-floor workspace features high-speed fibre, individual power stations, and unlimited specialty drip coffee from 7am.</p>
+        <span class="ecrd-link">Discover more →</span>
+      </div>
+      <div class="ecrd sr d3">
+        <div class="ecrd-num">03</div>
+        <span class="ecrd-icon">🥞</span>
+        <h3 class="ecrd-title">Weekend Brunch</h3>
+        <p class="ecrd-desc">Every Saturday and Sunday, 9am–1pm. A Nepali-fusion spread with tableside espresso service. Reservation strongly recommended.</p>
+        <span class="ecrd-link">Book a table →</span>
+      </div>
+      <div class="ecrd sr d1">
+        <div class="ecrd-num">04</div>
+        <span class="ecrd-icon">🎉</span>
+        <h3 class="ecrd-title">Private Gatherings</h3>
+        <p class="ecrd-desc">Our garden terrace in Jhamsikhel seats up to 35 guests. Perfect for corporate lunches, milestone celebrations, and intimate events.</p>
+        <span class="ecrd-link">Enquire →</span>
+      </div>
+      <div class="ecrd sr d2">
+        <div class="ecrd-num">05</div>
+        <span class="ecrd-icon">☕</span>
+        <h3 class="ecrd-title">Coffee Workshops</h3>
+        <p class="ecrd-desc">Learn latte art, pour-over technique, and Nepali coffee history from our head barista <strong style="color:var(--c-ivory)">Bikash Rai</strong>. Every Thursday, 6pm.</p>
+        <span class="ecrd-link">Register →</span>
+      </div>
+      <div class="ecrd sr d3">
+        <div class="ecrd-num">06</div>
+        <span class="ecrd-icon">🍫</span>
+        <h3 class="ecrd-title">Origin Tastings</h3>
+        <p class="ecrd-desc">A guided flight through 6 Nepali coffee regions, paired with artisan chocolates from <strong style="color:var(--c-ivory)">Himalayan Chocolatier, Pokhara</strong> and local wildflower honeys.</p>
+        <span class="ecrd-link">Explore →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gal-sec" id="gallery" aria-labelledby="gal-h">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <div class="tag" style="justify-content:center;margin-bottom:14px"><div class="tag-line"></div>Visual Stories<div class="tag-line"></div></div>
+      <h2 class="heading-lg" id="gal-h" style="color:var(--c-ivory)">Inside <em>Avi's</em></h2>
+    </div>
+    <div class="gal-grid sr">
+      <div class="gal-item" data-src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=900&q=80" alt="Avi's interior — warm Jhamsikhel ambiance" loading="lazy">
+        <div class="gal-cap"><span>Interior Ambiance</span></div>
+      </div>
+      <div class="gal-item" data-src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80" alt="Coffee preparation" loading="lazy">
+        <div class="gal-cap"><span>The Craft</span></div>
+      </div>
+      <div class="gal-item" data-src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&q=80" alt="Freshly roasted Nepali coffee beans" loading="lazy">
+        <div class="gal-cap"><span>Nepali Beans</span></div>
+      </div>
+      <div class="gal-item" data-src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=700&q=80" alt="Seating and lounge spaces" loading="lazy">
+        <div class="gal-cap"><span>Seating Spaces</span></div>
+      </div>
+      <div class="gal-item" data-src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80" alt="Latte art creation" loading="lazy">
+        <div class="gal-cap"><span>Latte Art</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lbx" id="lbx" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <div class="lbx-wrap">
+    <button class="lbx-x" id="lbxX" aria-label="Close image viewer">✕</button>
+    <img src="" alt="" id="lbxImg">
+  </div>
+</div>
+
+<!-- CRAFT PROCESS -->
+<section class="craft-sec" aria-labelledby="craft-h">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <div class="tag" style="justify-content:center;margin-bottom:14px"><div class="tag-line"></div>From Farm to Cup<div class="tag-line"></div></div>
+      <h2 class="heading-lg" id="craft-h" style="color:var(--c-ivory)">The Art of <em>Nepali</em> Coffee</h2>
+      <p class="body-lg" style="max-width:540px;margin:16px auto 0">Every cup is the result of hundreds of intentional decisions — made with science, love, and deep respect for Nepal's land.</p>
+    </div>
+    <div class="craft-grid">
+      <div class="craft-step sr d1">
+        <div class="cs-n">01</div>
+        <span class="cs-icon">🌱</span>
+        <h3 class="cs-title">Origin & Sourcing</h3>
+        <p class="cs-text">We work directly with 14 smallholder farms across Gulmi, Lamjung, Kaski, Arghakhanchi, Palpa, and Rolpa. Our team visits each harvest to cup and select lots by hand.</p>
+      </div>
+      <div class="craft-step sr d2">
+        <div class="cs-n">02</div>
+        <span class="cs-icon">🔥</span>
+        <h3 class="cs-title">Artisan Roasting</h3>
+        <p class="cs-text">At our Patan roastery, head roaster Dipesh Maharjan crafts individual roast profiles per lot — balancing sweetness, body, and origin character with obsessive precision.</p>
+      </div>
+      <div class="craft-step sr d3">
+        <div class="cs-n">03</div>
+        <span class="cs-icon">⚗️</span>
+        <h3 class="cs-title">Precision Brewing</h3>
+        <p class="cs-text">Every brew method is calibrated daily. Himalayan spring water at 93°C. Grind size dialled per gram. Extraction windows measured in seconds. Never guessed.</p>
+      </div>
+      <div class="craft-step sr d4">
+        <div class="cs-n">04</div>
+        <span class="cs-icon">🌿</span>
+        <h3 class="cs-title">Sustainability</h3>
+        <p class="cs-text">Zero-waste packaging, solar-powered roasting, and a closed-loop compost programme that returns spent grounds to our partner farms as fertiliser.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEASONAL SPECIALS -->
+<section class="season-sec" id="seasonal" aria-labelledby="season-h">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <div class="tag" style="justify-content:center;margin-bottom:14px"><div class="tag-line"></div>Limited Editions<div class="tag-line"></div></div>
+      <h2 class="heading-lg" id="season-h" style="color:var(--c-ivory)">Seasonal <em>Specials</em></h2>
+    </div>
+    <div class="season-row">
+      <div class="scard sr d1">
+        <div class="scard-bg" style="background-image:url('https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=900&q=80')"></div>
+        <div class="scard-body">
+          <span class="stag">Monsoon Special</span>
+          <h3 class="scard-title">Ilam Chai Cold Brew</h3>
+          <p class="scard-desc">Eastern Nepal's finest Ilam black tea, cold-brewed with our reserve espresso, topped with cardamom cream. A Nepalese summer classic.</p>
+          <span class="scard-price">रू ५२०</span>
+        </div>
+      </div>
+      <div class="scard sr d2">
+        <div class="scard-bg" style="background-image:url('https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80')"></div>
+        <div class="scard-body">
+          <span class="stag">Limited Edition</span>
+          <h3 class="scard-title">Chitwan Honey Cardamom Latte</h3>
+          <p class="scard-desc">Raw Chitwan wildflower honey, green cardamom, and steamed buffalo milk.</p>
+          <span class="scard-price">रू ४६०</span>
+        </div>
+      </div>
+      <div class="scard sr d3">
+        <div class="scard-bg" style="background-image:url('https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=80')"></div>
+        <div class="scard-body">
+          <span class="stag">Dessert Pairing</span>
+          <h3 class="scard-title">Yomari & Espresso</h3>
+          <p class="scard-desc">Traditional Newari yomari with chaku and sesame, paired with our double reserve espresso shot.</p>
+          <span class="scard-price">रू ४२०</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-sec" aria-labelledby="testi-h">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <div class="tag" style="justify-content:center;margin-bottom:14px"><div class="tag-line"></div>Guest Stories<div class="tag-line"></div></div>
+      <h2 class="heading-lg" id="testi-h" style="color:var(--c-ivory)">What Our <em>Guests</em> Say</h2>
+    </div>
+    <div class="testi-track-wrap">
+      <div class="testi-track" id="tTrack">
+
+        <div class="tcrd">
+          <span class="tcrd-q">"</span>
+          <div class="tcrd-stars">★★★★★</div>
+          <p class="tcrd-text">The atmosphere, coffee quality, and attention to detail are unlike any café I've visited — in Nepal or anywhere across Asia. The Lamjung pour over was genuinely transcendent.</p>
+          <div class="tcrd-author">
+            <div class="tcrd-avi">प</div>
+            <div>
+              <div class="tcrd-name">Pratiksha Shrestha</div>
+              <div class="tcrd-city">Bouddhanath, Kathmandu</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tcrd">
+          <span class="tcrd-q">"</span>
+          <div class="tcrd-stars">★★★★★</div>
+          <p class="tcrd-text">I've been to specialty cafés in Tokyo, Melbourne, and Copenhagen. Avi's belongs in that conversation — and the coffee is far more interesting because the story is Nepal's own.</p>
+          <div class="tcrd-author">
+            <div class="tcrd-avi">आ</div>
+            <div>
+              <div class="tcrd-name">Aashish Tamang</div>
+              <div class="tcrd-city">Patan Durbar Square, Lalitpur</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tcrd">
+          <span class="tcrd-q">"</span>
+          <div class="tcrd-stars">★★★★★</div>
+          <p class="tcrd-text">Our anniversary dinner on the garden terrace was perfect in every way. The team anticipated every need. Avi himself came to greet us. The espresso was the best I've ever had.</p>
+          <div class="tcrd-author">
+            <div class="tcrd-avi">सु</div>
+            <div>
+              <div class="tcrd-name">Sunita & Bikram Rana</div>
+              <div class="tcrd-city">Maharajgunj, Kathmandu</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tcrd">
+          <span class="tcrd-q">"</span>
+          <div class="tcrd-stars">★★★★★</div>
+          <p class="tcrd-text">I visit Kathmandu monthly for work. Avi's remote lounge is my second office — incredible WiFi, consistent power, and the cold brew is something I genuinely look forward to all week.</p>
+          <div class="tcrd-author">
+            <div class="tcrd-avi">नि</div>
+            <div>
+              <div class="tcrd-name">Niraj Bhandari</div>
+              <div class="tcrd-city">Pokhara, Gandaki Province</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tcrd">
+          <span class="tcrd-q">"</span>
+          <div class="tcrd-stars">★★★★★</div>
+          <p class="tcrd-text">The origin tasting flight changed how I understand coffee. I had no idea Nepal produced something this layered and expressive. Now I order beans for home every single month.</p>
+          <div class="tcrd-author">
+            <div class="tcrd-avi">म</div>
+            <div>
+              <div class="tcrd-name">Manisha Gurung</div>
+              <div class="tcrd-city">Jhamsikhel, Lalitpur</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="testi-controls">
+      <button class="tbtn" id="tPrev" aria-label="Previous review">‹</button>
+      <div class="tdots" id="tDots"></div>
+      <button class="tbtn" id="tNext" aria-label="Next review">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVATION -->
+<section class="res-sec" id="reservation" aria-labelledby="res-h">
+  <div class="wrap">
+    <div class="res-grid">
+      <div>
+        <div class="tag sr"><div class="tag-line"></div>Make a Booking</div>
+        <h2 class="res-info-title sr d1" id="res-h">
+          Reserve Your<br><em>Experience</em>
+        </h2>
+        <p class="res-info-body sr d2">Every table at Avi's is set with intention. We would love to welcome you — whether for a quiet morning ritual or a special celebration with loved ones.</p>
+        <div class="hours sr d3">
+          <div class="hour-row">
+            <span class="hour-day">आइतबार – बिहिबार</span>
+            <span class="hour-time">बिहान ७:३० – रात ९:३० बजे</span>
+          </div>
+          <div class="hour-row">
+            <span class="hour-day">शुक्रबार – शनिबार</span>
+            <span class="hour-time">बिहान ७:०० – रात १०:३० बजे</span>
+          </div>
+          <div class="hour-row">
+            <span class="hour-day">सार्वजनिक बिदा</span>
+            <span class="hour-time">बिहान ८:०० – रात ८:०० बजे</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="res-card sr-r">
+        <h3 class="res-card-title">Reserve a Table</h3>
+        <p class="res-card-sub">Avi's Artisan Café · Jhamsikhel, Lalitpur</p>
+        <div class="fg-row fg">
+          <div>
+            <label class="flabel" for="rname">Full Name</label>
+            <input class="finput" type="text" id="rname" name="name" placeholder="Avi Shrestha" autocomplete="name">
+          </div>
+          <div>
+            <label class="flabel" for="remail">Email Address</label>
+            <input class="finput" type="email" id="remail" name="email" placeholder="hello@email.com" autocomplete="email">
+          </div>
+        </div>
+        <div class="fg-row fg">
+          <div>
+            <label class="flabel" for="rphone">Phone Number</label>
+            <input class="finput" type="tel" id="rphone" name="phone" placeholder="+977 98XXXXXXXX" autocomplete="tel">
+          </div>
+          <div>
+            <label class="flabel" for="rguests">Number of Guests</label>
+            <input class="finput" type="number" id="rguests" name="guests" placeholder="2" min="1" max="35">
+          </div>
+        </div>
+        <div class="fg-row fg">
+          <div>
+            <label class="flabel" for="rdate">Preferred Date</label>
+            <input class="finput" type="date" id="rdate" name="date">
+          </div>
+          <div>
+            <label class="flabel" for="rtime">Preferred Time</label>
+            <input class="finput" type="time" id="rtime" name="time">
+          </div>
+        </div>
+        <button class="btn-reserve" type="button" id="reserveBtn">Reserve Your Experience</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="insta-sec" aria-label="Instagram feed">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <div class="tag" style="justify-content:center;margin-bottom:14px"><div class="tag-line"></div>@Avis.cafe<div class="tag-line"></div></div>
+      <h2 class="heading-lg" style="color:var(--c-ivory)">Follow Our <em>Journey</em></h2>
+      <p class="body-lg" style="max-width:480px;margin:16px auto 0">Everyday moments from our café, farms, and the people who make Avi's what it is.</p>
+    </div>
+    <div class="insta-grid sr">
+      <div class="iitem"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=300&q=70" alt="Coffee closeup" loading="lazy"><div class="iover">📷</div></div>
+      <div class="iitem"><img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=300&q=70" alt="Latte art" loading="lazy"><div class="iover">❤️</div></div>
+      <div class="iitem"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=300&q=70" alt="Coffee beans Nepal" loading="lazy"><div class="iover">📷</div></div>
+      <div class="iitem"><img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=300&q=70" alt="Behind the bar" loading="lazy"><div class="iover">❤️</div></div>
+      <div class="iitem"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=300&q=70" alt="Morning pour" loading="lazy"><div class="iover">📷</div></div>
+      <div class="iitem"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=300&q=70" alt="Espresso pull" loading="lazy"><div class="iover">❤️</div></div>
+    </div>
+    <a href="https://instagram.com/Avis.cafe" target="_blank" rel="noopener noreferrer" class="btn-follow">
+      <span>📸</span> Follow @Avis.cafe
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="ct-sec" id="contact" aria-labelledby="ct-h">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <div class="tag" style="justify-content:center;margin-bottom:14px"><div class="tag-line"></div>Find Us<div class="tag-line"></div></div>
+      <h2 class="heading-lg" id="ct-h" style="color:var(--c-ivory)">Come <em>Visit</em> Us</h2>
+    </div>
+    <div class="ct-grid">
+      <div class="ctcard sr d1">
+        <div class="ctcard-icon">📍</div>
+        <div class="ctcard-label">Address</div>
+        <div class="ctcard-main">Jhamsikhel Marg, Ward No. 22</div>
+        <div class="ctcard-sub">Lalitpur Metropolitan City<br>Bagmati Province, Nepal 44600<br><span style="color:var(--c-gold);font-size:0.75rem;margin-top:4px;display:inline-block">नेपाल · ललितपुर</span></div>
+      </div>
+      <div class="ctcard sr d2">
+        <div class="ctcard-icon">📞</div>
+        <div class="ctcard-label">Phone & Email</div>
+        <div class="ctcard-main">+977 01-5XXXXXX</div>
+        <div class="ctcard-sub">
+          +977 980-XXXXXXX (WhatsApp)<br>
+          hello@Avis.com.np<br>
+          reservations@Avis.com.np
+        </div>
+      </div>
+      <div class="ctcard sr d3">
+        <div class="ctcard-icon">🌐</div>
+        <div class="ctcard-label">Social & Community</div>
+        <div class="ctcard-main">@Avis.cafe</div>
+        <div class="ctcard-sub">Follow us for daily specials, farm visits, behind-the-scenes moments, and upcoming workshops across Nepal.</div>
+        <div class="soc-row">
+          <a href="#" class="soc-btn" aria-label="Instagram">📷</a>
+          <a href="#" class="soc-btn" aria-label="Facebook">📘</a>
+          <a href="#" class="soc-btn" aria-label="TikTok">🎵</a>
+          <a href="#" class="soc-btn" aria-label="YouTube">▶️</a>
+          <a href="#" class="soc-btn" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="f-brand-name">Avi's</div>
+        <div class="f-brand-tag">Artisan Café · Jhamsikhel, Lalitpur</div>
+        <p class="f-brand-desc">Since 2016, we have dedicated ourselves to elevating Nepali coffee culture — one beautifully crafted cup at a time. From the highland farms of Gulmi to your hands in Jhamsikhel.</p>
+        <div class="f-newsletter">
+          <input type="email" placeholder="Your email address" aria-label="Subscribe to our newsletter">
+          <button type="button">Subscribe</button>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title">Visit</div>
+        <div class="f-links">
+          <a href="#story">Our Story</a>
+          <a href="#menu">Menu</a>
+          <a href="#experiences">Experiences</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#seasonal">Seasonal</a>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title">Services</div>
+        <div class="f-links">
+          <a href="#reservation">Reservations</a>
+          <a href="#">Coffee Workshops</a>
+          <a href="#">Private Events</a>
+          <a href="#">Bean Subscriptions</a>
+          <a href="#">Gift Cards</a>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title">Locations</div>
+        <div class="f-links">
+          <a href="#">Jhamsikhel, Lalitpur</a>
+          <a href="#">Patan Durbar Square</a>
+          <a href="#">Thamel, Kathmandu</a>
+          <a href="#">Lakeside, Pokhara</a>
+          <a href="#">Coming Soon: Biratnagar</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-copy">© 2024 Avi's Artisan Café. All rights reserved. Jhamsikhel, Lalitpur, Nepal.</span>
+      <span class="f-motto">Crafted with Passion. Served with Excellence.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="btt" id="btt" aria-label="Back to top">↑</button>
+
+<!-- TOAST -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- JS -->
+<script>
+(function(){
+'use strict';
+
+/* ── Cursor ── */
+const cdot = document.getElementById('cdot');
+const cring = document.getElementById('cring');
+let mx=window.innerWidth/2, my=window.innerHeight/2, rx=mx, ry=my;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+(function animCursor(){
+  cdot.style.left=mx+'px';cdot.style.top=my+'px';
+  rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;
+  cring.style.left=rx+'px';cring.style.top=ry+'px';
+  requestAnimationFrame(animCursor);
+})();
+// Scale ring on hoverable els
+document.querySelectorAll('a,button,.mcrd,.ecrd,.gal-item,.iitem').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cring.style.transform='translate(-50%,-50%) scale(1.8)';cring.style.borderColor='rgba(201,168,92,0.8)'});
+  el.addEventListener('mouseleave',()=>{cring.style.transform='translate(-50%,-50%) scale(1)';cring.style.borderColor='rgba(201,168,92,0.5)'});
+});
+
+/* ── Nav scroll ── */
+const nav = document.getElementById('nav');
+const btt = document.getElementById('btt');
+window.addEventListener('scroll',()=>{
+  const sy=window.scrollY;
+  nav.classList.toggle('solid',sy>80);
+  btt.classList.toggle('show',sy>500);
+  // active nav links
+  ['story','menu','experiences','gallery','reservation','contact'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(!el) return;
+    const r=el.getBoundingClientRect();
+    const a=document.querySelector(`.nav-menu a[href="#${id}"]`);
+    if(a) a.classList.toggle('act',r.top<=100&&r.bottom>=100);
+  });
+},{passive:true});
+
+/* ── Back to top ── */
+btt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+/* ── Smooth scroll ── */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();const top=t.getBoundingClientRect().top+window.scrollY-72;window.scrollTo({top,behavior:'smooth'});}
+  });
+});
+
+/* ── Mobile drawer ── */
+const ham=document.getElementById('ham');
+const drawer=document.getElementById('drawer');
+const dclose=document.getElementById('dclose');
+function openD(){drawer.classList.add('open');document.body.style.overflow='hidden';ham.setAttribute('aria-expanded','true');}
+function closeD(){drawer.classList.remove('open');document.body.style.overflow='';ham.setAttribute('aria-expanded','false');}
+ham.addEventListener('click',openD);
+dclose.addEventListener('click',closeD);
+drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeD));
+
+/* ── Hero parallax ── */
+const heroReel=document.getElementById('heroReel');
+window.addEventListener('scroll',()=>{
+  if(heroReel&&window.scrollY<window.innerHeight*1.2){
+    heroReel.style.transform=`translateY(${window.scrollY*0.3}px) scale(1.08)`;
+  }
+},{passive:true});
+
+/* ── Scroll reveal ── */
+const srEls=document.querySelectorAll('.sr,.sr-l,.sr-r');
+const srObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');srObs.unobserve(e.target);}});
+},{threshold:0.1});
+srEls.forEach(el=>srObs.observe(el));
+
+/* ── Animated counters ── */
+const counters=document.querySelectorAll('[data-count]');
+const countObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting) return;
+    const target=+e.target.dataset.count;
+    let cur=0;const dur=1800;const step=target/(dur/16);
+    const t=setInterval(()=>{
+      cur+=step;
+      if(cur>=target){cur=target;clearInterval(t);}
+      e.target.textContent=Math.floor(cur).toLocaleString()+(target>=1000?'+':'');
+    },16);
+    countObs.unobserve(e.target);
+  });
+},{threshold:0.5});
+counters.forEach(c=>countObs.observe(c));
+
+/* ── Gallery lightbox ── */
+const lbx=document.getElementById('lbx');
+const lbxImg=document.getElementById('lbxImg');
+const lbxX=document.getElementById('lbxX');
+document.querySelectorAll('.gal-item').forEach(item=>{
+  item.addEventListener('click',()=>{
+    lbxImg.src=item.dataset.src||item.querySelector('img')?.src||'';
+    lbxImg.alt=item.querySelector('img')?.alt||'';
+    lbx.classList.add('show');document.body.style.overflow='hidden';
+  });
+});
+function closeLbx(){lbx.classList.remove('show');document.body.style.overflow='';}
+lbxX.addEventListener('click',closeLbx);
+lbx.addEventListener('click',e=>{if(e.target===lbx)closeLbx();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLbx();});
+
+/* ── Testimonial slider ── */
+const track=document.getElementById('tTrack');
+const cards=track?[...track.querySelectorAll('.tcrd')]:[];
+const dotsWrap=document.getElementById('tDots');
+let cur=0, autoT;
+
+function getVis(){return window.innerWidth<768?1:window.innerWidth<1100?2:3;}
+
+function buildDots(){
+  dotsWrap.innerHTML='';
+  const total=Math.ceil(cards.length/getVis());
+  for(let i=0;i<total;i++){
+    const d=document.createElement('div');d.className='tdot'+(i===cur?' on':'');
+    d.addEventListener('click',()=>{goSlide(i);resetAuto();});
+    dotsWrap.appendChild(d);
+  }
+}
+
+function goSlide(idx){
+  const vis=getVis();
+  const max=Math.ceil(cards.length/vis)-1;
+  cur=Math.max(0,Math.min(idx,max));
+  const w=cards[0]?cards[0].offsetWidth+20:0;
+  track.style.transform=`translateX(-${cur*vis*w}px)`;
+  dotsWrap.querySelectorAll('.tdot').forEach((d,i)=>d.classList.toggle('on',i===cur));
+}
+
+function startAuto(){autoT=setInterval(()=>{const vis=getVis();const max=Math.ceil(cards.length/vis)-1;goSlide(cur>=max?0:cur+1);},5500);}
+function resetAuto(){clearInterval(autoT);startAuto();}
+
+document.getElementById('tPrev')?.addEventListener('click',()=>{goSlide(cur-1);resetAuto();});
+document.getElementById('tNext')?.addEventListener('click',()=>{goSlide(cur+1);resetAuto();});
+
+buildDots();startAuto();
+window.addEventListener('resize',()=>{buildDots();goSlide(cur);});
+
+/* ── Toast helper ── */
+const toast=document.getElementById('toast');
+function showToast(msg,dur=4000){
+  toast.textContent=msg;toast.classList.add('show');
+  setTimeout(()=>toast.classList.remove('show'),dur);
+}
+
+/* ── Reservation ── */
+document.getElementById('reserveBtn')?.addEventListener('click',()=>{
+  const name=document.getElementById('rname').value.trim();
+  const email=document.getElementById('remail').value.trim();
+  const date=document.getElementById('rdate').value;
+  if(!name){showToast('कृपया आफ्नो नाम लेख्नुहोस्।');return;}
+  if(!email){showToast('कृपया इमेल ठेगाना लेख्नुहोस्।');return;}
+  showToast(`धन्यवाद ${name}! आपको बुकिङ प्राप्त भयो। हामी शीघ्र सम्पर्क गर्नेछौं। 🙏`);
+});
+
+/* ── Newsletter ── */
+document.querySelector('.f-newsletter button')?.addEventListener('click',function(){
+  const inp=this.previousElementSibling;
+  if(!inp.value.trim()){showToast('कृपया इमेल ठेगाना लेख्नुहोस्।');return;}
+  showToast('सदस्यता लिनुभएकोमा धन्यवाद! 🙏');inp.value='';
+});
+
+})();
+</script>
+
+</body>
+</html>

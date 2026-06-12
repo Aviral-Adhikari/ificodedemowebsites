@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localify | Discover Nepal Through Local Eyes - Premium Travel & Adventure Agency</title>
+    
+    <!-- SEO Optimization -->
+    <meta name="description" content="Experience authentic Nepal with Localify. Premium Himalayan treks, Everest expeditions, cultural tours, and sustainable community-based adventures curated by local experts.">
+    <meta name="keywords" content="Nepal Travel, Everest Base Camp Trek, Annapurna Tour, Localify, Kathmandu Travel Agency, Sustainable Tourism Nepal, Pokhara Adventure">
+    <meta name="author" content="Localify Travels Pvt. Ltd.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.localify.com/">
+    <meta property="og:title" content="Localify | Discover Nepal Through Local Eyes">
+    <meta property="og:description" content="Premium Himalayan treks, cultural heritage tours, and authentic local experiences across Nepal. Licensed operator based in Thamel.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Structured Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Localify Travels Pvt. Ltd.",
+      "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
+      "@id": "https://www.localify.com",
+      "url": "https://www.localify.com",
+      "telephone": "+9779801234567",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Thamel Marg",
+        "addressLocality": "Kathmandu",
+        "postalCode": "44600",
+        "addressCountry": "NP"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      }
+    }
+    </script>
+
+    <style>
+        /* --- CSS SYSTEM VARIABLES --- */
+        :root {
+            --primary-himalayan: #0E4D92;
+            --primary-teal: #0F766E;
+            --primary-sky: #3B82F6;
+            --accent-sunrise: #F97316;
+            --accent-saffron: #FBBF24;
+            --neutral-white: #F8FAFC;
+            --neutral-mist: #E2E8F0;
+            --neutral-stone: #F1F5F9;
+            --text-slate: #1E293B;
+            --text-gray: #64748B;
+            --font-headings: 'Poppins', 'Montserrat', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 24px;
+            --shadow-premium: 0 20px 40px -15px rgba(30, 41, 59, 0.06);
+        }
+
+        /* --- BASE STYLES --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { 
+            font-family: var(--font-body); 
+            background-color: var(--neutral-white); 
+            color: var(--text-slate); 
+            line-height: 1.6; 
+            overflow-x: hidden; 
+        }
+        h1, h2, h3, h4 { font-family: var(--font-headings); font-weight: 700; color: var(--text-slate); }
+        a { text-decoration: none; color: inherit; transition: var(--transition-smooth); }
+        ul { list-style: none; }
+        img { width: 100%; height: 100%; display: block; object-fit: cover; }
+        
+        button, .btn { 
+            cursor: pointer; 
+            border: none; 
+            outline: none; 
+            font-family: var(--font-headings); 
+            font-weight: 600; 
+            border-radius: 30px; 
+            transition: var(--transition-smooth); 
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 0.9rem;
+        }
+
+        /* --- GLOBAL LAYOUT COMPONENT CLASSES --- */
+        .section-padding { padding: 100px 10% 100px 10%; }
+        @media (max-width: 1200px) { .section-padding { padding: 80px 5%; } }
+        
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 55px auto; }
+        .section-header .tag { 
+            color: var(--primary-sky); 
+            text-transform: uppercase; 
+            font-weight: 700; 
+            letter-spacing: 1.5px; 
+            font-size: 0.8rem; 
+            display: inline-block; 
+            margin-bottom: 10px; 
+        }
+        .section-header h2 { font-size: 2.3rem; font-family: 'Montserrat', sans-serif; color: var(--text-slate); letter-spacing: -0.5px; }
+        
+        .btn-primary { background: var(--primary-himalayan); color: white; padding: 13px 28px; box-shadow: 0 10px 20px rgba(14, 77, 146, 0.15); }
+        .btn-primary:hover { background: #0b3d75; transform: translateY(-2px); }
+        .btn-accent { background: var(--accent-sunrise); color: white; padding: 13px 28px; box-shadow: 0 10px 20px rgba(249, 115, 22, 0.15); }
+        .btn-accent:hover { background: #e0630d; transform: translateY(-2px); }
+        .btn-outline { background: transparent; border: 2px solid white; color: white; padding: 11px 26px; }
+        .btn-outline:hover { background: white; color: var(--text-slate); }
+
+        /* Dynamic On-Scroll Animation Interceptor */
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* --- TRANSPARENT STICKY HEADER --- */
+        header {
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+            transition: var(--transition-smooth); padding: 25px 10%;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        header.sticky { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); padding: 14px 10%; box-shadow: 0 4px 30px rgba(0,0,0,0.02); }
+        
+        .logo { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.6rem; color: white; display: flex; align-items: center; gap: 4px; }
+        .logo span { color: var(--accent-sunrise); }
+        header.sticky .logo { color: var(--text-slate); }
+
+        nav ul { display: flex; gap: 30px; align-items: center; }
+        nav ul a { color: rgba(255, 255, 255, 0.9); font-weight: 500; font-size: 0.9rem; position: relative; padding: 5px 0; }
+        nav ul a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--accent-sunrise); transition: var(--transition-smooth); }
+        nav ul a:hover::after, nav ul a.active::after { width: 100%; }
+        nav ul a:hover, nav ul a.active { color: white; }
+        header.sticky nav ul a { color: var(--text-slate); }
+        header.sticky nav ul a:hover, header.sticky nav ul a.active { color: var(--primary-himalayan); }
+
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; width: 28px; }
+        .hamburger span { width: 100%; height: 2.5px; background: white; transition: var(--transition-smooth); border-radius: 2px; }
+        header.sticky .hamburger span { background: var(--text-slate); }
+
+        @media (max-width: 1024px) {
+            header, header.sticky { padding: 20px 5%; }
+            .hamburger { display: flex; z-index: 1001; }
+            .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+            .hamburger.open span:nth-child(2) { opacity: 0; }
+            .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+            nav {
+                position: fixed; top: 0; right: -100%; width: 280px; height: 100vh;
+                background: white; padding: 100px 30px; box-shadow: -10px 0 40px rgba(0,0,0,0.05);
+                transition: var(--transition-smooth);
+            }
+            nav.open { right: 0; }
+            nav ul { flex-direction: column; align-items: flex-start; gap: 20px; }
+            nav ul a { color: var(--text-slate) !important; font-size: 1rem; }
+            .nav-right .btn { display: none; }
+        }
+
+        /* --- CINEMATIC HERO LAYER --- */
+        .hero {
+            height: 100vh; width: 100%; position: relative;
+            background: linear-gradient(rgba(15, 23, 42, 0.25), rgba(15, 23, 42, 0.65)), 
+                        url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1920&q=90') no-repeat center center/cover;
+            display: flex; align-items: center; padding: 0 10%; color: white;
+        }
+        .hero-content { max-width: 750px; z-index: 10; animation: fadeInUp 1s ease; }
+        .hero-content .tag { color: var(--accent-saffron); text-transform: uppercase; font-weight: 700; letter-spacing: 2px; font-size: 0.85rem; margin-bottom: 12px; display: inline-block;}
+        .hero h1 { font-size: 3.8rem; font-family: 'Montserrat', sans-serif; line-height: 1.15; margin-bottom: 20px; color: white; letter-spacing: -1px; }
+        .hero h1 span { color: var(--accent-sunrise); }
+        .hero p { font-size: 1.15rem; margin-bottom: 35px; color: rgba(248, 250, 252, 0.9); font-weight: 300; max-width: 600px; }
+        .hero-btns { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 50px; }
+        
+        .hero-trust { display: flex; gap: 35px; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 25px; }
+        .trust-item { display: flex; align-items: center; gap: 8px; font-weight: 500; font-size: 0.9rem; color: rgba(255, 255, 255, 0.85); }
+        .trust-item span { color: var(--accent-saffron); font-size: 1.1rem; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.4rem; }
+            .hero p { font-size: 1rem; }
+            .hero-trust { gap: 15px; }
+        }
+
+        /* --- DESTINATIONS LAYOUT GRID --- */
+        .destinations-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .dest-card {
+            position: relative; height: 380px; border-radius: var(--radius-sm); overflow: hidden;
+            box-shadow: var(--shadow-premium); cursor: pointer; background: #000;
+        }
+        .dest-img { width: 100%; height: 100%; transition: var(--transition-smooth); opacity: 0.9; }
+        .dest-card:hover .dest-img { transform: scale(1.05); opacity: 0.75; }
+        .dest-overlay {
+            position: absolute; bottom: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.4) 50%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 25px; color: white;
+            transition: var(--transition-smooth);
+        }
+        .dest-overlay h3 { color: white; font-size: 1.4rem; margin-bottom: 6px; font-family: 'Poppins', sans-serif;}
+        .dest-overlay p { font-size: 0.85rem; color: rgba(255, 255, 255, 0.8); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .dest-meta { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px; }
+        .dest-meta span { font-size: 0.8rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; color: var(--accent-saffron); }
+        .dest-btn { font-size: 0.85rem; color: white; font-weight: 600; background: rgba(255,255,255,0.15); padding: 4px 12px; border-radius: 20px; }
+        .dest-card:hover .dest-btn { background: var(--accent-sunrise); }
+
+        @media (max-width: 992px) { .destinations-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .destinations-grid { grid-template-columns: 1fr; } }
+
+        /* --- ASYMMETRIC ABOUT MODULE --- */
+        .about-bg { background-color: var(--neutral-stone); }
+        .about-container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-left-image-wrap { position: relative; padding-right: 30px; padding-bottom: 30px; }
+        .about-main-img { border-radius: var(--radius-md); box-shadow: var(--shadow-premium); height: 440px; }
+        .about-floating-card {
+            position: absolute; bottom: 0; right: 0; background: white; padding: 20px;
+            border-radius: var(--radius-sm); box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            max-width: 240px; border-left: 4px solid var(--accent-sunrise);
+        }
+        .about-floating-card h4 { font-size: 1rem; margin-bottom: 4px; color: var(--primary-himalayan); }
+        .about-floating-card p { font-size: 0.8rem; color: var(--text-gray); margin: 0; }
+
+        .about-right h2 { font-size: 2.4rem; margin-bottom: 18px; line-height: 1.2; font-family: 'Montserrat', sans-serif;}
+        .about-right .desc { color: var(--text-gray); margin-bottom: 30px; font-size: 1rem; }
+        .about-stats-matrix { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .stat-card { background: white; padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--neutral-mist); }
+        .stat-card h3 { font-size: 2.2rem; color: var(--primary-teal); font-family: 'Montserrat', sans-serif; margin-bottom: 2px; }
+        .stat-card p { font-size: 0.85rem; color: var(--text-slate); font-weight: 600; }
+
+        @media (max-width: 992px) {
+            .about-container { grid-template-columns: 1fr; gap: 40px; }
+            .about-left-image-wrap { padding: 0; order: 2; }
+            .about-main-img { height: 320px; }
+            .about-right { order: 1; }
+        }
+
+        /* --- TOUR CARD PACKAGES LAYER --- */
+        .tours-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .tour-card {
+            background: white; border-radius: var(--radius-sm); overflow: hidden;
+            box-shadow: var(--shadow-premium); border: 1px solid var(--neutral-mist);
+            transition: var(--transition-smooth);
+        }
+        .tour-card:hover { transform: translateY(-6px); box-shadow: 0 25px 50px -15px rgba(30, 41, 59, 0.12); }
+        .tour-img-wrap { position: relative; height: 220px; }
+        .tour-badge {
+            position: absolute; top: 12px; left: 12px; background: var(--primary-teal);
+            color: white; padding: 3px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .tour-difficulty {
+            position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.7);
+            color: white; padding: 3px 10px; border-radius: 4px; font-size: 0.75rem; backdrop-filter: blur(4px);
+        }
+        .tour-content { padding: 22px; }
+        .tour-duration { font-size: 0.8rem; color: var(--primary-sky); font-weight: 600; text-transform: uppercase; margin-bottom: 6px; display: block; }
+        .tour-content h3 { font-size: 1.2rem; margin-bottom: 8px; line-height: 1.35; color: var(--text-slate); }
+        .tour-desc { color: var(--text-gray); font-size: 0.88rem; margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .tour-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--neutral-stone); padding-top: 16px; }
+        .tour-price span { font-size: 0.75rem; color: var(--text-gray); display: block; }
+        .tour-price strong { font-size: 1.3rem; color: var(--text-slate); font-family: 'Montserrat', sans-serif; }
+        .tour-footer .btn { padding: 8px 18px; font-size: 0.8rem; border-radius: 4px; }
+
+        @media (max-width: 992px) { .tours-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 650px) { .tours-grid { grid-template-columns: 1fr; } }
+
+        /* --- WHY TRAVEL GRID OVER HIGH MOUNTAIN GRADIENT --- */
+        .why-bg { 
+            background: linear-gradient(135deg, #0b2240 0%, #0c3a6b 50%, #0f548a 100%); 
+            color: white; 
+        }
+        .why-bg h2 { color: white; }
+        .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .why-card {
+            background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 30px 22px; border-radius: var(--radius-sm); transition: var(--transition-smooth);
+        }
+        .why-card:hover { background: rgba(255, 255, 255, 0.08); transform: translateY(-3px); }
+        .why-icon {
+            font-size: 1.6rem; color: var(--accent-saffron); margin-bottom: 16px;
+            background: rgba(255, 255, 255, 0.06); width: 45px; height: 45px; display: flex;
+            align-items: center; justify-content: center; border-radius: 8px;
+        }
+        .why-card h3 { color: white; font-size: 1.15rem; margin-bottom: 8px; }
+        .why-card p { color: rgba(248, 250, 252, 0.7); font-size: 0.85rem; line-height: 1.5; }
+
+        @media (max-width: 1024px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 550px) { .why-grid { grid-template-columns: 1fr; } }
+
+        /* --- EXPERIENCES BLOCK MODES --- */
+        .exp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .exp-card {
+            position: relative; height: 260px; border-radius: var(--radius-sm); overflow: hidden;
+            box-shadow: var(--shadow-premium); cursor: pointer; background: #000;
+        }
+        .exp-card img { width: 100%; height: 100%; transition: var(--transition-smooth); opacity: 0.85; }
+        .exp-card:hover img { transform: scale(1.04); opacity: 0.65; }
+        .exp-content-box {
+            position: absolute; bottom: 0; left: 0; width: 100%; height: 100%;
+            padding: 24px; display: flex; flex-direction: column; justify-content: flex-end;
+            background: linear-gradient(transparent 30%, rgba(15, 23, 42, 0.95) 100%);
+            color: white;
+        }
+        .exp-content-box h3 { color: white; font-size: 1.2rem; margin-bottom: 6px; }
+        .exp-content-box p { font-size: 0.82rem; color: rgba(255,255,255,0.75); line-height: 1.4; }
+
+        @media (max-width: 992px) { .exp-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .exp-grid { grid-template-columns: 1fr; } }
+
+        /* --- CAROUSEL STRUCTURE --- */
+        .testimonial-bg { background: var(--neutral-stone); }
+        .testimonial-container { max-width: 750px; margin: 0 auto; position: relative; overflow: hidden; }
+        .testimonial-slider { display: flex; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        .testimonial-slide { min-width: 100%; text-align: center; padding: 10px 30px; }
+        .stars { color: var(--accent-saffron); font-size: 1.2rem; margin-bottom: 14px; }
+        .review-text { font-size: 1.25rem; font-style: italic; font-weight: 400; line-height: 1.6; color: var(--text-slate); margin-bottom: 24px; }
+        .traveler-profile { display: flex; align-items: center; justify-content: center; gap: 12px; }
+        .traveler-img { width: 52px; height: 52px; border-radius: 50%; border: 2px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .traveler-info h4 { font-size: 0.95rem; text-align: left; color: var(--text-slate); }
+        .traveler-info p { font-size: 0.8rem; color: var(--text-gray); text-align: left; }
+        
+        .slider-dots { display: flex; justify-content: center; gap: 8px; margin-top: 25px; }
+        .dot { width: 8px; height: 8px; background: var(--neutral-mist); border-radius: 50%; cursor: pointer; transition: var(--transition-smooth); }
+        .dot.active { background: var(--primary-himalayan); width: 20px; border-radius: 4px; }
+
+        /* --- GALLERY ASYMMETRIC GRID --- */
+        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 140px; gap: 14px; }
+        .gallery-item { position: relative; border-radius: var(--radius-sm); overflow: hidden; cursor: pointer; box-shadow: var(--shadow-premium); }
+        .gallery-item img { width: 100%; height: 100%; transition: var(--transition-smooth); }
+        .gallery-item:hover img { transform: scale(1.04); }
+        .gallery-hover { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(14, 77, 146, 0.35); display: flex; align-items: center; justify-content: center; color: white; opacity: 0; transition: var(--transition-smooth); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.5px; }
+        .gallery-item:hover .gallery-hover { opacity: 1; }
+        
+        /* Grid Span Variations to create an asymmetric dynamic layout */
+        .gi-1 { grid-column: span 2; grid-row: span 2; }
+        .gi-2 { grid-column: span 1; grid-row: span 1; }
+        .gi-3 { grid-column: span 1; grid-row: span 2; }
+        .gi-4 { grid-column: span 1; grid-row: span 1; }
+        .gi-5 { grid-column: span 2; grid-row: span 1; }
+        .gi-6 { grid-column: span 1; grid-row: span 1; }
+
+        @media (max-width: 768px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 120px; }
+            .gi-1, .gi-3, .gi-5 { grid-column: span 2; grid-row: span 1; }
+            .gi-2, .gi-4, .gi-6 { grid-column: span 1; grid-row: span 1; }
+        }
+
+        /* Lightbox Layout Overlay */
+        .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.96); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 30px; }
+        .lightbox img { max-width: 90%; max-height: 80vh; border-radius: 4px; object-fit: contain; }
+        .lightbox-close { position: absolute; top: 25px; right: 35px; color: white; font-size: 2.2rem; cursor: pointer; }
+
+        /* --- JOURNAL/BLOG CARDS --- */
+        .blog-bg { background: var(--neutral-stone); }
+        .blog-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .blog-card { background: white; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--neutral-mist); box-shadow: var(--shadow-premium); }
+        .blog-img-wrap { height: 160px; }
+        .blog-content { padding: 18px; }
+        .blog-meta { font-size: 0.75rem; color: var(--text-gray); margin-bottom: 6px; font-weight: 500; }
+        .blog-content h3 { font-size: 1rem; line-height: 1.4; margin-bottom: 12px; color: var(--text-slate); }
+        .blog-link { font-size: 0.82rem; color: var(--primary-teal); font-weight: 600; display: inline-flex; align-items: center; gap: 4px; }
+        .blog-link:hover { color: var(--primary-himalayan); }
+
+        @media (max-width: 1024px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .blog-grid { grid-template-columns: 1fr; } }
+
+        /* --- BOOKING MODULE SPLIT --- */
+        .booking-bg { 
+            background: linear-gradient(rgba(14, 77, 146, 0.9), rgba(30, 41, 59, 0.95)), 
+                        url('https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+            color: white;
+        }
+        .booking-container { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; }
+        .booking-info h2 { font-size: 2.4rem; margin-bottom: 16px; color: white; font-family: 'Montserrat', sans-serif;}
+        .booking-info p { color: rgba(255, 255, 255, 0.8); margin-bottom: 30px; font-size: 0.95rem; }
+        .booking-trust-list { display: flex; flex-direction: column; gap: 14px; }
+        .booking-trust-card { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.06); padding: 16px; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.1); }
+        .booking-trust-card h4 { font-size: 0.95rem; color: white; margin-bottom: 2px; }
+        .booking-trust-card p { font-size: 0.8rem; color: rgba(255,255,255,0.7); margin: 0; }
+
+        .booking-form-wrap { background: white; padding: 35px; border-radius: var(--radius-md); box-shadow: 0 20px 50px rgba(0,0,0,0.15); color: var(--text-slate); }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .full-width { grid-column: span 2; }
+        .form-group { display: flex; flex-direction: column; gap: 5px; }
+        .form-group label { font-size: 0.75rem; font-weight: 600; color: var(--text-slate); text-transform: uppercase; letter-spacing: 0.5px; }
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 11px 14px; border: 1px solid var(--neutral-mist); border-radius: 6px; font-family: var(--font-body); font-size: 0.9rem;
+            color: var(--text-slate); background: var(--neutral-white); transition: var(--transition-smooth);
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--primary-sky); outline: none; background: white; }
+        .booking-form-wrap .btn { width: 100%; margin-top: 10px; padding: 13px; border-radius: 6px; font-size: 0.95rem; }
+
+        .notification { position: fixed; bottom: 30px; right: 30px; background: #10B981; color: white; padding: 14px 24px; border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: none; z-index: 2500; font-weight: 600; font-size: 0.9rem; }
+
+        @media (max-width: 992px) {
+            .booking-container { grid-template-columns: 1fr; gap: 40px; }
+            .form-grid { grid-template-columns: 1fr; }
+            .full-width { grid-column: span 1; }
+        }
+
+        /* --- CONTACT CARDS CONFIGURATION --- */
+        .contact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+        .contact-block-card { background: white; border: 1px solid var(--neutral-mist); padding: 30px 20px; border-radius: var(--radius-sm); box-shadow: var(--shadow-premium); }
+        .cb-icon { font-size: 1.8rem; margin-bottom: 12px; display: block; color: var(--primary-sky); }
+        .contact-block-card h4 { font-size: 1rem; margin-bottom: 6px; color: var(--text-slate); }
+        .contact-block-card p, .contact-block-card a { font-size: 0.85rem; color: var(--text-gray); }
+
+        @media (max-width: 992px) { .contact-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 500px) { .contact-grid { grid-template-columns: 1fr; } }
+
+        /* --- ACCORDION INTERFACES --- */
+        .faq-bg { background: var(--neutral-stone); }
+        .faq-container { max-width: 750px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background: white; border: 1px solid var(--neutral-mist); border-radius: 6px; overflow: hidden; }
+        .faq-trigger { padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; font-weight: 600; font-size: 1rem; }
+        .faq-icon { font-size: 1.1rem; transition: var(--transition-smooth); color: var(--primary-teal); }
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1); background: var(--neutral-white); }
+        .faq-content p { padding: 20px 24px; color: var(--text-gray); font-size: 0.88rem; border-top: 1px solid var(--neutral-mist); }
+        .faq-item.open { border-color: var(--primary-sky); }
+        .faq-item.open .faq-icon { transform: rotate(45deg); color: var(--accent-sunrise); }
+
+        /* --- STYLISH FOOTER LAYOUT --- */
+        footer { background: #08121e; color: rgba(255, 255, 255, 0.65); padding: 75px 10% 25px 10%; font-size: 0.88rem; border-top: 1px solid rgba(255,255,255,0.04); }
+        .footer-grid { display: grid; grid-template-columns: 1.3fr 0.8fr 0.8fr 1.1fr; gap: 40px; margin-bottom: 50px; }
+        .footer-col h4 { color: white; font-size: 1rem; margin-bottom: 20px; position: relative; padding-bottom: 8px; }
+        .footer-col h4::after { content: ''; position: absolute; bottom: 0; left: 0; width: 30px; height: 2px; background: var(--accent-sunrise); }
+        .footer-col p { margin-bottom: 15px; line-height: 1.5; }
+        .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+        .footer-col ul a:hover { color: white; padding-left: 4px; }
+        
+        .newsletter-form { display: flex; gap: 8px; margin-top: 15px; }
+        .newsletter-form input { padding: 10px 14px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.04); color: white; outline: none; font-size: 0.85rem; flex: 1; }
+        .newsletter-form .btn { border-radius: 4px; padding: 10px 16px; font-size: 0.82rem; }
+        
+        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 25px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+        .footer-bottom-links { display: flex; gap: 20px; }
+
+        @media (max-width: 1024px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; text-align: center; } }
+
+        /* --- BACK TO TOP --- */
+        .back-to-top { position: fixed; bottom: 25px; left: 25px; width: 44px; height: 44px; background: var(--primary-himalayan); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1); visibility: hidden; opacity: 0; transform: translateY(8px); transition: var(--transition-smooth); z-index: 999; }
+        .back-to-top.show { visibility: visible; opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <!-- UI State Components -->
+    <div class="notification" id="successNotify">Booking Request Submitted! Our native destination desk will connect shortly.</div>
+    <div class="back-to-top" id="backToTop">↑</div>
+
+    <!-- Image Lightbox Container -->
+    <div class="lightbox" id="galleryLightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img id="lightboxImg" src="" alt="Enlarged view">
+    </div>
+
+    <!-- --- TRANSPARENT STICKY NAVIGATION HEADER --- -->
+    <header id="mainHeader">
+        <a href="#" class="logo">Localify<span>.</span></a>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#destinations" class="nav-link">Destinations</a></li>
+                <li><a href="#tours" class="nav-link">Tours</a></li>
+                <li><a href="#experiences" class="nav-link">Experiences</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a href="#booking" class="btn btn-accent">Book Your Adventure</a>
+            <div class="hamburger" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- --- HERO VIEW SECTION --- -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="tag">Authentic Himalayan Expeditions</span>
+            <h1>Explore The <span>Heart</span><br>Of Nepal</h1>
+            <p>From Himalayan adventures to hidden cultural gems, Localify helps you experience Nepal like a local.</p>
+            <div class="hero-btns">
+                <a href="#tours" class="btn btn-primary">Explore Tours</a>
+                <a href="#booking" class="btn btn-outline">Plan Your Trip</a>
+            </div>
+            <div class="hero-trust">
+                <div class="trust-item"><span>✓</span> 5000+ Happy Travelers</div>
+                <div class="trust-item"><span>✓</span> 200+ Local Experiences</div>
+                <div class="trust-item"><span>✓</span> Licensed Nepal Tour Operator</div>
+                <div class="trust-item"><span>✓</span> 4.9 Star Reviews</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- FEATURED DESTINATIONS --- -->
+    <section class="section-padding reveal" id="destinations">
+        <div class="section-header">
+            <span class="tag">Explore Regions</span>
+            <h2>Featured Destinations</h2>
+        </div>
+        <div class="destinations-grid">
+            <!-- Kathmandu -->
+            <div class="dest-card">
+                <img class="dest-img" src="https://images.unsplash.com/photo-1582650625119-3a31f8fa2699?auto=format&fit=crop&w=600&q=80" alt="Kathmandu Overview">
+                <div class="dest-overlay">
+                    <h3>Kathmandu</h3>
+                    <p>Ancient brick brickwork architecture and historic square shrines.</p>
+                    <div class="dest-meta">
+                        <span>34 Tours</span>
+                        <span class="dest-btn">Explore</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Pokhara -->
+            <div class="dest-card">
+                <img class="dest-img" src="https://images.unsplash.com/photo-1486911278844-a81c5267e227?auto=format&fit=crop&w=600&q=80" alt="Pokhara Valley">
+                <div class="dest-overlay">
+                    <h3>Pokhara</h3>
+                    <p>Glacial blue lakes mirroring the massive white Annapurna walls perfectly.</p>
+                    <div class="dest-meta">
+                        <span>28 Tours</span>
+                        <span class="dest-btn">Explore</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Chitwan -->
+            <div class="dest-card">
+                <img class="dest-img" src="https://images.unsplash.com/photo-1578326457399-3b34dbbf23b8?auto=format&fit=crop&w=600&q=80" alt="Chitwan National Park">
+                <div class="dest-overlay">
+                    <h3>Chitwan</h3>
+                    <p>Subtropical lowlands tracking the rare armor-plated rhinos and wild elephants.</p>
+                    <div class="dest-meta">
+                        <span>14 Tours</span>
+                        <span class="dest-btn">Explore</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Lumbini -->
+            <div class="dest-card">
+                <img class="dest-img" src="https://images.unsplash.com/photo-1596120206141-c425a1d477e1?auto=format&fit=crop&w=600&q=80" alt="Lumbini Circuit">
+                <div class="dest-overlay">
+                    <h3>Lumbini</h3>
+                    <p>Sacred monastic grounds preserving the timeless birthplace coordinates of Buddha.</p>
+                    <div class="dest-meta">
+                        <span>8 Tours</span>
+                        <span class="dest-btn">Explore</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Mustang -->
+            <div class="dest-card">
+                <img class="dest-img" src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=600&q=80" alt="Upper Mustang Wilderness">
+                <div class="dest-overlay">
+                    <h3>Mustang</h3>
+                    <p>Wind-sculpted stone cliffs sheltering ancient sky caves and walled cities.</p>
+                    <div class="dest-meta">
+                        <span>11 Tours</span>
+                        <span class="dest-btn">Explore</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Everest Region -->
+            <div class="dest-card">
+                <img class="dest-img" src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80" alt="Everest Region Base Track">
+                <div class="dest-overlay">
+                    <h3>Everest Region</h3>
+                    <p>The iconic gateway to high alpine tracking along the roof of our world.</p>
+                    <div class="dest-meta">
+                        <span>42 Tours</span>
+                        <span class="dest-btn">Explore</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- ASYMMETRIC ABOUT MODULE --- -->
+    <section class="section-padding about-bg reveal" id="about">
+        <div class="about-container">
+            <div class="about-left-image-wrap">
+                <div class="about-main-img">
+                    <img src="https://images.unsplash.com/photo-1582650625119-3a31f8fa2699?auto=format&fit=crop&w=700&q=80" style="border-radius:14px;" alt="Kathmandu Stupa View">
+                </div>
+                <div class="about-floating-card">
+                    <h4>Community Supported</h4>
+                    <p>Every booking channels directly into indigenous family school structures.</p>
+                </div>
+            </div>
+            <div class="about-right">
+                <span class="tag">About Localify</span>
+                <h2>Travel Beyond The Tourist Trail</h2>
+                <p class="desc">We believe standard sightseeing misses the soul of the terrain. Localify pairs modern luxury standards with rugged local expertise to expose the true pulse of Nepalese cultures, keeping sustainability at the absolute core of operations.</p>
+                
+                <div class="about-stats-matrix" id="counterSection">
+                    <div class="stat-card">
+                        <h3 class="counter" data-target="10">0</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="counter" data-target="5000">0</h3>
+                        <p>Happy Travelers</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="counter" data-target="200">0</h3>
+                        <p>Guided Tours</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="counter" data-target="98">0</h3>
+                        <p>Satisfaction Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- POPULAR TOUR PACKAGES --- -->
+    <section class="section-padding reveal" id="tours">
+        <div class="section-header">
+            <span class="tag">Curated Itineraries</span>
+            <h2>Popular Tour Packages</h2>
+        </div>
+        <div class="tours-grid">
+            <!-- Package 1 -->
+            <div class="tour-card">
+                <div class="tour-img-wrap">
+                    <span class="tour-badge">Best Seller</span>
+                    <span class="tour-difficulty">Hard</span>
+                    <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=500&q=80" alt="Everest Base Camp Trek">
+                </div>
+                <div class="tour-content">
+                    <span class="tour-duration">14 Days</span>
+                    <h3>Everest Base Camp Trek</h3>
+                    <p>Ascend into the legendary Sagarmatha National Park alongside Sherpa mountaineers.</p>
+                    <div class="tour-footer">
+                        <div class="tour-price"><span>Per Person</span><strong>$1,490</strong></div>
+                        <a href="#booking" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Package 2 -->
+            <div class="tour-card">
+                <div class="tour-img-wrap">
+                    <span class="tour-difficulty">Moderate</span>
+                    <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=500&q=80" alt="Annapurna Base Camp Trek">
+                </div>
+                <div class="tour-content">
+                    <span class="tour-duration">10 Days</span>
+                    <h3>Annapurna Base Camp Trek</h3>
+                    <p>Trek through dense rhododendron ecosystems into a sheer mountain amphitheater.</p>
+                    <div class="tour-footer">
+                        <div class="tour-price"><span>Per Person</span><strong>$1,120</strong></div>
+                        <a href="#booking" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Package 3 -->
+            <div class="tour-card">
+                <div class="tour-img-wrap">
+                    <span class="tour-difficulty">Easy</span>
+                    <img src="https://images.unsplash.com/photo-1582650625119-3a31f8fa2699?auto=format&fit=crop&w=500&q=80" alt="Kathmandu Heritage Tour">
+                </div>
+                <div class="tour-content">
+                    <span class="tour-duration">2 Days</span>
+                    <h3>Kathmandu Heritage Tour</h3>
+                    <p>Navigate complex pagoda clusters, palace architecture, and live artisan workshops.</p>
+                    <div class="tour-footer">
+                        <div class="tour-price"><span>Per Person</span><strong>$250</strong></div>
+                        <a href="#booking" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Package 4 -->
+            <div class="tour-card">
+                <div class="tour-img-wrap">
+                    <span class="tour-difficulty">Easy</span>
+                    <img src="https://images.unsplash.com/photo-1578326457399-3b34dbbf23b8?auto=format&fit=crop&w=500&q=80" alt="Chitwan Jungle Safari">
+                </div>
+                <div class="tour-content">
+                    <span class="tour-duration">3 Days</span>
+                    <h3>Chitwan Jungle Safari</h3>
+                    <p>Track rare wildlife on structured four-wheel canopy drives inside deep woodlands.</p>
+                    <div class="tour-footer">
+                        <div class="tour-price"><span>Per Person</span><strong>$380</strong></div>
+                        <a href="#booking" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Package 5 -->
+            <div class="tour-card">
+                <div class="tour-img-wrap">
+                    <span class="tour-difficulty">Easy</span>
+                    <img src="https://images.unsplash.com/photo-1486911278844-a81c5267e227?auto=format&fit=crop&w=500&q=80" alt="Pokhara Adventure Escape">
+                </div>
+                <div class="tour-content">
+                    <span class="tour-duration">4 Days</span>
+                    <h3>Pokhara Adventure Escape</h3>
+                    <p>Boat across glassy lake waters or paraglide directly beneath snowy mountain walls.</p>
+                    <div class="tour-footer">
+                        <div class="tour-price"><span>Per Person</span><strong>$420</strong></div>
+                        <a href="#booking" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Package 6 -->
+            <div class="tour-card">
+                <div class="tour-img-wrap">
+                    <span class="tour-badge">Luxury</span>
+                    <span class="tour-difficulty">Hard</span>
+                    <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=500&q=80" alt="Upper Mustang Expedition">
+                </div>
+                <div class="tour-content">
+                    <span class="tour-duration">12 Days</span>
+                    <h3>Upper Mustang Expedition</h3>
+                    <p>Bespoke jeep logistics across ancient wind-eroded kingdoms and remote high passes.</p>
+                    <div class="tour-footer">
+                        <div class="tour-price"><span>Per Person</span><strong>$2,750</strong></div>
+                        <a href="#booking" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- WHY TRAVEL WITH US --- -->
+    <section class="section-padding why-bg reveal">
+        <div class="section-header">
+            <span class="tag" style="color:var(--accent-saffron);">Why Choose Us</span>
+            <h2>Why Travel With Localify</h2>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon">🧑‍✈️</div>
+                <h3>Local Expert Guides</h3>
+                <p>Native tracking experts equipped with deep historical knowledge and safety certifications.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">⚙️</div>
+                <h3>Customized Itineraries</h3>
+                <p>Perfect flexible pacing configurations matching your explicit fitness or accommodation levels.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">🌱</div>
+                <h3>Sustainable Tourism</h3>
+                <p>Ensuring operational funds cycle directly into village clinics and school networks.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">💵</div>
+                <h3>Transparent Pricing</h3>
+                <p>No hidden fees, surprise mountain park taxes, or operational service markups.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">🚑</div>
+                <h3>24/7 Operations Support</h3>
+                <p>Continuous satellite monitoring ensures immediate evacuation protocols if required.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">🛡️</div>
+                <h3>Safe & Reliable Service</h3>
+                <p>Fully accredited with the Ministry of Tourism & Civil Aviation of Nepal.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- UNIQUE EXPERIENCES SHOWCASE --- -->
+    <section class="section-padding reveal" id="experiences">
+        <div class="section-header">
+            <span class="tag">Immersive Experiences</span>
+            <h2>Unique Local Experiences</h2>
+        </div>
+        <div class="exp-grid">
+            <!-- Exp 1 -->
+            <div class="exp-card">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80" alt="Village Homestay">
+                <div class="exp-content-box">
+                    <h3>Village Homestays</h3>
+                    <p>Live with Gurung families in mountain stone cottages.</p>
+                </div>
+            </div>
+            <!-- Exp 2 -->
+            <div class="exp-card">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=400&q=80" alt="Mountain Trekking">
+                <div class="exp-content-box">
+                    <h3>Mountain Trekking</h3>
+                    <p>Traverse crisp high-altitude alpine routes securely.</p>
+                </div>
+            </div>
+            <!-- Exp 3 -->
+            <div class="exp-card">
+                <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=400&q=80" alt="Helicopter Tours">
+                <div class="exp-content-box">
+                    <h3>Helicopter Tours</h3>
+                    <p>Fly over high ice fields for direct mountain views.</p>
+                </div>
+            </div>
+            <!-- Exp 4 -->
+            <div class="exp-card">
+                <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=400&q=80" alt="Wildlife Safaris">
+                <div class="exp-content-box">
+                    <h3>Wildlife Safaris</h3>
+                    <p>Encounter rare rhinos in deep jungle preserves.</p>
+                </div>
+            </div>
+            <!-- Exp 5 -->
+            <div class="exp-card">
+                <img src="https://images.unsplash.com/photo-1605001011156-cbf0b0f67a51?auto=format&fit=crop&w=400&q=80" alt="Cultural Festivals">
+                <div class="exp-content-box">
+                    <h3>Cultural Festivals</h3>
+                    <p>Witness complex ancient sacred dances firsthand.</p>
+                </div>
+            </div>
+            <!-- Exp 6 -->
+            <div class="exp-card">
+                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=400&q=80" alt="Food Walks">
+                <div class="exp-content-box">
+                    <h3>Food & Heritage Walks</h3>
+                    <p>Sample authentic momos and street foods in historic squares.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- TRAVELER TESTIMONIALS --- -->
+    <section class="section-padding testimonial-bg reveal" id="reviews">
+        <div class="section-header">
+            <span class="tag">Testimonials</span>
+            <h2>What Our Travelers Say</h2>
+        </div>
+        <div class="testimonial-container">
+            <div class="testimonial-slider" id="testimonialSlider">
+                <div class="testimonial-slide">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Localify gave us the most authentic and memorable experience of Nepal. From mountain hospitality to the vast technical knowledge of our track leader, everything was flawless."</p>
+                    <div class="traveler-profile">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" class="traveler-img" alt="Guest David">
+                        <div class="traveler-info">
+                            <h4>David Larsson</h4>
+                            <p>Stockholm, Sweden</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Our custom family journey to Upper Mustang was beautifully arranged. Impeccable accommodation standards out in incredibly remote, rugged terrain."</p>
+                    <div class="traveler-profile">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80" class="traveler-img" alt="Guest Sarah">
+                        <div class="traveler-info">
+                            <h4>Sarah Jenkins</h4>
+                            <p>Austin, USA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+    </section>
+
+    <!-- --- TRAVEL ASYMMETRIC MASONRY GALLERY --- -->
+    <section class="section-padding reveal">
+        <div class="section-header">
+            <span class="tag">Captured Moments</span>
+            <h2>Our Travel Gallery</h2>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+            <div class="gallery-item gi-1"><img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80" alt="Mountain Range"><div class="gallery-hover">Enlarge View</div></div>
+            <div class="gallery-item gi-2"><img src="https://images.unsplash.com/photo-1582650625119-3a31f8fa2699?auto=format&fit=crop&w=400&q=80" alt="Temple Architecture"><div class="gallery-hover">Enlarge View</div></div>
+            <div class="gallery-item gi-3"><img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=400&q=80" alt="Trek Path"><div class="gallery-hover">Enlarge View</div></div>
+            <div class="gallery-item gi-4"><img src="https://images.unsplash.com/photo-1578326457399-3b34dbbf23b8?auto=format&fit=crop&w=400&q=80" alt="Wild Rhinoceros"><div class="gallery-hover">Enlarge View</div></div>
+            <div class="gallery-item gi-5"><img src="https://images.unsplash.com/photo-1486911278844-a81c5267e227?auto=format&fit=crop&w=600&q=80" alt="Phewa Lake"><div class="gallery-hover">Enlarge View</div></div>
+            <div class="gallery-item gi-6"><img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=400&q=80" alt="Mustang Canyon"><div class="gallery-hover">Enlarge View</div></div>
+        </div>
+    </section>
+
+    <!-- --- TRAVEL BLOG SECTION --- -->
+    <section class="section-padding blog-bg reveal">
+        <div class="section-header">
+            <span class="tag">Field Updates</span>
+            <h2>Latest From The Blog</h2>
+        </div>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-img-wrap"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=400&q=80" alt="Nepal Seasons"></div>
+                <div class="blog-content">
+                    <p class="blog-meta">June 02, 2026 | Guide</p>
+                    <h3>Best Time To Visit Nepal: Season Breakdown</h3>
+                    <a href="#booking" class="blog-link">Read More →</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img-wrap"><img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=400&q=80" alt="Everest Ascent Preparation"></div>
+                <div class="blog-content">
+                    <p class="blog-meta">May 24, 2026 | Trekking</p>
+                    <h3>Beginner's Guide To Everest Trekking</h3>
+                    <a href="#booking" class="blog-link">Read More →</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img-wrap"><img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=400&q=80" alt="Hidden Villages"></div>
+                <div class="blog-content">
+                    <p class="blog-meta">May 11, 2026 | Culture</p>
+                    <h3>Top Hidden Gems In Nepal Outposts</h3>
+                    <a href="#booking" class="blog-link">Read More →</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img-wrap"><img src="https://images.unsplash.com/photo-1582650625119-3a31f8fa2699?auto=format&fit=crop&w=400&q=80" alt="Practical Travel Planning"></div>
+                <div class="blog-content">
+                    <p class="blog-meta">Apr 19, 2026 | Planning</p>
+                    <h3>Essential Travel Tips For Nepal Journeys</h3>
+                    <a href="#booking" class="blog-link">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- PREMIUM SPLIT BOOKING INQUIRY FORM --- -->
+    <section class="section-padding booking-bg reveal" id="booking">
+        <div class="booking-container">
+            <div class="booking-info">
+                <h2>Plan Your Custom Adventure</h2>
+                <p>Complete the details below. Our native route designers map and tailor ideal logistics, accommodation grades, and permits within 12 business hours.</p>
+                <div class="booking-trust-list">
+                    <div class="booking-trust-card">
+                        <span>🔒</span>
+                        <div>
+                            <h4>Secure Booking Desk</h4>
+                            <p>Encrypted data channels protecting your information privacy parameters.</p>
+                        </div>
+                    </div>
+                    <div class="booking-trust-card">
+                        <span>⛰️</span>
+                        <div>
+                            <h4>Verified Local Operations</h4>
+                            <p>Direct contact structures without secondary international handling agencies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="booking-form-wrap">
+                <form id="adventureForm" novalidate>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" required placeholder="+1 234 567 890">
+                        </div>
+                        <div class="form-group">
+                            <label for="destination">Destination *</label>
+                            <select id="destination" required>
+                                <option value="" disabled selected>Select Target</option>
+                                <option value="kathmandu">Kathmandu Valley</option>
+                                <option value="pokhara">Pokhara Valley</option>
+                                <option value="chitwan">Chitwan Wilderness</option>
+                                <option value="lumbini">Lumbini Meditative</option>
+                                <option value="mustang">Upper Mustang Desert</option>
+                                <option value="everest">Everest National Park</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="travelDate">Travel Date *</label>
+                            <input type="date" id="travelDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="travelers">Travelers *</label>
+                            <input type="number" id="travelers" min="1" value="1" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="package">Tour Package</label>
+                            <select id="package">
+                                <option value="custom">Bespoke Custom / Not Listed</option>
+                                <option value="ebc">Everest Base Camp Trek - 14 Days</option>
+                                <option value="abc">Annapurna Base Camp Trek - 10 Days</option>
+                                <option value="ktm">Kathmandu Heritage Tour - 2 Days</option>
+                                <option value="chitwan">Chitwan Jungle Safari - 3 Days</option>
+                                <option value="pokhara">Pokhara Adventure Escape - 4 Days</option>
+                                <option value="mustang">Upper Mustang Expedition - 12 Days</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message">Message / Custom Requests</label>
+                            <textarea id="message" rows="3" placeholder="Specify any dietary needs, alt-route configurations, or hotel preferences..."></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn btn-accent">Start Planning My Trip</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- CONTACT BLOCK MATRIX --- -->
+    <section class="section-padding reveal" id="contact">
+        <div class="section-header">
+            <span class="tag">Get In Touch</span>
+            <h2>Contact Localify Office</h2>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-block-card">
+                <span class="cb-icon">📍</span>
+                <h4>Office Location</h4>
+                <p>Thamel Marg, Kathmandu, Nepal</p>
+            </div>
+            <div class="contact-block-card">
+                <span class="cb-icon">📞</span>
+                <h4>Phone Coordinates</h4>
+                <p><a href="tel:+9779801234567">+977 9801234567</a></p>
+            </div>
+            <div class="contact-block-card">
+                <span class="cb-icon">✉️</span>
+                <h4>Email Inbox</h4>
+                <p><a href="mailto:hello@localify.com">hello@localify.com</a></p>
+            </div>
+            <div class="contact-block-card">
+                <span class="cb-icon">🕒</span>
+                <h4>Operating Hours</h4>
+                <p>Sun – Fri | 8 AM – 7 PM</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- FAQ ACCORDION --- -->
+    <section class="section-padding faq-bg reveal">
+        <div class="section-header">
+            <span class="tag">FAQ</span>
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-trigger"><span>Do I need a visa for Nepal?</span><span class="faq-icon">+</span></div>
+                <div class="faq-content"><p>Yes, entry visas are required. Tourist visas can be processed efficiently on arrival at Tribhuvan International Airport (TIA) in Kathmandu via automatic processing kiosks.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-trigger"><span>What is the best season to visit?</span><span class="faq-icon">+</span></div>
+                <div class="faq-content"><p>The primary high tracking windows occur between September to November (Autumn) and March to May (Spring) for crystal-clear sky environments and stable pass temperatures.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-trigger"><span>Are your tours customizable?</span><span class="faq-icon">+</span></div>
+                <div class="faq-content"><p>Yes, all routes can be tailored. You can tweak destination sequences, upgrade mountain tea houses to premium mountain eco-resorts, or insert helicopter legs.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-trigger"><span>Do you provide airport pickup?</span><span class="faq-icon">+</span></div>
+                <div class="faq-content"><p>Yes, every itinerary booked includes private traditional greetings and vehicle transport options from the airport directly to your hotel base.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-trigger"><span>Are trekking permits included?</span><span class="faq-icon">+</span></div>
+                <div class="faq-content"><p>Yes, all TIMS logistics, conservation area entrance documents, and municipal local taxes are systematically pre-arranged within our standard quote prices.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- PREMIUM BRAND FOOTER --- -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo" style="color:white; margin-bottom: 15px;">Localify<span>.</span></a>
+                <p>High-end adventure tourism and deeply immersive cultural circuits throughout Nepal. Explore sustainably with local guides.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Destinations</h4>
+                <ul>
+                    <li><a href="#destinations">Kathmandu Circuit</a></li>
+                    <li><a href="#destinations">Pokhara Foothills</a></li>
+                    <li><a href="#destinations">Everest High Tracks</a></li>
+                    <li><a href="#destinations">Upper Mustang Desert</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Tour Packages</h4>
+                <ul>
+                    <li><a href="#tours">Everest Base Camp Trek</a></li>
+                    <li><a href="#tours">Annapurna Base Track</a></li>
+                    <li><a href="#tours">Chitwan Safari Option</a></li>
+                    <li><a href="#tours">Kathmandu Heritage Tour</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>Subscribe to secure seasonal track updates, mountain logs, and priority custom rates.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!'); this.reset();">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit" class="btn btn-accent">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Localify Travels Pvt. Ltd. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Charter</a>
+                <a href="#">Operator Agreement</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- --- NATIVE INTERACTION SCRIPTS --- -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. HEADER SCROLL & BACK TO TOP VISIBILITY
+            const header = document.getElementById('mainHeader');
+            const backToTop = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                header.classList.toggle('sticky', window.scrollY > 40);
+                backToTop.classList.toggle('show', window.scrollY > 500);
+            });
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // 2. RESPONSIVE NAVIGATION OVERLAY MENU
+            const menuToggle = document.getElementById('menuToggle');
+            const mainNav = document.getElementById('mainNav');
+
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('open');
+                mainNav.classList.toggle('open');
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('open');
+                    mainNav.classList.remove('open');
+                });
+            });
+
+            // 3. SCROLL REVEAL ENTRANCES
+            const reveals = document.querySelectorAll('.reveal');
+            const handleReveal = () => {
+                reveals.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    if (elementTop < window.innerHeight - 80) {
+                        element.classList.add('active');
+                    }
+                });
+            };
+            window.addEventListener('scroll', handleReveal);
+            handleReveal();
+
+            // 4. METRIC COUTERS
+            const counterSection = document.getElementById('counterSection');
+            let countersRun = false;
+
+            const runCounters = () => {
+                document.querySelectorAll('.counter').forEach(counter => {
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    const step = target / 100;
+                    let current = 0;
+                    
+                    const updateValue = () => {
+                        current += step;
+                        if (current < target) {
+                            counter.innerText = Math.floor(current) + (target === 98 ? '%' : '+');
+                            requestAnimationFrame(updateValue);
+                        } else {
+                            counter.innerText = target + (target === 98 ? '%' : '+');
+                        }
+                    };
+                    updateValue();
+                });
+            };
+
+            window.addEventListener('scroll', () => {
+                if (!counterSection) return;
+                if (counterSection.getBoundingClientRect().top < window.innerHeight - 50 && !countersRun) {
+                    countersRun = true;
+                    runCounters();
+                }
+            });
+
+            // 5. AUTO-SLIDING TESTIMONIAL CAROUSEL
+            const slider = document.getElementById('testimonialSlider');
+            const slides = document.querySelectorAll('.testimonial-slide');
+            const dotsContainer = document.getElementById('sliderDots');
+            let slideIndex = 0;
+
+            slides.forEach((_, idx) => {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (idx === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => showSlide(idx));
+                dotsContainer.appendChild(dot);
+            });
+
+            const showSlide = (idx) => {
+                slideIndex = idx;
+                slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+                document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === slideIndex));
+            };
+
+            setInterval(() => {
+                slideIndex = (slideIndex + 1) % slides.length;
+                showSlide(slideIndex);
+            }, 5000);
+
+            // 6. LIGHTBOX MODULE FUNCTIONALITY
+            const lightbox = document.getElementById('galleryLightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+
+            document.getElementById('galleryGrid').addEventListener('click', (e) => {
+                const item = e.target.closest('.gallery-item');
+                if (item) {
+                    lightboxImg.src = item.querySelector('img').src;
+                    lightbox.style.display = 'flex';
+                }
+            });
+
+            document.getElementById('lightboxClose').addEventListener('click', () => lightbox.style.display = 'none');
+            lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.style.display = 'none'; });
+
+            // 7. ACCORDION LOGIC ENGINE
+            document.querySelector('.faq-container').addEventListener('click', (e) => {
+                const trigger = e.target.closest('.faq-trigger');
+                if (!trigger) return;
+                const item = trigger.parentElement;
+                const content = item.querySelector('.faq-content');
+                const isOpen = item.classList.contains('open');
+
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('open');
+                    i.querySelector('.faq-content').style.maxHeight = null;
+                });
+
+                if (!isOpen) {
+                    item.classList.add('open');
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+
+            // 8. LINK TRACKING SENSOR
+            window.addEventListener('scroll', () => {
+                const scrollPos = window.scrollY + 180;
+                document.querySelectorAll('section[id]').forEach(section => {
+                    if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            link.classList.toggle('active', link.getAttribute('href').substring(1) === section.getAttribute('id'));
+                        });
+                    }
+                });
+            });
+
+            // 9. FORM VALIDATION PROTOCOL
+            const form = document.getElementById('adventureForm');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let valid = true;
+                form.querySelectorAll('[required]').forEach(input => {
+                    if (!input.value.trim() || (input.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value))) {
+                        valid = false;
+                        input.style.borderColor = '#EF4444';
+                    } else {
+                        input.style.borderColor = 'var(--neutral-mist)';
+                    }
+                });
+
+                if (valid) {
+                    const notify = document.getElementById('successNotify');
+                    notify.style.display = 'block';
+                    form.reset();
+                    setTimeout(() => notify.style.display = 'none', 4500);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tour Packages | Localify</title><meta name="description" content="Browse Localify adventure, family, honeymoon, luxury and budget tour packages with itineraries, inclusions, reviews and inquiry forms."><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body><header class="site-header" data-header></header>
+<main>
+  <section class="page-hero compact" style="--bg:url('https://images.unsplash.com/photo-1539635278303-d4002c07eae3?auto=format&fit=crop&w=1600&q=85')"><div><p class="eyebrow">Tours</p><h1>Curated packages with flexible upgrades.</h1></div></section>
+  <section class="section">
+    <div class="filter-bar">
+      <input data-package-search type="search" placeholder="Search packages">
+      <select data-package-category><option value="">All categories</option><option>Adventure</option><option>Family</option><option>Honeymoon</option><option>Luxury</option><option>Budget</option></select>
+      <select data-package-budget><option value="">Any budget</option><option value="900">Under $900</option><option value="1500">Under $1,500</option><option value="2500">Under $2,500</option></select>
+      <input data-package-date type="date" aria-label="Travel date">
+    </div>
+    <div class="package-grid" data-packages></div>
+  </section>
+  <section class="section split muted">
+    <div><p class="eyebrow">Compare</p><h2>Destination comparison</h2><p>Select packages as favorites and compare destination style, cost and duration before sending an inquiry.</p><div data-wishlist-panel class="wishlist-panel"></div></div>
+    <form class="form-card" data-inquiry-form><h3>Quick inquiry</h3><input name="name" placeholder="Full name" required><input name="email" type="email" placeholder="Email" required><input name="phone" placeholder="Phone" required><input name="destination" placeholder="Destination"><input name="date" type="date"><input name="travelers" type="number" min="1" placeholder="Travelers count"><textarea name="message" placeholder="Message"></textarea><button class="btn btn-blue" type="submit">Send Inquiry</button></form>
+  </section>
+  <section class="section">
+    <div class="section-heading"><div><p class="eyebrow">Budget tool</p><h2>Travel cost calculator</h2></div></div>
+    <form class="calculator" data-calculator>
+      <label>Travelers<input name="travelers" type="number" min="1" value="2"></label>
+      <label>Days<input name="days" type="number" min="1" value="7"></label>
+      <label>Daily comfort budget<input name="daily" type="number" min="25" value="120"></label>
+      <label>Flight estimate<input name="flights" type="number" min="0" value="450"></label>
+      <output data-calculator-total>$0</output>
+    </form>
+  </section>
+</main><footer class="site-footer"></footer><a class="whatsapp-float" href="https://wa.me/9779844550537">WhatsApp</a><button class="chat-placeholder" data-chat>Live Chat</button><script src="assets/js/main.js"></script></body></html>

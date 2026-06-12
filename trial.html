@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PawCare Veterinary Clinic — compassionate, expert veterinary care for your beloved pets. General checkups, surgery, emergency care, dental treatments and more. Book your appointment today.">
+<meta name="keywords" content="veterinary clinic, pet care, dog vet, cat vet, emergency vet, animal hospital, pet health">
+<meta property="og:title" content="PawCare Veterinary Clinic | Compassionate Care For Every Pet">
+<meta property="og:description" content="Expert veterinary services, preventive care, and emergency treatment to keep your beloved pets healthy and happy.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#2E8B57">
+<title>PawCare Veterinary Clinic | Compassionate Care For Every Pet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════
+   TOKENS & RESET
+═══════════════════════════════════════════ */
+:root{
+  --g-deep:#1F6B4F;
+  --g-main:#2E8B57;
+  --g-mid:#3CB371;
+  --g-teal:#5ABF9A;
+  --g-soft:#DFF3E8;
+  --g-mint:#F2F8F4;
+  --g-light:#F8FAF8;
+  --white:#FFFFFF;
+  --char:#222222;
+  --mid:#555555;
+  --light:#888888;
+  --border:#E2EEE7;
+  --shadow-sm:0 2px 12px rgba(46,139,87,0.08);
+  --shadow-md:0 8px 32px rgba(46,139,87,0.12);
+  --shadow-lg:0 20px 60px rgba(46,139,87,0.16);
+  --radius-sm:10px;
+  --radius-md:16px;
+  --radius-lg:24px;
+  --radius-xl:36px;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+  --ff-head:'Poppins',sans-serif;
+  --ff-body:'DM Sans',sans-serif;
+  --pad:clamp(60px,8vw,120px);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden}
+body{font-family:var(--ff-body);background:var(--white);color:var(--char);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+input,select,textarea{font-family:inherit}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:#f0f0f0}
+::-webkit-scrollbar-thumb{background:var(--g-main);border-radius:2px}
+
+/* ═══════════════════════════════════════════
+   TYPOGRAPHY UTILITIES
+═══════════════════════════════════════════ */
+.section-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--g-soft);color:var(--g-deep);
+  padding:6px 16px;border-radius:50px;
+  font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;
+  font-family:var(--ff-head);margin-bottom:16px;
+}
+.section-tag svg{width:14px;height:14px}
+h2.section-title{
+  font-family:var(--ff-head);font-size:clamp(1.9rem,3.5vw,2.9rem);
+  font-weight:700;color:var(--char);line-height:1.18;margin-bottom:14px;
+}
+h2.section-title span{color:var(--g-main)}
+.section-sub{
+  font-size:1rem;color:var(--mid);line-height:1.75;max-width:560px;font-weight:300;
+}
+.section-header{text-align:center;margin-bottom:clamp(40px,5vw,64px)}
+.section-header .section-sub{margin:0 auto}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
+
+/* ═══════════════════════════════════════════
+   SCROLL REVEAL
+═══════════════════════════════════════════ */
+.sr{opacity:0;transform:translateY(32px);transition:opacity 0.75s var(--ease),transform 0.75s var(--ease)}
+.sr.in{opacity:1;transform:none}
+.sr-l{opacity:0;transform:translateX(-32px);transition:opacity 0.75s var(--ease),transform 0.75s var(--ease)}
+.sr-l.in{opacity:1;transform:none}
+.sr-r{opacity:0;transform:translateX(32px);transition:opacity 0.75s var(--ease),transform 0.75s var(--ease)}
+.sr-r.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.18s}.d3{transition-delay:.26s}
+.d4{transition-delay:.34s}.d5{transition-delay:.42s}.d6{transition-delay:.5s}
+
+/* ═══════════════════════════════════════════
+   BUTTONS
+═══════════════════════════════════════════ */
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--g-main);color:#fff;
+  padding:14px 30px;border-radius:50px;
+  font-family:var(--ff-head);font-size:0.85rem;font-weight:600;letter-spacing:0.04em;
+  transition:all 0.3s var(--ease);border:2px solid var(--g-main);
+}
+.btn-primary:hover{background:var(--g-deep);border-color:var(--g-deep);transform:translateY(-2px);box-shadow:0 10px 28px rgba(46,139,87,0.35)}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:8px;
+  background:transparent;color:var(--g-main);
+  padding:14px 30px;border-radius:50px;
+  font-family:var(--ff-head);font-size:0.85rem;font-weight:600;letter-spacing:0.04em;
+  border:2px solid var(--g-main);
+  transition:all 0.3s var(--ease);
+}
+.btn-outline:hover{background:var(--g-main);color:#fff;transform:translateY(-2px);box-shadow:0 10px 28px rgba(46,139,87,0.25)}
+.btn-white{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;color:var(--g-main);
+  padding:14px 30px;border-radius:50px;
+  font-family:var(--ff-head);font-size:0.85rem;font-weight:700;
+  transition:all 0.3s var(--ease);border:2px solid #fff;
+}
+.btn-white:hover{background:var(--g-soft);border-color:var(--g-soft);transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,0.15)}
+.btn-danger{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#e74c3c;color:#fff;
+  padding:12px 26px;border-radius:50px;
+  font-family:var(--ff-head);font-size:0.82rem;font-weight:700;letter-spacing:0.04em;
+  border:2px solid #e74c3c;
+  transition:all 0.3s;
+}
+.btn-danger:hover{background:#c0392b;border-color:#c0392b;transform:translateY(-2px);box-shadow:0 10px 24px rgba(231,76,60,0.35)}
+
+/* ═══════════════════════════════════════════
+   HEADER / NAV
+═══════════════════════════════════════════ */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:18px 0;
+  transition:all 0.4s var(--ease);
+  background:transparent;
+}
+.header.scrolled{
+  background:rgba(255,255,255,0.97);
+  backdrop-filter:blur(20px);
+  box-shadow:0 2px 24px rgba(46,139,87,0.1);
+  padding:12px 0;
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-icon{
+  width:42px;height:42px;background:var(--g-main);border-radius:12px;
+  display:grid;place-items:center;font-size:1.3rem;flex-shrink:0;
+}
+.logo-text{font-family:var(--ff-head);font-weight:800;font-size:1.2rem;color:var(--char);line-height:1}
+.logo-sub{font-size:0.6rem;color:var(--g-main);letter-spacing:0.12em;text-transform:uppercase;font-weight:600}
+.nav{display:flex;align-items:center;gap:32px}
+.nav a{
+  font-family:var(--ff-head);font-size:0.82rem;font-weight:500;color:var(--mid);
+  transition:color 0.3s;position:relative;
+}
+.nav a::after{
+  content:'';position:absolute;bottom:-3px;left:0;width:0;height:2px;
+  background:var(--g-main);border-radius:1px;transition:width 0.3s var(--ease);
+}
+.nav a:hover{color:var(--g-main)}
+.nav a:hover::after,.nav a.act::after{width:100%}
+.nav a.act{color:var(--g-main)}
+.header-btns{display:flex;gap:10px;align-items:center}
+.header-btns .btn-primary{padding:10px 20px;font-size:0.78rem}
+.header-btns .btn-danger{padding:10px 20px;font-size:0.78rem}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.ham span{width:22px;height:2px;background:var(--char);border-radius:1px;transition:all 0.3s;display:block}
+
+/* Mobile nav */
+.mob-nav{
+  position:fixed;top:0;right:-100%;width:300px;height:100vh;
+  background:#fff;z-index:2000;padding:80px 32px 40px;
+  box-shadow:-8px 0 40px rgba(0,0,0,0.12);
+  transition:right 0.4s var(--ease);
+  display:flex;flex-direction:column;gap:8px;
+}
+.mob-nav.open{right:0}
+.mob-nav a{
+  font-family:var(--ff-head);font-size:1rem;font-weight:500;color:var(--char);
+  padding:12px 0;border-bottom:1px solid var(--border);transition:color 0.3s;
+}
+.mob-nav a:hover{color:var(--g-main)}
+.mob-nav-close{position:absolute;top:22px;right:22px;font-size:1.3rem;cursor:pointer;color:var(--mid);transition:color 0.3s}
+.mob-nav-close:hover{color:var(--g-main)}
+.mob-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:1999;opacity:0;pointer-events:none;transition:opacity 0.4s}
+.mob-overlay.show{opacity:1;pointer-events:all}
+.mob-nav-btns{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.mob-nav-btns .btn-primary,.mob-nav-btns .btn-danger{justify-content:center}
+
+/* ═══════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════ */
+.hero{
+  min-height:100vh;background:linear-gradient(135deg,var(--g-mint) 0%,#e8f5ee 40%,var(--g-soft) 100%);
+  display:flex;align-items:center;position:relative;overflow:hidden;
+  padding:120px 0 80px;
+}
+.hero::before{
+  content:'';position:absolute;top:-100px;right:-100px;
+  width:600px;height:600px;
+  background:radial-gradient(circle,rgba(91,191,154,0.2) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero::after{
+  content:'';position:absolute;bottom:-120px;left:-120px;
+  width:500px;height:500px;
+  background:radial-gradient(circle,rgba(46,139,87,0.1) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--g-main);color:#fff;
+  padding:7px 18px;border-radius:50px;font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;
+  font-family:var(--ff-head);margin-bottom:20px;
+  animation:fadeUp 0.7s var(--ease) 0.2s both;
+}
+.hero-title{
+  font-family:var(--ff-head);
+  font-size:clamp(2.4rem,4.5vw,4rem);
+  font-weight:800;color:var(--char);line-height:1.12;margin-bottom:20px;
+  animation:fadeUp 0.7s var(--ease) 0.4s both;
+}
+.hero-title .green{color:var(--g-main)}
+.hero-sub{
+  font-size:1.05rem;color:var(--mid);line-height:1.78;margin-bottom:36px;font-weight:300;
+  animation:fadeUp 0.7s var(--ease) 0.55s both;
+}
+.hero-btns{
+  display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px;
+  animation:fadeUp 0.7s var(--ease) 0.7s both;
+}
+.hero-trust{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;
+  animation:fadeUp 0.7s var(--ease) 0.85s both;
+}
+.trust-item{
+  display:flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,0.8);border:1px solid var(--border);
+  padding:10px 14px;border-radius:var(--radius-sm);
+}
+.trust-check{
+  width:24px;height:24px;background:var(--g-main);border-radius:50%;
+  display:grid;place-items:center;flex-shrink:0;color:#fff;font-size:0.7rem;font-weight:700;
+}
+.trust-text{font-size:0.78rem;font-weight:500;color:var(--char);font-family:var(--ff-head)}
+/* Hero visual */
+.hero-visual{position:relative;animation:fadeUp 0.8s var(--ease) 0.5s both}
+.hero-img-main{
+  width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius-xl);
+  background:url('https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=85') center/cover;
+  box-shadow:var(--shadow-lg);
+}
+.hero-float-1{
+  position:absolute;top:-20px;left:-24px;
+  background:#fff;border-radius:var(--radius-md);padding:14px 18px;
+  box-shadow:var(--shadow-md);display:flex;align-items:center;gap:12px;
+}
+.hf-icon{font-size:1.8rem}
+.hf-num{font-family:var(--ff-head);font-size:1.4rem;font-weight:800;color:var(--char);line-height:1}
+.hf-lbl{font-size:0.68rem;color:var(--mid);font-weight:500}
+.hero-float-2{
+  position:absolute;bottom:32px;right:-24px;
+  background:var(--g-main);border-radius:var(--radius-md);padding:14px 18px;
+  box-shadow:var(--shadow-md);color:#fff;min-width:180px;
+}
+.hf2-title{font-family:var(--ff-head);font-size:0.82rem;font-weight:700;margin-bottom:6px}
+.hf2-stars{font-size:0.85rem;letter-spacing:2px;margin-bottom:4px}
+.hf2-sub{font-size:0.68rem;opacity:0.8}
+.hero-badge{
+  position:absolute;bottom:-16px;left:24px;
+  background:#fff;border-radius:50px;padding:10px 18px;
+  box-shadow:var(--shadow-md);display:flex;align-items:center;gap:8px;
+  border-left:4px solid var(--g-main);
+}
+.hb-dot{width:8px;height:8px;background:#2ecc71;border-radius:50%;animation:pulse 2s infinite}
+.hb-text{font-size:0.75rem;font-weight:600;color:var(--char);font-family:var(--ff-head)}
+
+/* ═══════════════════════════════════════════
+   QUICK SERVICES
+═══════════════════════════════════════════ */
+.quick-sec{padding:var(--pad) 0;background:var(--white)}
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.qcard{
+  background:var(--g-light);border:1.5px solid var(--border);border-radius:var(--radius-md);
+  padding:32px 24px;text-align:center;
+  transition:all 0.35s var(--ease);cursor:default;
+}
+.qcard:hover{
+  transform:translateY(-8px);
+  box-shadow:0 16px 48px rgba(46,139,87,0.15);
+  border-color:var(--g-teal);
+  background:#fff;
+}
+.qcard-icon{
+  width:64px;height:64px;background:var(--g-soft);border-radius:var(--radius-md);
+  display:grid;place-items:center;font-size:1.8rem;margin:0 auto 18px;
+  transition:background 0.3s;
+}
+.qcard:hover .qcard-icon{background:var(--g-main)}
+.qcard-title{font-family:var(--ff-head);font-size:1rem;font-weight:700;color:var(--char);margin-bottom:8px}
+.qcard-desc{font-size:0.83rem;color:var(--mid);line-height:1.65;margin-bottom:18px}
+.qcard-link{
+  font-family:var(--ff-head);font-size:0.75rem;font-weight:600;color:var(--g-main);
+  letter-spacing:0.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:4px;
+  transition:gap 0.3s;
+}
+.qcard:hover .qcard-link{gap:10px}
+
+/* ═══════════════════════════════════════════
+   ABOUT
+═══════════════════════════════════════════ */
+.about-sec{padding:var(--pad) 0;background:var(--g-mint)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,80px);align-items:center}
+.about-img-wrap{position:relative}
+.about-img{
+  width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius-xl);
+  background:url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=80') center/cover;
+  box-shadow:var(--shadow-lg);
+}
+.about-badge{
+  position:absolute;top:24px;right:-20px;
+  background:var(--g-main);color:#fff;border-radius:var(--radius-md);padding:16px 20px;
+  text-align:center;box-shadow:var(--shadow-md);
+}
+.ab-num{font-family:var(--ff-head);font-size:2rem;font-weight:800;line-height:1}
+.ab-txt{font-size:0.7rem;font-weight:500;letter-spacing:0.08em;margin-top:2px;opacity:0.85}
+.about-stats{
+  display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px;
+}
+.astat{
+  background:#fff;border-radius:var(--radius-md);padding:20px;
+  border:1.5px solid var(--border);text-align:center;
+  transition:border-color 0.3s,box-shadow 0.3s;
+}
+.astat:hover{border-color:var(--g-main);box-shadow:var(--shadow-sm)}
+.astat-num{font-family:var(--ff-head);font-size:1.8rem;font-weight:800;color:var(--g-main)}
+.astat-lbl{font-size:0.75rem;color:var(--mid);margin-top:4px;font-weight:500}
+.about-points{display:flex;flex-direction:column;gap:12px;margin:24px 0}
+.about-point{display:flex;align-items:flex-start;gap:12px}
+.ap-check{
+  width:22px;height:22px;background:var(--g-soft);border-radius:50%;
+  display:grid;place-items:center;flex-shrink:0;margin-top:2px;
+  color:var(--g-main);font-size:0.75rem;font-weight:700;
+}
+.ap-text{font-size:0.9rem;color:var(--mid);line-height:1.6}
+
+/* ═══════════════════════════════════════════
+   FULL SERVICES
+═══════════════════════════════════════════ */
+.services-sec{padding:var(--pad) 0;background:var(--white)}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.scard{
+  background:var(--g-light);border:1.5px solid var(--border);border-radius:var(--radius-md);
+  padding:28px 20px;transition:all 0.35s var(--ease);position:relative;overflow:hidden;
+}
+.scard::before{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:linear-gradient(to right,var(--g-main),var(--g-teal));
+  transform:scaleX(0);transform-origin:left;transition:transform 0.35s var(--ease);
+}
+.scard:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:var(--g-teal);background:#fff}
+.scard:hover::before{transform:scaleX(1)}
+.scard-icon{
+  width:52px;height:52px;background:var(--g-soft);border-radius:var(--radius-sm);
+  display:grid;place-items:center;font-size:1.5rem;margin-bottom:16px;transition:background 0.3s;
+}
+.scard:hover .scard-icon{background:var(--g-main)}
+.scard-title{font-family:var(--ff-head);font-size:0.95rem;font-weight:700;color:var(--char);margin-bottom:8px}
+.scard-desc{font-size:0.8rem;color:var(--mid);line-height:1.65;margin-bottom:16px}
+.scard-link{
+  font-family:var(--ff-head);font-size:0.72rem;font-weight:600;color:var(--g-main);
+  letter-spacing:0.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:4px;
+}
+
+/* ═══════════════════════════════════════════
+   TEAM
+═══════════════════════════════════════════ */
+.team-sec{padding:var(--pad) 0;background:var(--g-mint)}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.tcard{
+  background:#fff;border-radius:var(--radius-lg);overflow:hidden;
+  border:1.5px solid var(--border);
+  transition:all 0.35s var(--ease);
+}
+.tcard:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--g-teal)}
+.tcard-img{
+  width:100%;aspect-ratio:1;object-fit:cover;background:var(--g-soft);
+  display:flex;align-items:center;justify-content:center;font-size:5rem;
+  position:relative;overflow:hidden;
+}
+.tcard-img-photo{width:100%;height:100%;object-fit:cover;display:block}
+.tcard-body{padding:20px}
+.tcard-name{font-family:var(--ff-head);font-size:1rem;font-weight:700;color:var(--char);margin-bottom:3px}
+.tcard-role{font-size:0.78rem;color:var(--g-main);font-weight:600;margin-bottom:4px;font-family:var(--ff-head)}
+.tcard-spec{font-size:0.75rem;color:var(--mid);margin-bottom:4px}
+.tcard-exp{
+  display:inline-block;background:var(--g-soft);color:var(--g-deep);
+  font-size:0.68rem;font-weight:600;padding:3px 10px;border-radius:50px;margin-bottom:12px;
+  font-family:var(--ff-head);
+}
+.tcard-social{display:flex;gap:8px}
+.soc-btn{
+  width:30px;height:30px;border-radius:50%;border:1.5px solid var(--border);
+  color:var(--mid);font-size:0.75rem;display:grid;place-items:center;
+  transition:all 0.3s;
+}
+.soc-btn:hover{border-color:var(--g-main);color:var(--g-main);background:var(--g-soft)}
+
+/* ═══════════════════════════════════════════
+   WHY CHOOSE
+═══════════════════════════════════════════ */
+.why-sec{padding:var(--pad) 0;background:var(--white)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.wcard{
+  background:var(--g-light);border:1.5px solid var(--border);border-radius:var(--radius-md);
+  padding:32px 24px;transition:all 0.35s var(--ease);
+}
+.wcard:hover{background:#fff;border-color:var(--g-teal);box-shadow:var(--shadow-md);transform:translateY(-4px)}
+.wcard-icon{
+  width:56px;height:56px;background:var(--g-soft);border-radius:var(--radius-sm);
+  display:grid;place-items:center;font-size:1.6rem;margin-bottom:18px;
+}
+.wcard-title{font-family:var(--ff-head);font-size:1rem;font-weight:700;color:var(--char);margin-bottom:8px}
+.wcard-desc{font-size:0.83rem;color:var(--mid);line-height:1.7}
+
+/* ═══════════════════════════════════════════
+   PET CARE RESOURCES
+═══════════════════════════════════════════ */
+.blog-sec{padding:var(--pad) 0;background:var(--g-light)}
+.blog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.bcard{
+  background:#fff;border-radius:var(--radius-md);overflow:hidden;
+  border:1.5px solid var(--border);
+  transition:all 0.35s var(--ease);
+}
+.bcard:hover{box-shadow:var(--shadow-md);transform:translateY(-4px);border-color:var(--g-teal)}
+.bcard-img{
+  width:100%;aspect-ratio:16/10;object-fit:cover;
+  display:flex;align-items:center;justify-content:center;font-size:3rem;
+  background:var(--g-soft);
+}
+.bcard-body{padding:20px}
+.bcard-meta{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.bcard-cat{
+  background:var(--g-soft);color:var(--g-deep);
+  font-size:0.65rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+  padding:3px 10px;border-radius:50px;font-family:var(--ff-head);
+}
+.bcard-date{font-size:0.72rem;color:var(--light)}
+.bcard-title{font-family:var(--ff-head);font-size:0.95rem;font-weight:700;color:var(--char);line-height:1.4;margin-bottom:8px}
+.bcard-desc{font-size:0.8rem;color:var(--mid);line-height:1.65;margin-bottom:14px}
+.bcard-link{
+  font-family:var(--ff-head);font-size:0.72rem;font-weight:600;color:var(--g-main);
+  letter-spacing:0.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:4px;
+}
+
+/* ═══════════════════════════════════════════
+   TESTIMONIALS
+═══════════════════════════════════════════ */
+.testi-sec{padding:var(--pad) 0;background:var(--white);overflow:hidden}
+.testi-slider{position:relative;margin-top:clamp(32px,4vw,56px)}
+.testi-track{display:flex;gap:24px;transition:transform 0.6s var(--ease)}
+.ttcard{
+  min-width:calc(33.333% - 16px);flex-shrink:0;
+  background:var(--g-light);border:1.5px solid var(--border);border-radius:var(--radius-lg);
+  padding:32px;transition:border-color 0.3s,box-shadow 0.3s;
+}
+.ttcard:hover{border-color:var(--g-teal);box-shadow:var(--shadow-md)}
+.tt-stars{color:#f39c12;font-size:1rem;letter-spacing:2px;margin-bottom:14px}
+.tt-text{font-size:0.92rem;color:var(--mid);line-height:1.78;font-style:italic;margin-bottom:22px}
+.tt-author{display:flex;align-items:center;gap:13px}
+.tt-avi{
+  width:48px;height:48px;border-radius:50%;background:var(--g-soft);
+  display:grid;place-items:center;font-size:1.2rem;
+  border:3px solid var(--g-teal);flex-shrink:0;overflow:hidden;
+}
+.tt-name{font-family:var(--ff-head);font-size:0.88rem;font-weight:700;color:var(--char)}
+.tt-pet{font-size:0.74rem;color:var(--mid);margin-top:2px}
+.testi-nav{display:flex;justify-content:center;align-items:center;gap:12px;margin-top:36px}
+.tnbtn{
+  width:40px;height:40px;border-radius:50%;border:2px solid var(--border);
+  color:var(--mid);display:grid;place-items:center;font-size:1rem;
+  transition:all 0.3s;cursor:pointer;
+}
+.tnbtn:hover{border-color:var(--g-main);color:var(--g-main);background:var(--g-soft)}
+.tdots{display:flex;gap:8px;align-items:center}
+.tdot{width:8px;height:8px;border-radius:4px;background:var(--border);transition:all 0.3s;cursor:pointer}
+.tdot.on{background:var(--g-main);width:24px}
+
+/* ═══════════════════════════════════════════
+   EMERGENCY BANNER
+═══════════════════════════════════════════ */
+.emerg-sec{
+  padding:60px 0;
+  background:linear-gradient(135deg,#e74c3c 0%,#c0392b 100%);
+  position:relative;overflow:hidden;
+}
+.emerg-sec::before{
+  content:'';position:absolute;top:-60px;right:-60px;
+  width:300px;height:300px;
+  background:rgba(255,255,255,0.07);border-radius:50%;
+}
+.emerg-inner{
+  display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;
+  position:relative;z-index:1;
+}
+.emerg-left{display:flex;align-items:center;gap:20px}
+.emerg-icon{
+  width:64px;height:64px;background:rgba(255,255,255,0.15);border-radius:50%;
+  display:grid;place-items:center;font-size:1.8rem;flex-shrink:0;
+}
+.emerg-title{font-family:var(--ff-head);font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:800;color:#fff;margin-bottom:6px}
+.emerg-sub{font-size:0.9rem;color:rgba(255,255,255,0.8);font-weight:300}
+.emerg-right{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.btn-emerg-white{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;color:#e74c3c;
+  padding:14px 28px;border-radius:50px;
+  font-family:var(--ff-head);font-size:0.85rem;font-weight:700;
+  transition:all 0.3s;
+}
+.btn-emerg-white:hover{background:#fff5f5;transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,0.2)}
+.emerg-phone{
+  display:flex;align-items:center;gap:8px;
+  color:#fff;font-family:var(--ff-head);font-size:1.1rem;font-weight:700;
+}
+
+/* ═══════════════════════════════════════════
+   BOOKING FORM
+═══════════════════════════════════════════ */
+.book-sec{padding:var(--pad) 0;background:var(--g-mint)}
+.book-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(32px,6vw,80px);align-items:start}
+.book-info-title{
+  font-family:var(--ff-head);font-size:clamp(1.7rem,3vw,2.5rem);
+  font-weight:800;color:var(--char);line-height:1.2;margin-bottom:14px;
+}
+.book-info-sub{font-size:0.92rem;color:var(--mid);line-height:1.75;margin-bottom:28px}
+.book-steps{display:flex;flex-direction:column;gap:16px}
+.bstep{display:flex;align-items:flex-start;gap:14px}
+.bstep-num{
+  width:32px;height:32px;background:var(--g-main);color:#fff;border-radius:50%;
+  display:grid;place-items:center;font-family:var(--ff-head);font-size:0.8rem;font-weight:700;flex-shrink:0;margin-top:1px;
+}
+.bstep-title{font-family:var(--ff-head);font-size:0.88rem;font-weight:700;color:var(--char);margin-bottom:3px}
+.bstep-desc{font-size:0.8rem;color:var(--mid)}
+/* Form card */
+.book-card{
+  background:#fff;border-radius:var(--radius-xl);padding:clamp(28px,4vw,48px);
+  box-shadow:var(--shadow-lg);border:1.5px solid var(--border);
+}
+.book-card-title{font-family:var(--ff-head);font-size:1.4rem;font-weight:700;color:var(--char);margin-bottom:4px}
+.book-card-sub{font-size:0.8rem;color:var(--mid);margin-bottom:24px}
+.fg{margin-bottom:14px}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.flbl{
+  display:block;font-family:var(--ff-head);font-size:0.7rem;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin-bottom:7px;
+}
+.finput,.fselect,.ftextarea{
+  width:100%;padding:12px 16px;
+  background:var(--g-light);border:1.5px solid var(--border);border-radius:var(--radius-sm);
+  font-family:var(--ff-body);font-size:0.88rem;color:var(--char);outline:none;
+  transition:border-color 0.3s,box-shadow 0.3s;
+  -webkit-appearance:none;
+}
+.finput:focus,.fselect:focus,.ftextarea:focus{
+  border-color:var(--g-main);box-shadow:0 0 0 3px rgba(46,139,87,0.1);background:#fff;
+}
+.finput::placeholder,.ftextarea::placeholder{color:#bbb}
+.finput.err{border-color:#e74c3c;background:#fff8f8}
+.ftextarea{resize:vertical;min-height:80px}
+.fselect{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23666' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;cursor:pointer}
+.btn-book{
+  width:100%;padding:16px;
+  background:var(--g-main);color:#fff;border-radius:var(--radius-sm);
+  font-family:var(--ff-head);font-size:0.9rem;font-weight:700;letter-spacing:0.06em;
+  transition:all 0.3s;cursor:pointer;border:none;margin-top:6px;
+}
+.btn-book:hover{background:var(--g-deep);transform:translateY(-2px);box-shadow:0 12px 32px rgba(46,139,87,0.3)}
+.form-success{
+  display:none;text-align:center;padding:32px 20px;
+}
+.form-success.show{display:block}
+.fs-icon{font-size:3rem;margin-bottom:14px}
+.fs-title{font-family:var(--ff-head);font-size:1.3rem;font-weight:700;color:var(--g-main);margin-bottom:8px}
+.fs-sub{font-size:0.88rem;color:var(--mid)}
+
+/* ═══════════════════════════════════════════
+   CONTACT
+═══════════════════════════════════════════ */
+.contact-sec{padding:var(--pad) 0;background:var(--white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(32px,6vw,80px)}
+.ct-cards{display:flex;flex-direction:column;gap:16px}
+.ctcard{
+  display:flex;align-items:flex-start;gap:14px;
+  background:var(--g-light);border:1.5px solid var(--border);border-radius:var(--radius-md);
+  padding:20px;transition:border-color 0.3s,box-shadow 0.3s;
+}
+.ctcard:hover{border-color:var(--g-teal);box-shadow:var(--shadow-sm)}
+.ctcard-icon{
+  width:44px;height:44px;background:var(--g-soft);border-radius:var(--radius-sm);
+  display:grid;place-items:center;font-size:1.2rem;flex-shrink:0;
+}
+.ctcard-label{font-family:var(--ff-head);font-size:0.65rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--g-main);margin-bottom:4px}
+.ctcard-main{font-family:var(--ff-head);font-size:0.92rem;font-weight:700;color:var(--char);margin-bottom:2px}
+.ctcard-sub{font-size:0.78rem;color:var(--mid);line-height:1.55}
+/* Map placeholder */
+.map-wrap{
+  background:var(--g-light);border-radius:var(--radius-xl);overflow:hidden;
+  border:1.5px solid var(--border);display:flex;flex-direction:column;
+}
+.map-placeholder{
+  flex:1;min-height:300px;background:linear-gradient(135deg,var(--g-mint),var(--g-soft));
+  display:grid;place-items:center;
+}
+.map-inner{text-align:center}
+.map-icon{font-size:3rem;margin-bottom:12px}
+.map-title{font-family:var(--ff-head);font-size:1rem;font-weight:700;color:var(--g-main);margin-bottom:4px}
+.map-sub{font-size:0.8rem;color:var(--mid)}
+.map-footer{padding:16px 20px;border-top:1.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px}
+.hours-item{font-size:0.75rem;color:var(--mid)}
+.hours-item strong{color:var(--char);font-family:var(--ff-head);font-size:0.75rem}
+.social-row{display:flex;gap:8px}
+.soc-c{
+  width:36px;height:36px;border-radius:50%;border:1.5px solid var(--border);
+  color:var(--mid);font-size:0.88rem;display:grid;place-items:center;
+  transition:all 0.3s;
+}
+.soc-c:hover{border-color:var(--g-main);color:var(--g-main);background:var(--g-soft)}
+
+/* ═══════════════════════════════════════════
+   FAQ
+═══════════════════════════════════════════ */
+.faq-sec{padding:var(--pad) 0;background:var(--g-mint)}
+.faq-wrap{max-width:760px;margin:0 auto}
+.faq-item{
+  background:#fff;border:1.5px solid var(--border);border-radius:var(--radius-md);
+  margin-bottom:12px;overflow:hidden;transition:border-color 0.3s,box-shadow 0.3s;
+}
+.faq-item.open{border-color:var(--g-main);box-shadow:var(--shadow-sm)}
+.faq-q{
+  width:100%;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  cursor:pointer;background:none;font-family:var(--ff-head);font-size:0.95rem;font-weight:600;
+  color:var(--char);text-align:left;
+}
+.faq-q:hover{color:var(--g-main)}
+.faq-icon{
+  width:28px;height:28px;border-radius:50%;border:2px solid var(--border);
+  display:grid;place-items:center;font-size:0.9rem;color:var(--mid);flex-shrink:0;
+  transition:all 0.3s;
+}
+.faq-item.open .faq-icon{background:var(--g-main);border-color:var(--g-main);color:#fff;transform:rotate(45deg)}
+.faq-body{
+  max-height:0;overflow:hidden;transition:max-height 0.4s var(--ease);
+}
+.faq-body-inner{padding:0 24px 20px;font-size:0.88rem;color:var(--mid);line-height:1.75}
+
+/* ═══════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════ */
+.footer{background:#0d2418;padding:72px 0 0}
+.footer-top{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;
+  gap:clamp(24px,4vw,60px);padding-bottom:52px;
+  border-bottom:1px solid rgba(255,255,255,0.07);
+}
+.f-logo{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.f-logo-icon{width:40px;height:40px;background:var(--g-main);border-radius:10px;display:grid;place-items:center;font-size:1.2rem;flex-shrink:0}
+.f-logo-name{font-family:var(--ff-head);font-size:1.2rem;font-weight:800;color:#fff}
+.f-logo-sub{font-size:0.58rem;color:var(--g-teal);letter-spacing:0.12em;text-transform:uppercase;font-weight:600}
+.f-desc{font-size:0.83rem;color:rgba(255,255,255,0.45);line-height:1.75;margin-bottom:22px}
+.f-nl{display:flex;gap:8px}
+.f-nl input{
+  flex:1;padding:10px 14px;
+  background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);
+  border-radius:var(--radius-sm);color:#fff;font-family:var(--ff-body);font-size:0.8rem;outline:none;
+  transition:border-color 0.3s;
+}
+.f-nl input:focus{border-color:var(--g-teal)}
+.f-nl input::placeholder{color:rgba(255,255,255,0.25)}
+.f-nl button{
+  padding:10px 18px;background:var(--g-main);color:#fff;border-radius:var(--radius-sm);
+  font-weight:700;font-size:0.78rem;cursor:pointer;border:none;transition:background 0.3s;font-family:var(--ff-head);
+}
+.f-nl button:hover{background:var(--g-mid)}
+.f-col-title{font-family:var(--ff-head);font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);font-weight:600;margin-bottom:16px}
+.f-links{display:flex;flex-direction:column;gap:8px}
+.f-links a{font-size:0.83rem;color:rgba(255,255,255,0.5);transition:color 0.3s}
+.f-links a:hover{color:var(--g-teal)}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:18px 0;flex-wrap:wrap;gap:12px;
+}
+.f-copy{font-size:0.75rem;color:rgba(255,255,255,0.2)}
+.f-rights{font-size:0.75rem;color:rgba(255,255,255,0.2)}
+
+/* ═══════════════════════════════════════════
+   BACK TO TOP
+═══════════════════════════════════════════ */
+.btt{
+  position:fixed;bottom:28px;right:28px;z-index:500;
+  width:46px;height:46px;border-radius:50%;
+  background:var(--g-main);color:#fff;
+  display:grid;place-items:center;font-size:1.1rem;
+  opacity:0;transform:translateY(16px);pointer-events:none;
+  transition:all 0.35s var(--ease);
+  box-shadow:0 6px 24px rgba(46,139,87,0.4);cursor:pointer;
+}
+.btt.show{opacity:1;transform:none;pointer-events:all}
+.btt:hover{background:var(--g-deep);transform:translateY(-2px)}
+
+/* ═══════════════════════════════════════════
+   TOAST
+═══════════════════════════════════════════ */
+.toast{
+  position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(16px);
+  background:var(--char);color:#fff;
+  padding:12px 28px;border-radius:50px;
+  font-family:var(--ff-head);font-size:0.82rem;font-weight:500;
+  box-shadow:0 10px 32px rgba(0,0,0,0.2);
+  opacity:0;pointer-events:none;transition:all 0.4s var(--ease);z-index:9000;white-space:nowrap;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ═══════════════════════════════════════════
+   ANIMATIONS
+═══════════════════════════════════════════ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(46,185,107,0.5)}50%{box-shadow:0 0 0 6px rgba(46,185,107,0)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hero-float-1,.hero-float-2,.hero-badge{animation:float 4s ease-in-out infinite}
+.hero-float-2{animation-delay:1s}.hero-badge{animation-delay:2s}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════ */
+@media(max-width:1100px){
+  .services-grid{grid-template-columns:repeat(3,1fr)}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .blog-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+  .hero-float-1,.hero-float-2,.hero-badge{display:none}
+}
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-visual{display:none}
+  .about-grid{grid-template-columns:1fr}
+  .about-img-wrap{display:none}
+  .quick-grid{grid-template-columns:repeat(2,1fr)}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .book-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .ttcard{min-width:calc(50% - 12px)}
+}
+@media(max-width:640px){
+  .nav,.header-btns{display:none}
+  .ham{display:flex}
+  .quick-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .team-grid{grid-template-columns:1fr 1fr}
+  .blog-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .emerg-inner{flex-direction:column;text-align:center}
+  .hero-trust{grid-template-columns:1fr}
+  .about-stats{grid-template-columns:1fr 1fr}
+  .ttcard{min-width:calc(100%)}
+  .fg-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="wrap">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="PawCare Veterinary Clinic Home">
+        <div class="logo-icon" aria-hidden="true">🐾</div>
+        <div>
+          <div class="logo-text">PawCare</div>
+          <div class="logo-sub">Veterinary Clinic</div>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#team">Our Team</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-btns">
+        <a href="#booking" class="btn-primary">Book Appointment</a>
+        <a href="tel:+19995550911" class="btn-danger">🚨 Emergency</a>
+      </div>
+      <button class="ham" id="ham" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mob-overlay" id="mobOverlay"></div>
+<nav class="mob-nav" id="mobNav" aria-label="Mobile navigation">
+  <button class="mob-nav-close" id="mobClose" aria-label="Close menu">✕</button>
+  <a href="#about">About Us</a>
+  <a href="#services">Services</a>
+  <a href="#team">Our Team</a>
+  <a href="#testimonials">Reviews</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Contact</a>
+  <div class="mob-nav-btns">
+    <a href="#booking" class="btn-primary" style="justify-content:center">Book Appointment</a>
+    <a href="tel:+19995550911" class="btn-danger" style="justify-content:center">🚨 Emergency Care</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home" aria-label="Welcome to PawCare">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-tag">🐾 &nbsp;Trusted Pet Healthcare</div>
+        <h1 class="hero-title">Compassionate<br>Care For <span class="green">Every Pet</span></h1>
+        <p class="hero-sub">Providing expert veterinary services, preventive care, and emergency treatment to keep your beloved pets healthy and happy.</p>
+        <div class="hero-btns">
+          <a href="#booking" class="btn-primary">📅 Schedule Appointment</a>
+          <a href="#services" class="btn-outline">Explore Services</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item"><div class="trust-check">✓</div><span class="trust-text">Licensed Veterinarians</span></div>
+          <div class="trust-item"><div class="trust-check">✓</div><span class="trust-text">Emergency Care 24/7</span></div>
+          <div class="trust-item"><div class="trust-check">✓</div><span class="trust-text">Advanced Equipment</span></div>
+          <div class="trust-item"><div class="trust-check">✓</div><span class="trust-text">10,000+ Happy Pets</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-img-main" role="img" aria-label="Veterinarian caring for pets"></div>
+        <div class="hero-float-1">
+          <div class="hf-icon">😺</div>
+          <div>
+            <div class="hf-num" data-count="10000">0</div>
+            <div class="hf-lbl">Pets Treated</div>
+          </div>
+        </div>
+        <div class="hero-float-2">
+          <div class="hf2-title">Client Satisfaction</div>
+          <div class="hf2-stars">★★★★★</div>
+          <div class="hf2-sub">98% — 2,400+ reviews</div>
+        </div>
+        <div class="hero-badge">
+          <div class="hb-dot"></div>
+          <span class="hb-text">Emergency Line Always Open</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK SERVICES -->
+<section class="quick-sec" id="quick-services" aria-labelledby="qs-h">
+  <div class="wrap">
+    <div class="section-header sr">
+      <div class="section-tag">⚕️ What We Offer</div>
+      <h2 class="section-title" id="qs-h">Everything Your Pet <span>Needs</span></h2>
+      <p class="section-sub">From routine wellness checkups to complex surgical procedures, our team delivers comprehensive care with compassion.</p>
+    </div>
+    <div class="quick-grid">
+      <div class="qcard sr d1"><div class="qcard-icon">🩺</div><h3 class="qcard-title">General Checkups</h3><p class="qcard-desc">Comprehensive wellness exams to catch health issues early and keep your pet in peak condition year-round.</p><span class="qcard-link">Learn More →</span></div>
+      <div class="qcard sr d2"><div class="qcard-icon">💉</div><h3 class="qcard-title">Vaccinations</h3><p class="qcard-desc">Complete vaccine schedules for dogs, cats, and exotic pets — protecting against preventable diseases.</p><span class="qcard-link">Learn More →</span></div>
+      <div class="qcard sr d3"><div class="qcard-icon">🔬</div><h3 class="qcard-title">Surgery</h3><p class="qcard-desc">State-of-the-art surgical facilities with board-certified surgeons and advanced anaesthetic monitoring.</p><span class="qcard-link">Learn More →</span></div>
+      <div class="qcard sr d1"><div class="qcard-icon">🚨</div><h3 class="qcard-title">Emergency Care</h3><p class="qcard-desc">24/7 emergency services with immediate triage and intensive care for critical situations.</p><span class="qcard-link">Learn More →</span></div>
+      <div class="qcard sr d2"><div class="qcard-icon">🦷</div><h3 class="qcard-title">Dental Care</h3><p class="qcard-desc">Professional dental cleanings, extractions, and oral health assessments for fresh breath and healthy gums.</p><span class="qcard-link">Learn More →</span></div>
+      <div class="qcard sr d3"><div class="qcard-icon">✂️</div><h3 class="qcard-title">Pet Grooming</h3><p class="qcard-desc">Professional grooming services including baths, haircuts, nail trimming, and skin & coat treatments.</p><span class="qcard-link">Learn More →</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-sec" id="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-img-wrap sr-l">
+        <div class="about-img" role="img" aria-label="Our veterinary team caring for animals"></div>
+        <div class="about-badge"><div class="ab-num">15+</div><div class="ab-txt">Years of Care</div></div>
+      </div>
+      <div class="sr-r">
+        <div class="section-tag">🏥 About PawCare</div>
+        <h2 class="section-title" id="about-h" style="text-align:left;margin-bottom:16px">Caring For Pets <span>Like Family</span></h2>
+        <p class="section-sub" style="max-width:100%;margin:0 0 16px">Founded in 2008, PawCare Veterinary Clinic has grown into one of the region's most trusted animal hospitals. We believe every pet deserves the same compassionate, expert care we'd give to a cherished family member.</p>
+        <div class="about-points">
+          <div class="about-point"><div class="ap-check">✓</div><div class="ap-text"><strong>Comprehensive care</strong> from preventive wellness to complex surgery — all under one roof.</div></div>
+          <div class="about-point"><div class="ap-check">✓</div><div class="ap-text"><strong>Board-certified specialists</strong> with advanced training in surgery, dentistry, and internal medicine.</div></div>
+          <div class="about-point"><div class="ap-check">✓</div><div class="ap-text"><strong>Fear-free environment</strong> designed to minimise stress and anxiety for every patient we see.</div></div>
+        </div>
+        <div class="about-stats">
+          <div class="astat sr d1"><div class="astat-num" data-count="15">0</div><div class="astat-lbl">Years Experience</div></div>
+          <div class="astat sr d2"><div class="astat-num" data-count="10000">0</div><div class="astat-lbl">Pets Treated</div></div>
+          <div class="astat sr d3"><div class="astat-num" data-count="98">0</div><div class="astat-lbl">% Client Satisfaction</div></div>
+          <div class="astat sr d4"><div class="astat-num" data-count="24">0</div><div class="astat-lbl">/ 7 Emergency Support</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FULL SERVICES -->
+<section class="services-sec" id="services" aria-labelledby="srv-h">
+  <div class="wrap">
+    <div class="section-header sr">
+      <div class="section-tag">🏥 Our Services</div>
+      <h2 class="section-title" id="srv-h">Complete <span>Veterinary Services</span></h2>
+      <p class="section-sub">A full spectrum of medical and wellness services to support every stage of your pet's life.</p>
+    </div>
+    <div class="services-grid">
+      <div class="scard sr d1"><div class="scard-icon">🩺</div><h3 class="scard-title">Wellness Exams</h3><p class="scard-desc">Annual and bi-annual comprehensive health assessments tailored to your pet's age and breed.</p><a href="#booking" class="scard-link">Book Now →</a></div>
+      <div class="scard sr d2"><div class="scard-icon">💉</div><h3 class="scard-title">Vaccinations</h3><p class="scard-desc">Core and non-core vaccines administered on personalised schedules for optimal protection.</p><a href="#booking" class="scard-link">Book Now →</a></div>
+      <div class="scard sr d3"><div class="scard-icon">🔬</div><h3 class="scard-title">Surgery</h3><p class="scard-desc">Soft tissue, orthopedic, and minimally invasive procedures performed by our surgical team.</p><a href="#booking" class="scard-link">Book Now →</a></div>
+      <div class="scard sr d4"><div class="scard-icon">🧪</div><h3 class="scard-title">Diagnostic Testing</h3><p class="scard-desc">In-house labs, digital X-ray, ultrasound, and ECG for rapid, accurate diagnosis.</p><a href="#booking" class="scard-link">Learn More →</a></div>
+      <div class="scard sr d1"><div class="scard-icon">🦷</div><h3 class="scard-title">Dental Treatments</h3><p class="scard-desc">Prophylactic cleanings, tooth extraction, and oral surgery under safe general anaesthesia.</p><a href="#booking" class="scard-link">Book Now →</a></div>
+      <div class="scard sr d2"><div class="scard-icon">🚨</div><h3 class="scard-title">Emergency Services</h3><p class="scard-desc">Round-the-clock emergency triage and intensive care for life-threatening situations.</p><a href="tel:+19995550911" class="scard-link">Call Now →</a></div>
+      <div class="scard sr d3"><div class="scard-icon">🥗</div><h3 class="scard-title">Pet Nutrition</h3><p class="scard-desc">Personalised dietary plans and therapeutic nutrition counselling for optimal health.</p><a href="#booking" class="scard-link">Learn More →</a></div>
+      <div class="scard sr d4"><div class="scard-icon">✂️</div><h3 class="scard-title">Grooming & Hygiene</h3><p class="scard-desc">Full-service grooming by certified groomers — from baths and trims to medicated treatments.</p><a href="#booking" class="scard-link">Book Now →</a></div>
+      <div class="scard sr d1"><div class="scard-icon">🐾</div><h3 class="scard-title">Senior Pet Care</h3><p class="scard-desc">Specialised monitoring and management for aging pets — arthritis, cognitive health, and more.</p><a href="#booking" class="scard-link">Learn More →</a></div>
+      <div class="scard sr d2"><div class="scard-icon">📡</div><h3 class="scard-title">Microchipping</h3><p class="scard-desc">Quick, painless permanent identification microchipping with national registry registration.</p><a href="#booking" class="scard-link">Book Now →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team-sec" id="team" aria-labelledby="team-h">
+  <div class="wrap">
+    <div class="section-header sr">
+      <div class="section-tag">👨‍⚕️ Our Specialists</div>
+      <h2 class="section-title" id="team-h">Meet Our <span>Veterinarians</span></h2>
+      <p class="section-sub">Our team of licensed, compassionate veterinary professionals are dedicated to the health and wellbeing of every patient.</p>
+    </div>
+    <div class="team-grid">
+      <div class="tcard sr d1">
+        <div class="tcard-img" style="background:linear-gradient(135deg,#e8f5ee,#c8e6d4)">
+          <span style="font-size:4rem">👩‍⚕️</span>
+        </div>
+        <div class="tcard-body">
+          <div class="tcard-name">Dr. Sarah Mitchell</div>
+          <div class="tcard-role">Chief Veterinarian</div>
+          <div class="tcard-spec">Internal Medicine & Oncology</div>
+          <span class="tcard-exp">15+ Years Experience</span>
+          <div class="tcard-social">
+            <a href="#" class="soc-btn" aria-label="LinkedIn">💼</a>
+            <a href="#" class="soc-btn" aria-label="Email">📧</a>
+          </div>
+        </div>
+      </div>
+      <div class="tcard sr d2">
+        <div class="tcard-img" style="background:linear-gradient(135deg,#e8f0f5,#c8d6e6)">
+          <span style="font-size:4rem">👨‍⚕️</span>
+        </div>
+        <div class="tcard-body">
+          <div class="tcard-name">Dr. James Patel</div>
+          <div class="tcard-role">Veterinary Surgeon</div>
+          <div class="tcard-spec">Orthopedic & Soft Tissue Surgery</div>
+          <span class="tcard-exp">12+ Years Experience</span>
+          <div class="tcard-social">
+            <a href="#" class="soc-btn" aria-label="LinkedIn">💼</a>
+            <a href="#" class="soc-btn" aria-label="Email">📧</a>
+          </div>
+        </div>
+      </div>
+      <div class="tcard sr d3">
+        <div class="tcard-img" style="background:linear-gradient(135deg,#f5ece8,#e6d0c8)">
+          <span style="font-size:4rem">👩‍⚕️</span>
+        </div>
+        <div class="tcard-body">
+          <div class="tcard-name">Dr. Emily Chen</div>
+          <div class="tcard-role">Pet Dentist</div>
+          <div class="tcard-spec">Dental Surgery & Oral Health</div>
+          <span class="tcard-exp">9+ Years Experience</span>
+          <div class="tcard-social">
+            <a href="#" class="soc-btn" aria-label="LinkedIn">💼</a>
+            <a href="#" class="soc-btn" aria-label="Email">📧</a>
+          </div>
+        </div>
+      </div>
+      <div class="tcard sr d4">
+        <div class="tcard-img" style="background:linear-gradient(135deg,#f5f0e8,#e6d8c8)">
+          <span style="font-size:4rem">👨‍⚕️</span>
+        </div>
+        <div class="tcard-body">
+          <div class="tcard-name">Dr. Carlos Rivera</div>
+          <div class="tcard-role">Nutrition Specialist</div>
+          <div class="tcard-spec">Animal Nutrition & Dietetics</div>
+          <span class="tcard-exp">8+ Years Experience</span>
+          <div class="tcard-social">
+            <a href="#" class="soc-btn" aria-label="LinkedIn">💼</a>
+            <a href="#" class="soc-btn" aria-label="Email">📧</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="why-sec" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="section-header sr">
+      <div class="section-tag">⭐ Why PawCare</div>
+      <h2 class="section-title" id="why-h">Why Pet Owners <span>Choose Us</span></h2>
+      <p class="section-sub">We combine medical excellence with genuine compassion to deliver an experience unlike any other clinic.</p>
+    </div>
+    <div class="why-grid">
+      <div class="wcard sr d1"><div class="wcard-icon">🏅</div><h3 class="wcard-title">Experienced Veterinary Team</h3><p class="wcard-desc">Board-certified specialists with decades of combined experience across all major veterinary disciplines.</p></div>
+      <div class="wcard sr d2"><div class="wcard-icon">🔬</div><h3 class="wcard-title">Modern Medical Equipment</h3><p class="wcard-desc">Digital imaging, in-house laboratory, and state-of-the-art surgical suites with the latest technology.</p></div>
+      <div class="wcard sr d3"><div class="wcard-icon">💚</div><h3 class="wcard-title">Compassionate Pet Care</h3><p class="wcard-desc">Fear-free handling techniques and a stress-minimising environment designed for every animal's comfort.</p></div>
+      <div class="wcard sr d1"><div class="wcard-icon">🚨</div><h3 class="wcard-title">24/7 Emergency Services</h3><p class="wcard-desc">Always available when your pet needs urgent care — our emergency team never sleeps.</p></div>
+      <div class="wcard sr d2"><div class="wcard-icon">💵</div><h3 class="wcard-title">Affordable Treatment Plans</h3><p class="wcard-desc">Transparent pricing, flexible payment options, and pet insurance guidance to fit every budget.</p></div>
+      <div class="wcard sr d3"><div class="wcard-icon">🏥</div><h3 class="wcard-title">Clean & Safe Environment</h3><p class="wcard-desc">Rigorous sanitation protocols and separate areas for cats, dogs, and exotic pets for total safety.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG / PET CARE RESOURCES -->
+<section class="blog-sec" aria-labelledby="blog-h">
+  <div class="wrap">
+    <div class="section-header sr">
+      <div class="section-tag">📚 Pet Care Resources</div>
+      <h2 class="section-title" id="blog-h">Tips From Our <span>Veterinarians</span></h2>
+      <p class="section-sub">Stay informed and keep your pet thriving with expert advice from our veterinary team.</p>
+    </div>
+    <div class="blog-grid">
+      <div class="bcard sr d1">
+        <div class="bcard-img">🐶</div>
+        <div class="bcard-body">
+          <div class="bcard-meta"><span class="bcard-cat">Dogs</span><span class="bcard-date">May 12, 2026</span></div>
+          <h3 class="bcard-title">Complete Puppy Vaccination Guide</h3>
+          <p class="bcard-desc">Everything you need to know about your puppy's vaccine schedule from 6 weeks through adulthood.</p>
+          <span class="bcard-link">Read More →</span>
+        </div>
+      </div>
+      <div class="bcard sr d2">
+        <div class="bcard-img">🐱</div>
+        <div class="bcard-body">
+          <div class="bcard-meta"><span class="bcard-cat">Cats</span><span class="bcard-date">Apr 28, 2026</span></div>
+          <h3 class="bcard-title">Cat Nutrition Essentials</h3>
+          <p class="bcard-desc">How to choose the right food, portion sizes, and supplements to keep your cat healthy at every life stage.</p>
+          <span class="bcard-link">Read More →</span>
+        </div>
+      </div>
+      <div class="bcard sr d3">
+        <div class="bcard-img">🛡️</div>
+        <div class="bcard-body">
+          <div class="bcard-meta"><span class="bcard-cat">Prevention</span><span class="bcard-date">Mar 15, 2026</span></div>
+          <h3 class="bcard-title">Preventing Common Pet Diseases</h3>
+          <p class="bcard-desc">Simple preventive measures that can protect your pet from the most common and costly health conditions.</p>
+          <span class="bcard-link">Read More →</span>
+        </div>
+      </div>
+      <div class="bcard sr d4">
+        <div class="bcard-img">👴🐕</div>
+        <div class="bcard-body">
+          <div class="bcard-meta"><span class="bcard-cat">Senior Care</span><span class="bcard-date">Feb 20, 2026</span></div>
+          <h3 class="bcard-title">Senior Pet Care Tips</h3>
+          <p class="bcard-desc">Adjusting your care routine to support your aging companion's changing physical and emotional needs.</p>
+          <span class="bcard-link">Read More →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-sec" id="testimonials" aria-labelledby="testi-h">
+  <div class="wrap">
+    <div class="section-header sr">
+      <div class="section-tag">💬 Pet Owner Stories</div>
+      <h2 class="section-title" id="testi-h">What Pet Owners <span>Are Saying</span></h2>
+    </div>
+    <div class="testi-slider sr">
+      <div class="testi-track" id="testiTrack">
+        <div class="ttcard"><div class="tt-stars">★★★★★</div><p class="tt-text">"The veterinarians treated my dog Bruno with incredible care and professionalism. From the moment we walked in, the staff was warm, knowledgeable, and genuinely concerned. Highly recommended."</p><div class="tt-author"><div class="tt-avi">🐕</div><div><div class="tt-name">Jennifer Williams</div><div class="tt-pet">Owner of Bruno, Labrador</div></div></div></div>
+        <div class="ttcard"><div class="tt-stars">★★★★★</div><p class="tt-text">"Dr. Mitchell performed emergency surgery on our cat Luna at 2am without hesitation. She was thorough, compassionate, and kept us informed every step of the way. PawCare truly saves lives."</p><div class="tt-author"><div class="tt-avi">🐈</div><div><div class="tt-name">Marcus & Diane Lee</div><div class="tt-pet">Owners of Luna, Persian Cat</div></div></div></div>
+        <div class="ttcard"><div class="tt-stars">★★★★★</div><p class="tt-text">"We've been bringing our three dogs here for six years. The cleanliness, the kindness of every staff member, and the quality of care are consistently outstanding. Best vet clinic in the area."</p><div class="tt-author"><div class="tt-avi">🐩</div><div><div class="tt-name">Robert Sanchez</div><div class="tt-pet">Owner of Bella, Max & Daisy</div></div></div></div>
+        <div class="ttcard"><div class="tt-stars">★★★★★</div><p class="tt-text">"Dr. Chen did dental work on my rabbit Harvey and the recovery was fantastic. The team was patient, gentle, and called twice to check in. PawCare genuinely cares about every animal, not just dogs and cats."</p><div class="tt-author"><div class="tt-avi">🐰</div><div><div class="tt-name">Priya Sharma</div><div class="tt-pet">Owner of Harvey, Holland Lop</div></div></div></div>
+        <div class="ttcard"><div class="tt-stars">★★★★★</div><p class="tt-text">"Transparent pricing, no surprise bills, and they actually explained every option before proceeding. I feel completely confident leaving my pets in their hands. The nutrition plan Dr. Rivera created has been transformative."</p><div class="tt-author"><div class="tt-avi">🐠</div><div><div class="tt-name">Thomas Nguyen</div><div class="tt-pet">Multi-pet household owner</div></div></div></div>
+      </div>
+    </div>
+    <div class="testi-nav">
+      <button class="tnbtn" id="tPrev" aria-label="Previous review">‹</button>
+      <div class="tdots" id="tDots"></div>
+      <button class="tnbtn" id="tNext" aria-label="Next review">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- EMERGENCY BANNER -->
+<section class="emerg-sec" aria-label="Emergency care information">
+  <div class="wrap">
+    <div class="emerg-inner">
+      <div class="emerg-left">
+        <div class="emerg-icon">🚨</div>
+        <div>
+          <h2 class="emerg-title">Emergency Veterinary Care — Always Available</h2>
+          <p class="emerg-sub">Our team is ready to provide immediate care when your pet needs it most, 24 hours a day, 7 days a week.</p>
+        </div>
+      </div>
+      <div class="emerg-right">
+        <a href="tel:+19995550911" class="btn-emerg-white">📞 Call Emergency Line</a>
+        <div class="emerg-phone"><span>🔴</span> +1 (999) 555-0911</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="book-sec" id="booking" aria-labelledby="book-h">
+  <div class="wrap">
+    <div class="book-grid">
+      <div class="sr-l">
+        <div class="section-tag" style="margin-bottom:16px">📅 Easy Booking</div>
+        <h2 class="book-info-title" id="book-h">Book Your Pet's Appointment</h2>
+        <p class="book-info-sub">Scheduling is quick and easy. Fill out the form and our team will confirm your appointment within 2 hours.</p>
+        <div class="book-steps">
+          <div class="bstep"><div class="bstep-num">1</div><div><div class="bstep-title">Fill In Details</div><div class="bstep-desc">Tell us about your pet and what they need.</div></div></div>
+          <div class="bstep"><div class="bstep-num">2</div><div><div class="bstep-title">Choose a Time</div><div class="bstep-desc">Pick your preferred date and time slot.</div></div></div>
+          <div class="bstep"><div class="bstep-num">3</div><div><div class="bstep-title">Get Confirmed</div><div class="bstep-desc">We'll send a confirmation and reminders via email.</div></div></div>
+          <div class="bstep"><div class="bstep-num">4</div><div><div class="bstep-title">We'll See You Soon!</div><div class="bstep-desc">Arrive at PawCare — we'll be ready for your pet.</div></div></div>
+        </div>
+      </div>
+      <div class="sr-r">
+        <div class="book-card">
+          <h3 class="book-card-title">Book an Appointment</h3>
+          <p class="book-card-sub">PawCare Veterinary Clinic · Response within 2 hours</p>
+          <div id="bookForm">
+            <div class="fg-row fg">
+              <div><label class="flbl" for="bname">Pet Owner Name *</label><input class="finput" type="text" id="bname" placeholder="Your full name" autocomplete="name"></div>
+              <div><label class="flbl" for="bemail">Email Address *</label><input class="finput" type="email" id="bemail" placeholder="you@email.com" autocomplete="email"></div>
+            </div>
+            <div class="fg-row fg">
+              <div><label class="flbl" for="bphone">Phone Number *</label><input class="finput" type="tel" id="bphone" placeholder="+1 (555) 000-0000" autocomplete="tel"></div>
+              <div><label class="flbl" for="bpetname">Pet's Name *</label><input class="finput" type="text" id="bpetname" placeholder="Your pet's name"></div>
+            </div>
+            <div class="fg-row fg">
+              <div><label class="flbl" for="bpettype">Pet Type *</label>
+                <select class="fselect" id="bpettype">
+                  <option value="">Select pet type</option>
+                  <option>Dog</option><option>Cat</option><option>Rabbit</option>
+                  <option>Bird</option><option>Fish</option><option>Reptile</option><option>Other</option>
+                </select>
+              </div>
+              <div><label class="flbl" for="bservice">Service Required *</label>
+                <select class="fselect" id="bservice">
+                  <option value="">Select a service</option>
+                  <option>General Checkup</option><option>Vaccination</option><option>Surgery Consultation</option>
+                  <option>Dental Treatment</option><option>Emergency Care</option><option>Grooming</option>
+                  <option>Nutrition Consult</option><option>Microchipping</option><option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="fg-row fg">
+              <div><label class="flbl" for="bdate">Preferred Date *</label><input class="finput" type="date" id="bdate"></div>
+              <div><label class="flbl" for="btime">Preferred Time *</label>
+                <select class="fselect" id="btime">
+                  <option value="">Select time</option>
+                  <option>8:00 AM</option><option>9:00 AM</option><option>10:00 AM</option><option>11:00 AM</option>
+                  <option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option>
+                  <option>4:00 PM</option><option>5:00 PM</option><option>6:00 PM</option>
+                </select>
+              </div>
+            </div>
+            <div class="fg"><label class="flbl" for="bnotes">Additional Notes</label><textarea class="ftextarea" id="bnotes" placeholder="Any specific concerns, medical history, or questions for the vet..."></textarea></div>
+            <button class="btn-book" type="button" id="bookBtn">📅 Book Appointment</button>
+          </div>
+          <div class="form-success" id="formSuccess">
+            <div class="fs-icon">🎉</div>
+            <h3 class="fs-title">Appointment Requested!</h3>
+            <p class="fs-sub">Thank you! We've received your booking request and will confirm within 2 hours via email. See you soon at PawCare!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-sec" id="contact" aria-labelledby="ct-h">
+  <div class="wrap">
+    <div class="section-header sr">
+      <div class="section-tag">📍 Find Us</div>
+      <h2 class="section-title" id="ct-h">Visit <span>PawCare Clinic</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="ct-cards sr-l">
+        <div class="ctcard">
+          <div class="ctcard-icon">📍</div>
+          <div><div class="ctcard-label">Address</div><div class="ctcard-main">142 Greenfield Avenue</div><div class="ctcard-sub">Suite 4, Maplewood District<br>Springfield, CA 90210</div></div>
+        </div>
+        <div class="ctcard">
+          <div class="ctcard-icon">📞</div>
+          <div><div class="ctcard-label">Phone</div><div class="ctcard-main">+1 (555) 234-5678</div><div class="ctcard-sub">Appointments & Enquiries<br>Mon–Fri: 8am–7pm</div></div>
+        </div>
+        <div class="ctcard">
+          <div class="ctcard-icon">🚨</div>
+          <div><div class="ctcard-label">Emergency</div><div class="ctcard-main">+1 (999) 555-0911</div><div class="ctcard-sub">Available 24 hours a day<br>7 days a week</div></div>
+        </div>
+        <div class="ctcard">
+          <div class="ctcard-icon">📧</div>
+          <div><div class="ctcard-label">Email</div><div class="ctcard-main">hello@pawcarevc.com</div><div class="ctcard-sub">appointments@pawcarevc.com<br>Response within 4 hours</div></div>
+        </div>
+      </div>
+      <div class="sr-r">
+        <div class="map-wrap">
+          <div class="map-placeholder">
+            <div class="map-inner">
+              <div class="map-icon">🗺️</div>
+              <div class="map-title">142 Greenfield Avenue, Springfield</div>
+              <div class="map-sub">Interactive map — embed Google Maps here</div>
+            </div>
+          </div>
+          <div class="map-footer">
+            <div>
+              <div style="font-family:var(--ff-head);font-size:0.75rem;font-weight:700;color:var(--char);margin-bottom:8px">Business Hours</div>
+              <div class="hours-grid">
+                <div class="hours-item"><strong>Mon – Fri</strong></div><div class="hours-item">8:00 AM – 7:00 PM</div>
+                <div class="hours-item"><strong>Saturday</strong></div><div class="hours-item">9:00 AM – 5:00 PM</div>
+                <div class="hours-item"><strong>Sunday</strong></div><div class="hours-item">Emergency Only</div>
+              </div>
+            </div>
+            <div>
+              <div style="font-family:var(--ff-head);font-size:0.7rem;font-weight:600;color:var(--mid);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.12em">Follow Us</div>
+              <div class="social-row">
+                <a href="#" class="soc-c" aria-label="Facebook">📘</a>
+                <a href="#" class="soc-c" aria-label="Instagram">📷</a>
+                <a href="#" class="soc-c" aria-label="YouTube">▶️</a>
+                <a href="#" class="soc-c" aria-label="TikTok">🎵</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-sec" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="section-header sr">
+      <div class="section-tag">❓ FAQ</div>
+      <h2 class="section-title" id="faq-h">Frequently Asked <span>Questions</span></h2>
+      <p class="section-sub">Everything you need to know before your pet's first visit — and beyond.</p>
+    </div>
+    <div class="faq-wrap sr">
+      <div class="faq-item">
+        <button class="faq-q">How often should my pet have a wellness checkup?<span class="faq-icon">+</span></button>
+        <div class="faq-body"><div class="faq-body-inner">For healthy adult dogs and cats, we recommend a comprehensive wellness exam once a year. Senior pets (7+ years) benefit from bi-annual checkups to catch age-related conditions early. Puppies and kittens need exams more frequently in their first year to complete vaccine series and monitor development.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What vaccinations does my pet require?<span class="faq-icon">+</span></button>
+        <div class="faq-body"><div class="faq-body-inner">Core vaccines for dogs include Distemper, Parvovirus, Adenovirus, and Rabies. For cats, we recommend Feline Herpesvirus, Calicivirus, Panleukopenia, and Rabies. Non-core vaccines (like Bordetella, Leptospirosis, and Lyme) are recommended based on your pet's lifestyle and risk factors. Our vets will create a personalised vaccine schedule at your first visit.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you provide emergency services outside business hours?<span class="faq-icon">+</span></button>
+        <div class="faq-body"><div class="faq-body-inner">Yes. PawCare operates a 24/7 emergency line at +1 (999) 555-0911. Our emergency team is always on call for life-threatening situations including difficulty breathing, severe trauma, ingestion of toxins, uncontrolled bleeding, and seizures. Please call ahead so we can prepare for your arrival.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What types of animals do you treat?<span class="faq-icon">+</span></button>
+        <div class="faq-body"><div class="faq-body-inner">PawCare treats a wide range of companion animals including dogs, cats, rabbits, guinea pigs, birds, reptiles (lizards, snakes, turtles), small rodents, and fish. Some exotic species may require a referral to a specialist — please call us in advance if you're unsure whether we see your specific pet.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I book an appointment?<span class="faq-icon">+</span></button>
+        <div class="faq-body"><div class="faq-body-inner">You can book an appointment through our online form on this page, by calling us at +1 (555) 234-5678, or by emailing appointments@pawcarevc.com. We typically confirm bookings within 2 hours during business hours. Walk-ins are also welcome for non-emergency visits, subject to availability.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you accept pet insurance?<span class="faq-icon">+</span></button>
+        <div class="faq-body"><div class="faq-body-inner">Yes! PawCare works with all major pet insurance providers. We provide detailed itemised invoices and medical records to support your insurance claims. We can also help you navigate your policy and advise on which coverage options best suit your pet's needs if you're considering pet insurance for the first time.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="f-logo">
+          <div class="f-logo-icon">🐾</div>
+          <div><div class="f-logo-name">PawCare</div><div class="f-logo-sub">Veterinary Clinic</div></div>
+        </div>
+        <p class="f-desc">Compassionate, expert veterinary care for every pet. Serving families and their animals since 2008 with dedication, expertise, and genuine love for animals.</p>
+        <div class="f-nl">
+          <input type="email" placeholder="Your email address" aria-label="Newsletter email">
+          <button type="button">Subscribe</button>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title">Quick Links</div>
+        <div class="f-links">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#services">Services</a>
+          <a href="#team">Our Team</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title">Veterinary Services</div>
+        <div class="f-links">
+          <a href="#services">Wellness Exams</a>
+          <a href="#services">Vaccinations</a>
+          <a href="#services">Surgery</a>
+          <a href="#services">Dental Care</a>
+          <a href="#services">Emergency Care</a>
+          <a href="#services">Grooming</a>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title">Contact</div>
+        <div class="f-links">
+          <a href="#">📍 142 Greenfield Ave, Springfield</a>
+          <a href="tel:+15552345678">📞 +1 (555) 234-5678</a>
+          <a href="tel:+19995550911">🚨 Emergency: (999) 555-0911</a>
+          <a href="mailto:hello@pawcarevc.com">📧 hello@pawcarevc.com</a>
+        </div>
+        <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+          <a href="#" class="soc-c" aria-label="Facebook">📘</a>
+          <a href="#" class="soc-c" aria-label="Instagram">📷</a>
+          <a href="#" class="soc-c" aria-label="YouTube">▶️</a>
+          <a href="#" class="soc-c" aria-label="TikTok">🎵</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-copy">© 2026 PawCare Veterinary Clinic. All Rights Reserved.</span>
+      <span class="f-rights">Designed with ❤️ for pets everywhere.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="btt" id="btt" aria-label="Back to top">↑</button>
+
+<!-- TOAST -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- JAVASCRIPT -->
+<script>
+(function(){
+'use strict';
+
+/* ── Scroll Reveal ── */
+const srEls = document.querySelectorAll('.sr,.sr-l,.sr-r');
+const srObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); srObs.unobserve(e.target); } });
+},{threshold:0.1});
+srEls.forEach(el => srObs.observe(el));
+
+/* ── Sticky header ── */
+const header = document.getElementById('header');
+const btt = document.getElementById('btt');
+window.addEventListener('scroll', () => {
+  const sy = window.scrollY;
+  header.classList.toggle('scrolled', sy > 60);
+  btt.classList.toggle('show', sy > 500);
+  // Active nav
+  ['about','services','team','testimonials','contact'].forEach(id => {
+    const el = document.getElementById(id);
+    if(!el) return;
+    const r = el.getBoundingClientRect();
+    const a = document.querySelector(`.nav a[href="#${id}"]`);
+    if(a) a.classList.toggle('act', r.top <= 80 && r.bottom >= 80);
+  });
+},{passive:true});
+
+/* ── Back to top ── */
+btt.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+/* ── Smooth scroll ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if(t){ e.preventDefault(); window.scrollTo({top: t.getBoundingClientRect().top + window.scrollY - 72, behavior:'smooth'}); }
+  });
+});
+
+/* ── Mobile nav ── */
+const ham = document.getElementById('ham');
+const mobNav = document.getElementById('mobNav');
+const mobOverlay = document.getElementById('mobOverlay');
+const mobClose = document.getElementById('mobClose');
+function openMob(){ mobNav.classList.add('open'); mobOverlay.classList.add('show'); document.body.style.overflow='hidden'; ham.setAttribute('aria-expanded','true'); }
+function closeMob(){ mobNav.classList.remove('open'); mobOverlay.classList.remove('show'); document.body.style.overflow=''; ham.setAttribute('aria-expanded','false'); }
+ham.addEventListener('click', openMob);
+mobClose.addEventListener('click', closeMob);
+mobOverlay.addEventListener('click', closeMob);
+mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMob));
+
+/* ── Animated counters ── */
+const counters = document.querySelectorAll('[data-count]');
+const cObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(!e.isIntersecting) return;
+    const target = +e.target.dataset.count;
+    const duration = 1800;
+    const step = target / (duration/16);
+    let cur = 0;
+    const timer = setInterval(() => {
+      cur += step;
+      if(cur >= target){ cur = target; clearInterval(timer); }
+      const val = Math.floor(cur);
+      e.target.textContent = val >= 1000 ? val.toLocaleString()+'+' : (target === 98 ? val+'%' : val);
+    }, 16);
+    cObs.unobserve(e.target);
+  });
+},{threshold:0.5});
+counters.forEach(c => cObs.observe(c));
+
+/* ── Testimonials slider ── */
+const track = document.getElementById('testiTrack');
+const cards = track ? [...track.querySelectorAll('.ttcard')] : [];
+const dotsWrap = document.getElementById('tDots');
+let cur = 0, autoT;
+function getVis(){ return window.innerWidth<768?1:window.innerWidth<1100?2:3; }
+function buildDots(){
+  dotsWrap.innerHTML='';
+  const total = Math.ceil(cards.length/getVis());
+  for(let i=0;i<total;i++){
+    const d = document.createElement('div');
+    d.className = 'tdot'+(i===cur?' on':'');
+    d.addEventListener('click',()=>{goTo(i);resetAuto();});
+    dotsWrap.appendChild(d);
+  }
+}
+function goTo(idx){
+  const vis = getVis();
+  const max = Math.ceil(cards.length/vis)-1;
+  cur = Math.max(0,Math.min(idx,max));
+  const w = cards[0] ? cards[0].offsetWidth + 24 : 0;
+  track.style.transform = `translateX(-${cur*vis*w}px)`;
+  dotsWrap.querySelectorAll('.tdot').forEach((d,i) => d.classList.toggle('on',i===cur));
+}
+function startAuto(){ autoT = setInterval(()=>{ const vis=getVis();const max=Math.ceil(cards.length/vis)-1; goTo(cur>=max?0:cur+1); },5000); }
+function resetAuto(){ clearInterval(autoT); startAuto(); }
+document.getElementById('tPrev')?.addEventListener('click',()=>{goTo(cur-1);resetAuto();});
+document.getElementById('tNext')?.addEventListener('click',()=>{goTo(cur+1);resetAuto();});
+buildDots(); startAuto();
+window.addEventListener('resize',()=>{buildDots();goTo(0);});
+
+/* ── FAQ accordion ── */
+document.querySelectorAll('.faq-item').forEach(item => {
+  const btn = item.querySelector('.faq-q');
+  const body = item.querySelector('.faq-body');
+  btn.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o => {
+      o.classList.remove('open');
+      o.querySelector('.faq-body').style.maxHeight = '0';
+    });
+    if(!isOpen){
+      item.classList.add('open');
+      body.style.maxHeight = body.scrollHeight + 'px';
+    }
+  });
+});
+
+/* ── Toast ── */
+const toast = document.getElementById('toast');
+function showToast(msg, dur=4000){
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(()=>toast.classList.remove('show'), dur);
+}
+
+/* ── Booking form ── */
+document.getElementById('bookBtn')?.addEventListener('click', () => {
+  const fields = [
+    {id:'bname', label:'Pet owner name'},
+    {id:'bemail', label:'Email address'},
+    {id:'bphone', label:'Phone number'},
+    {id:'bpetname', label:"Pet's name"},
+    {id:'bpettype', label:'Pet type'},
+    {id:'bservice', label:'Service required'},
+    {id:'bdate', label:'Preferred date'},
+    {id:'btime', label:'Preferred time'},
+  ];
+  let valid = true;
+  fields.forEach(f => {
+    const el = document.getElementById(f.id);
+    if(!el) return;
+    const v = el.value.trim();
+    if(!v){
+      el.classList.add('err');
+      el.addEventListener('input',()=>el.classList.remove('err'),{once:true});
+      valid = false;
+    }
+  });
+  // Email validation
+  const emailEl = document.getElementById('bemail');
+  if(emailEl && emailEl.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value)){
+    emailEl.classList.add('err');
+    valid = false;
+    showToast('Please enter a valid email address.');
+    return;
+  }
+  if(!valid){ showToast('Please fill in all required fields.'); return; }
+  document.getElementById('bookForm').style.display='none';
+  document.getElementById('formSuccess').classList.add('show');
+  showToast('🎉 Appointment booked successfully!');
+});
+
+/* ── Newsletter ── */
+document.querySelector('.f-nl button')?.addEventListener('click', function(){
+  const inp = this.previousElementSibling;
+  if(!inp.value.trim()){ showToast('Please enter your email address.'); return; }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inp.value)){ showToast('Please enter a valid email.'); return; }
+  showToast('✅ Subscribed! Thank you for joining us.');
+  inp.value='';
+});
+
+})();
+</script>
+</body>
+</html>

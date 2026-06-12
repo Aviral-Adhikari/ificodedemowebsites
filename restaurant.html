@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Himalayan Durbar — Kathmandu's finest dining experience. Award-winning Nepali and continental cuisine in the heart of Thamel. Reserve your table today.">
+<meta name="keywords" content="restaurant Kathmandu, fine dining Nepal, Nepali cuisine, Thamel restaurant, Himalayan food">
+<meta property="og:title" content="Himalayan Durbar | Fine Dining Kathmandu">
+<meta property="og:description" content="Experience fine dining like never before. Fresh ingredients, exceptional flavors, unforgettable moments in the heart of Kathmandu.">
+<meta property="og:type" content="restaurant">
+<title>Himalayan Durbar | Fine Dining — Kathmandu, Nepal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,700&family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #111111;
+  --black-soft: #1a1a1a;
+  --black-mid: #222222;
+  --gold: #D4AF37;
+  --gold-light: #e8c84a;
+  --gold-pale: #f5ead3;
+  --gold-dim: rgba(212,175,55,0.15);
+  --cream: #FAF7F0;
+  --cream-mid: #f0ebe0;
+  --brown: #3A2D24;
+  --brown-light: #5a4535;
+  --red: #B22222;
+  --red-soft: #c93333;
+  --white: #FFFFFF;
+  --gray: #888;
+  --gray-light: #ccc;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-alt: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Poppins', system-ui, sans-serif;
+  --transition: 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow: 0 16px 48px rgba(0,0,0,0.35);
+  --radius: 4px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--black); color: var(--cream); line-height: 1.6; overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: var(--font-body); }
+ul { list-style: none; }
+
+/* UTILITY */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+.section-label {
+  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 0.75rem;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  color: var(--cream); line-height: 1.2; margin-bottom: 1.25rem;
+}
+.section-title.dark { color: var(--black); }
+.section-sub { font-size: 0.95rem; color: rgba(250,247,240,0.65); max-width: 560px; line-height: 1.8; }
+.section-sub.dark { color: var(--brown-light); }
+.gold-divider {
+  display: flex; align-items: center; gap: 0.75rem; margin: 1.25rem 0;
+}
+.gold-divider span { width: 40px; height: 1px; background: var(--gold); }
+.gold-divider i { color: var(--gold); font-style: normal; font-size: 0.7rem; }
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  font-family: var(--font-body); font-size: 0.75rem;
+  font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  border: none; border-radius: var(--radius);
+  transition: var(--transition); cursor: pointer;
+}
+.btn-gold { background: var(--gold); color: var(--black); }
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,175,55,0.35); }
+.btn-outline-gold { background: transparent; color: var(--gold); border: 1.5px solid var(--gold); }
+.btn-outline-gold:hover { background: var(--gold); color: var(--black); transform: translateY(-2px); }
+.btn-outline-cream { background: transparent; color: var(--cream); border: 1.5px solid rgba(250,247,240,0.4); }
+.btn-outline-cream:hover { border-color: var(--gold); color: var(--gold); }
+.btn-red { background: var(--red); color: var(--white); }
+.btn-red:hover { background: var(--red-soft); transform: translateY(-2px); }
+
+/* Reveal */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* GRAIN OVERLAY */
+body::after {
+  content: '';
+  position: fixed; inset: 0; pointer-events: none; z-index: 9999;
+  opacity: 0.018;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* ─── HEADER ─── */
+#header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  transition: var(--transition);
+}
+#header.scrolled {
+  background: rgba(17,17,17,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212,175,55,0.12);
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.25rem 2.5rem;
+  max-width: 1400px; margin: 0 auto;
+}
+.logo {
+  display: flex; flex-direction: column; line-height: 1;
+}
+.logo-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem; font-weight: 700;
+  color: var(--cream); letter-spacing: 0.02em;
+}
+.logo-name em { color: var(--gold); font-style: normal; }
+.logo-tag {
+  font-size: 0.55rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold); margin-top: 0.2rem;
+}
+.nav-links { display: flex; align-items: center; gap: 0.2rem; }
+.nav-links a {
+  font-size: 0.72rem; font-weight: 500;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: rgba(250,247,240,0.7);
+  padding: 0.5rem 0.85rem;
+  transition: color var(--transition);
+  position: relative;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: 0; left: 0.85rem; right: 0.85rem;
+  height: 1px; background: var(--gold);
+  transform: scaleX(0); transition: transform var(--transition); transform-origin: left;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+.nav-actions { display: flex; gap: 0.75rem; margin-left: 1rem; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 0.5rem; }
+.hamburger span { width: 24px; height: 1.5px; background: var(--cream); display: block; transition: var(--transition); }
+.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
+.mobile-menu {
+  display: none; position: fixed; inset: 0; background: var(--black);
+  z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-family: var(--font-display); font-size: 1.6rem; color: var(--cream); transition: color var(--transition); }
+.mobile-menu a:hover { color: var(--gold); }
+.mobile-close { position: absolute; top: 1.5rem; right: 2rem; background: none; border: none; color: var(--cream); font-size: 2rem; cursor: pointer; }
+
+/* ─── HERO ─── */
+#hero {
+  min-height: 100vh; position: relative;
+  display: flex; align-items: center; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(17,17,17,0.65) 0%, rgba(17,17,17,0.45) 40%, rgba(17,17,17,0.8) 100%),
+    url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80') center/cover no-repeat;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 60%, rgba(212,175,55,0.07) 0%, transparent 60%);
+}
+.hero-content {
+  position: relative; z-index: 1;
+  max-width: 1200px; margin: 0 auto;
+  padding: 10rem 2rem 5rem;
+  display: grid; grid-template-columns: 1fr 0.65fr; gap: 4rem; align-items: center;
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  font-size: 0.65rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.5rem;
+}
+.hero-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  color: var(--cream); line-height: 1.1;
+  font-weight: 700; margin-bottom: 1.5rem;
+}
+.hero-title em { font-style: italic; color: var(--gold); }
+.hero-sub {
+  font-size: 1rem; color: rgba(250,247,240,0.65);
+  line-height: 1.8; max-width: 460px; margin-bottom: 2.5rem;
+}
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
+.hero-badges { display: flex; flex-direction: column; gap: 1rem; }
+.hero-badge {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: var(--radius);
+  background: rgba(17,17,17,0.5);
+  backdrop-filter: blur(8px);
+}
+.badge-icon { font-size: 1.3rem; flex-shrink: 0; }
+.badge-info { display: flex; flex-direction: column; line-height: 1.2; }
+.badge-title { font-size: 0.8rem; font-weight: 600; color: var(--cream); }
+.badge-desc { font-size: 0.68rem; color: var(--gold); letter-spacing: 0.05em; }
+.hero-scroll {
+  position: absolute; bottom: 2rem; left: 50%;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  color: rgba(250,247,240,0.3); font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+}
+.scroll-orb {
+  width: 28px; height: 44px;
+  border: 1.5px solid rgba(212,175,55,0.3);
+  border-radius: 14px;
+  display: flex; align-items: flex-start; justify-content: center;
+  padding-top: 6px;
+}
+.scroll-orb::after {
+  content: '';
+  width: 4px; height: 8px;
+  background: var(--gold);
+  border-radius: 2px;
+  animation: scrollBounce 2s infinite;
+}
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  80% { transform: translateY(14px); opacity: 0; }
+}
+
+/* ─── STATS BAND ─── */
+#stats-band {
+  background: var(--brown);
+  padding: 3rem 0;
+  border-top: 1px solid rgba(212,175,55,0.15);
+  border-bottom: 1px solid rgba(212,175,55,0.15);
+}
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.stat-item {
+  text-align: center; padding: 1rem 1.5rem;
+  border-right: 1px solid rgba(212,175,55,0.15);
+  transition: var(--transition);
+}
+.stat-item:last-child { border-right: none; }
+.stat-item:hover { background: rgba(212,175,55,0.06); }
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 2.4rem; font-weight: 700;
+  color: var(--gold); line-height: 1; margin-bottom: 0.35rem;
+}
+.stat-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; color: rgba(250,247,240,0.5); }
+
+/* ─── ABOUT ─── */
+#about { padding: 7rem 0; background: var(--black-soft); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.about-img-stack { position: relative; }
+.about-img-main {
+  aspect-ratio: 3/4;
+  background: linear-gradient(135deg, var(--brown) 0%, var(--black) 100%);
+  border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 5rem; position: relative; overflow: hidden;
+}
+.about-img-main::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: 
+    linear-gradient(135deg, rgba(212,175,55,0.06) 0%, transparent 60%),
+    url('https://images.unsplash.com/photo-1543353071-873f17a7a088?w=600&q=80') center/cover no-repeat;
+  opacity: 0.85;
+}
+.about-img-float {
+  position: absolute; bottom: -2rem; right: -2rem;
+  width: 55%; aspect-ratio: 1;
+  background: var(--gold);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 4px solid var(--black-soft);
+  display: flex; align-items: center; justify-content: center;
+}
+.about-img-float::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url('https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=400&q=80') center/cover no-repeat;
+  opacity: 0.9;
+}
+.years-badge {
+  position: absolute; top: -1.5rem; left: -1.5rem;
+  width: 90px; height: 90px;
+  background: var(--red);
+  border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  box-shadow: 0 8px 24px rgba(178,34,34,0.4);
+  z-index: 2;
+}
+.years-num { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; color: var(--white); line-height: 1; }
+.years-label { font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+.about-values { margin-top: 2rem; }
+.value-row { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem; }
+.value-dot { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; margin-top: 0.4rem; flex-shrink: 0; }
+.value-text h4 { font-size: 0.9rem; font-weight: 600; color: var(--cream); margin-bottom: 0.2rem; }
+.value-text p { font-size: 0.82rem; color: rgba(250,247,240,0.5); line-height: 1.6; }
+
+/* ─── SIGNATURE DISHES ─── */
+#dishes { padding: 7rem 0; background: var(--black); }
+.dishes-header { text-align: center; max-width: 600px; margin: 0 auto 4rem; }
+.dishes-header .gold-divider { justify-content: center; }
+.dishes-filter {
+  display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+.filter-btn {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  border: 1px solid rgba(212,175,55,0.25);
+  background: transparent; color: rgba(250,247,240,0.6);
+  border-radius: 100px;
+  transition: var(--transition);
+}
+.filter-btn:hover, .filter-btn.active { background: var(--gold); color: var(--black); border-color: var(--gold); }
+.dishes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.dish-card {
+  background: var(--black-soft);
+  border: 1px solid rgba(212,175,55,0.08);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.dish-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); border-color: rgba(212,175,55,0.25); }
+.dish-img {
+  aspect-ratio: 4/3; overflow: hidden; position: relative;
+  background: linear-gradient(135deg, var(--brown) 0%, var(--black-mid) 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem;
+}
+.dish-img-bg {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  transition: transform 0.6s ease;
+}
+.dish-card:hover .dish-img-bg { transform: scale(1.08); }
+.dish-badge {
+  position: absolute; top: 0.75rem; left: 0.75rem;
+  font-size: 0.58rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
+  padding: 0.3rem 0.65rem; border-radius: 2px;
+}
+.badge-popular { background: var(--red); color: var(--white); }
+.badge-new { background: var(--gold); color: var(--black); }
+.badge-chef { background: var(--brown); color: var(--gold); border: 1px solid var(--gold); }
+.dish-fav {
+  position: absolute; top: 0.75rem; right: 0.75rem;
+  width: 34px; height: 34px;
+  background: rgba(17,17,17,0.7);
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+.dish-fav:hover, .dish-fav.active { background: var(--gold); border-color: var(--gold); }
+.dish-info { padding: 1.5rem; }
+.dish-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--cream); margin-bottom: 0.4rem; }
+.dish-desc { font-size: 0.8rem; color: rgba(250,247,240,0.5); line-height: 1.6; margin-bottom: 1rem; }
+.dish-footer { display: flex; align-items: center; justify-content: space-between; }
+.dish-price { font-family: var(--font-display); font-size: 1.2rem; color: var(--gold); font-weight: 600; }
+.dish-rating { display: flex; align-items: center; gap: 0.3rem; font-size: 0.78rem; color: rgba(250,247,240,0.5); }
+.dish-rating .stars { color: var(--gold); }
+
+/* ─── FULL MENU ─── */
+#menu { padding: 7rem 0; background: var(--cream); }
+.menu-header { text-align: center; max-width: 600px; margin: 0 auto 3.5rem; }
+.menu-header .gold-divider { justify-content: center; }
+.menu-cats {
+  display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 3rem;
+}
+.menu-cat-btn {
+  padding: 0.6rem 1.5rem;
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  border: 1.5px solid var(--cream-mid);
+  background: transparent; color: var(--brown-light);
+  border-radius: 100px; transition: var(--transition);
+}
+.menu-cat-btn:hover, .menu-cat-btn.active { background: var(--black); color: var(--gold); border-color: var(--black); }
+.menu-items-wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+.menu-item {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--white);
+  border: 1px solid var(--cream-mid);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+.menu-item:hover { border-color: var(--gold); background: var(--gold-pale); }
+.menu-item-icon { font-size: 1.5rem; flex-shrink: 0; width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; }
+.menu-item-info { flex: 1; }
+.menu-item-name { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; color: var(--brown); }
+.menu-item-desc { font-size: 0.78rem; color: var(--gray); line-height: 1.5; }
+.menu-item-right { display: flex; flex-direction: column; align-items: flex-end; gap: 0.35rem; flex-shrink: 0; }
+.menu-item-price { font-family: var(--font-display); font-size: 1rem; color: var(--red); font-weight: 600; }
+.menu-popular { font-size: 0.58rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; background: var(--gold); color: var(--black); padding: 0.2rem 0.5rem; border-radius: 2px; }
+.menu-item[data-cat] { transition: opacity 0.3s, transform 0.3s; }
+.menu-item.hidden { display: none; }
+
+/* ─── CHEF ─── */
+#chef { padding: 7rem 0; background: var(--black-soft); }
+.chef-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.chef-img {
+  position: relative;
+  aspect-ratio: 3/4;
+  border-radius: var(--radius); overflow: hidden;
+  background: linear-gradient(135deg, var(--brown) 0%, var(--black) 100%);
+}
+.chef-img::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url('https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=700&q=80') center/cover no-repeat;
+  opacity: 0.8;
+}
+.chef-img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(17,17,17,0.8) 0%, transparent 50%);
+}
+.chef-img-caption {
+  position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem;
+  padding: 1rem;
+  background: rgba(17,17,17,0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: var(--radius);
+}
+.chef-caption-name { font-family: var(--font-display); font-size: 1.1rem; color: var(--cream); }
+.chef-caption-title { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+.chef-awards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+.chef-award {
+  padding: 1rem;
+  border: 1px solid rgba(212,175,55,0.15);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+.chef-award:hover { border-color: var(--gold); background: rgba(212,175,55,0.05); }
+.award-icon { font-size: 1.5rem; margin-bottom: 0.4rem; }
+.award-title { font-size: 0.82rem; font-weight: 600; color: var(--cream); }
+.award-year { font-size: 0.7rem; color: var(--gold); }
+
+/* ─── GALLERY ─── */
+#gallery { padding: 7rem 0; background: var(--black); }
+.gallery-header { text-align: center; max-width: 600px; margin: 0 auto 3.5rem; }
+.gallery-header .gold-divider { justify-content: center; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 1rem;
+}
+.gallery-item {
+  border-radius: var(--radius); overflow: hidden;
+  position: relative; cursor: pointer;
+  background: var(--black-mid);
+}
+.gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+.gallery-item:nth-child(4) { grid-column: span 2; }
+.gallery-item:nth-child(7) { grid-column: span 2; }
+.gallery-bg {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  transition: transform 0.5s ease;
+}
+.gallery-item:hover .gallery-bg { transform: scale(1.06); }
+.gallery-overlay {
+  position: absolute; inset: 0;
+  background: rgba(17,17,17,0.55);
+  opacity: 0; transition: opacity var(--transition);
+  display: flex; align-items: center; justify-content: center;
+}
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+.gallery-zoom { font-size: 1.5rem; color: var(--white); }
+.gallery-placeholder {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--brown) 0%, var(--black-mid) 100%);
+}
+
+/* LIGHTBOX */
+.lightbox {
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0,0,0,0.95);
+  display: none; align-items: center; justify-content: center;
+}
+.lightbox.open { display: flex; }
+.lightbox-inner { position: relative; max-width: 80vw; max-height: 80vh; }
+.lightbox-img {
+  max-width: 100%; max-height: 80vh; border-radius: var(--radius);
+  object-fit: contain;
+}
+.lightbox-placeholder {
+  width: 600px; height: 400px; max-width: 80vw;
+  background: var(--brown);
+  border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 5rem;
+}
+.lightbox-close {
+  position: fixed; top: 1.5rem; right: 2rem;
+  background: none; border: none; color: var(--cream);
+  font-size: 2.5rem; cursor: pointer; z-index: 10;
+}
+.lightbox-prev, .lightbox-next {
+  position: fixed; top: 50%; transform: translateY(-50%);
+  background: rgba(212,175,55,0.15); border: 1px solid rgba(212,175,55,0.3);
+  color: var(--gold); font-size: 1.5rem;
+  width: 48px; height: 48px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: var(--transition);
+}
+.lightbox-prev:hover, .lightbox-next:hover { background: var(--gold); color: var(--black); }
+.lightbox-prev { left: 1.5rem; }
+.lightbox-next { right: 1.5rem; }
+
+/* ─── SPECIAL OFFERS ─── */
+#offers { padding: 7rem 0; background: var(--brown); }
+.offers-header { text-align: center; max-width: 600px; margin: 0 auto 3.5rem; }
+.offers-header .gold-divider { justify-content: center; }
+.offers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.offer-card {
+  background: var(--black-soft);
+  border: 1px solid rgba(212,175,55,0.12);
+  border-radius: var(--radius); overflow: hidden;
+  transition: var(--transition);
+}
+.offer-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: rgba(212,175,55,0.3); }
+.offer-img {
+  aspect-ratio: 16/10;
+  position: relative;
+  background: linear-gradient(135deg, var(--brown) 0%, var(--black) 100%);
+  display: flex; align-items: center; justify-content: center; font-size: 3rem;
+}
+.offer-img::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  opacity: 0.6;
+}
+.offer-discount {
+  position: absolute; top: 1rem; right: 1rem;
+  background: var(--red); color: var(--white);
+  font-size: 0.7rem; font-weight: 700;
+  padding: 0.4rem 0.75rem; border-radius: 2px;
+  letter-spacing: 0.05em;
+}
+.offer-body { padding: 1.5rem; }
+.offer-tag { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+.offer-title { font-family: var(--font-display); font-size: 1.15rem; color: var(--cream); margin-bottom: 0.5rem; }
+.offer-desc { font-size: 0.82rem; color: rgba(250,247,240,0.5); line-height: 1.6; margin-bottom: 1.25rem; }
+
+/* ─── TESTIMONIALS ─── */
+#testimonials { padding: 7rem 0; background: var(--black-soft); overflow: hidden; }
+.test-header { text-align: center; max-width: 600px; margin: 0 auto 4rem; }
+.test-header .gold-divider { justify-content: center; }
+.slider-wrap { position: relative; overflow: hidden; }
+.slider-track { display: flex; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+.test-slide { min-width: 100%; padding: 0 2rem; display: flex; justify-content: center; }
+.test-card {
+  max-width: 760px; width: 100%;
+  padding: 3rem 3.5rem;
+  background: var(--black);
+  border: 1px solid rgba(212,175,55,0.12);
+  border-radius: var(--radius);
+  position: relative;
+}
+.test-quote {
+  position: absolute; top: 1.5rem; left: 2.5rem;
+  font-family: var(--font-display);
+  font-size: 7rem; font-weight: 700;
+  color: var(--gold); opacity: 0.08; line-height: 1;
+}
+.test-text {
+  font-family: var(--font-alt);
+  font-size: 1.25rem; font-style: italic;
+  color: var(--cream); line-height: 1.75;
+  margin-bottom: 2rem; position: relative; z-index: 1;
+}
+.test-client { display: flex; align-items: center; gap: 1rem; }
+.test-avatar {
+  width: 50px; height: 50px; border-radius: 50%;
+  background: var(--brown);
+  border: 2px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 1rem; color: var(--gold); font-weight: 700;
+  flex-shrink: 0;
+}
+.test-name { font-weight: 600; font-size: 0.9rem; color: var(--cream); }
+.test-loc { font-size: 0.75rem; color: rgba(250,247,240,0.4); }
+.test-stars { color: var(--gold); font-size: 0.9rem; margin-left: auto; }
+.slider-controls { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 2.5rem; }
+.s-btn {
+  width: 44px; height: 44px; border: 1.5px solid rgba(212,175,55,0.3);
+  background: transparent; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold); font-size: 1rem; transition: var(--transition);
+}
+.s-btn:hover { background: var(--gold); color: var(--black); border-color: var(--gold); }
+.s-dots { display: flex; gap: 0.5rem; }
+.s-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: rgba(212,175,55,0.25); border: none; cursor: pointer;
+  transition: var(--transition);
+}
+.s-dot.active { background: var(--gold); transform: scale(1.3); }
+
+/* ─── RESERVATION ─── */
+#reservation {
+  padding: 7rem 0;
+  background: var(--black);
+  position: relative; overflow: hidden;
+}
+#reservation::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1400&q=50') center/cover no-repeat;
+  opacity: 0.06;
+}
+.res-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; position: relative; z-index: 1; }
+.res-info { }
+.res-form-wrap {
+  background: var(--black-soft);
+  border: 1px solid rgba(212,175,55,0.15);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+}
+.res-form-title { font-family: var(--font-display); font-size: 1.4rem; color: var(--cream); margin-bottom: 0.25rem; }
+.res-form-sub { font-size: 0.82rem; color: rgba(250,247,240,0.45); margin-bottom: 2rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.form-group { margin-bottom: 1rem; }
+.form-group label {
+  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(250,247,240,0.45); display: block; margin-bottom: 0.4rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; padding: 0.8rem 1rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(212,175,55,0.15);
+  border-radius: var(--radius);
+  font-family: var(--font-body); font-size: 0.88rem;
+  color: var(--cream);
+  transition: border-color var(--transition);
+}
+.form-group select option { background: var(--black-mid); }
+.form-group textarea { resize: vertical; min-height: 90px; }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { outline: none; border-color: var(--gold); }
+.form-group input::placeholder { color: rgba(250,247,240,0.25); }
+.form-group.error input,
+.form-group.error select { border-color: var(--red); }
+.form-error-msg { font-size: 0.72rem; color: var(--red); margin-top: 0.3rem; display: none; }
+.form-group.error .form-error-msg { display: block; }
+.form-success-msg {
+  padding: 1.25rem; border: 1px solid rgba(212,175,55,0.3);
+  border-radius: var(--radius); background: rgba(212,175,55,0.07);
+  color: var(--gold); font-size: 0.9rem; display: none; margin-top: 1rem;
+}
+
+/* ─── EVENTS ─── */
+#events { padding: 7rem 0; background: var(--cream); }
+.events-header { margin-bottom: 3.5rem; }
+.events-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.event-card {
+  display: grid; grid-template-columns: 1fr 1.4fr;
+  background: var(--white);
+  border: 1px solid var(--cream-mid);
+  border-radius: var(--radius); overflow: hidden;
+  transition: var(--transition);
+}
+.event-card:hover { box-shadow: 0 12px 40px rgba(58,45,36,0.15); transform: translateY(-4px); }
+.event-img {
+  background: linear-gradient(135deg, var(--brown) 0%, var(--black-mid) 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem; position: relative; overflow: hidden;
+}
+.event-img::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center; opacity: 0.7;
+}
+.event-body { padding: 1.75rem; }
+.event-tag { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 0.5rem; }
+.event-name { font-family: var(--font-display); font-size: 1.1rem; color: var(--brown); margin-bottom: 0.5rem; }
+.event-desc { font-size: 0.8rem; color: var(--gray); line-height: 1.6; margin-bottom: 1rem; }
+.event-capacity { font-size: 0.75rem; color: var(--brown-light); font-weight: 500; margin-bottom: 1.25rem; }
+.event-capacity span { color: var(--red); font-weight: 700; }
+
+/* ─── CONTACT ─── */
+#contact { padding: 7rem 0; background: var(--black-soft); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+.contact-info-item { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.75rem; }
+.ci-icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  background: rgba(212,175,55,0.1);
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+}
+.ci-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 0.2rem; }
+.ci-val { font-size: 0.88rem; color: rgba(250,247,240,0.6); line-height: 1.55; }
+.hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 0.5rem; }
+.hours-item { font-size: 0.8rem; }
+.hours-day { font-weight: 600; color: var(--cream); }
+.hours-time { color: rgba(250,247,240,0.5); }
+.map-placeholder {
+  height: 220px;
+  background: rgba(212,175,55,0.04);
+  border: 1px solid rgba(212,175,55,0.12);
+  border-radius: var(--radius);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: rgba(250,247,240,0.25); gap: 0.5rem; margin-top: 1.5rem;
+  font-size: 0.82rem;
+}
+.map-icon { font-size: 2rem; }
+.contact-form-wrap {
+  background: var(--black);
+  border: 1px solid rgba(212,175,55,0.1);
+  border-radius: var(--radius); padding: 2rem;
+}
+
+/* ─── INSTAGRAM ─── */
+#instagram { padding: 5rem 0; background: var(--black); }
+.insta-header { text-align: center; margin-bottom: 2.5rem; }
+.insta-grid {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.insta-item {
+  aspect-ratio: 1; overflow: hidden;
+  background: var(--black-mid);
+  position: relative; cursor: pointer;
+}
+.insta-item::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  transition: transform 0.4s ease;
+}
+.insta-item:hover::before { transform: scale(1.08); }
+.insta-item::after {
+  content: '♡';
+  position: absolute; inset: 0;
+  background: rgba(17,17,17,0.55);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; color: var(--white);
+  opacity: 0; transition: opacity var(--transition);
+}
+.insta-item:hover::after { opacity: 1; }
+.insta-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+.insta-footer { text-align: center; }
+
+/* ─── FOOTER ─── */
+#footer { background: var(--black); padding: 4.5rem 0 0; border-top: 1px solid rgba(212,175,55,0.1); }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(212,175,55,0.08); }
+.footer-brand .logo { margin-bottom: 1.25rem; }
+.footer-about { font-size: 0.82rem; color: rgba(250,247,240,0.4); line-height: 1.75; margin-bottom: 1.5rem; }
+.footer-social { display: flex; gap: 0.75rem; }
+.social-link {
+  width: 36px; height: 36px;
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(250,247,240,0.4); font-size: 0.85rem;
+  transition: var(--transition);
+}
+.social-link:hover { border-color: var(--gold); color: var(--gold); }
+.footer-col-title { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+.footer-links { display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-links a { font-size: 0.83rem; color: rgba(250,247,240,0.4); transition: color var(--transition); }
+.footer-links a:hover { color: var(--cream); }
+.newsletter-form { display: flex; gap: 0.5rem; margin-top: 0.75rem; }
+.newsletter-form input {
+  flex: 1; padding: 0.7rem 1rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(212,175,55,0.15);
+  border-radius: var(--radius);
+  font-family: var(--font-body); font-size: 0.82rem;
+  color: var(--cream);
+}
+.newsletter-form input::placeholder { color: rgba(250,247,240,0.25); }
+.newsletter-form input:focus { outline: none; border-color: var(--gold); }
+.newsletter-form button {
+  padding: 0.7rem 1rem;
+  background: var(--gold); color: var(--black);
+  border: none; border-radius: var(--radius);
+  font-weight: 700; font-size: 0.8rem;
+  transition: var(--transition);
+}
+.newsletter-form button:hover { background: var(--gold-light); }
+.footer-bottom {
+  padding: 1.25rem 0;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.footer-copy { font-size: 0.78rem; color: rgba(250,247,240,0.25); }
+.footer-legal { display: flex; gap: 1.5rem; }
+.footer-legal a { font-size: 0.75rem; color: rgba(250,247,240,0.25); transition: color var(--transition); }
+.footer-legal a:hover { color: var(--gold); }
+
+/* BACK TO TOP */
+#back-top {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
+  width: 44px; height: 44px;
+  background: var(--gold); color: var(--black);
+  border: none; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  box-shadow: 0 4px 16px rgba(212,175,55,0.4);
+  opacity: 0; pointer-events: none;
+  transition: var(--transition); cursor: pointer;
+}
+#back-top.visible { opacity: 1; pointer-events: all; }
+#back-top:hover { transform: translateY(-3px); }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .dishes-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-item:nth-child(1) { grid-column: span 1; grid-row: span 1; }
+  .gallery-item:nth-child(4), .gallery-item:nth-child(7) { grid-column: span 1; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .insta-grid { grid-template-columns: repeat(3, 1fr); }
+  .offers-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .nav-links, .nav-actions { display: none; }
+  .hamburger { display: flex; }
+  .hero-content { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-grid, .chef-grid, .res-grid, .contact-grid { grid-template-columns: 1fr; }
+  .about-img-stack { display: none; }
+  .chef-img { height: 350px; }
+  .dishes-grid { grid-template-columns: 1fr; }
+  .menu-items-wrap { grid-template-columns: 1fr; }
+  .events-grid { grid-template-columns: 1fr; }
+  .event-card { grid-template-columns: 1fr; }
+  .event-img { height: 120px; }
+  .offers-grid { grid-template-columns: 1fr; }
+  .insta-grid { grid-template-columns: repeat(3, 1fr); }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .form-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <span class="logo-name">Himalayan <em>Durbar</em></span>
+      <span class="logo-tag">Fine Dining · Kathmandu</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#dishes">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#offers">Offers</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#reservation" class="btn btn-outline-gold" style="padding:0.65rem 1.4rem;font-size:0.68rem">Reserve Table</a>
+      <a href="#menu" class="btn btn-gold" style="padding:0.65rem 1.4rem;font-size:0.68rem">Order Online</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<nav class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close">✕</button>
+  <a href="#about" class="mob-link">About</a>
+  <a href="#dishes" class="mob-link">Menu</a>
+  <a href="#gallery" class="mob-link">Gallery</a>
+  <a href="#offers" class="mob-link">Offers</a>
+  <a href="#testimonials" class="mob-link">Testimonials</a>
+  <a href="#contact" class="mob-link">Contact</a>
+  <a href="#reservation" class="btn btn-gold">Reserve Table</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-eyebrow reveal">Established 2009 · Thamel, Kathmandu</div>
+      <h1 class="hero-title reveal reveal-delay-1">
+        Experience Fine Dining<br><em>Like Never Before</em>
+      </h1>
+      <p class="hero-sub reveal reveal-delay-2">
+        Fresh Himalayan ingredients, exceptional flavors, and unforgettable moments in the heart of Kathmandu.
+      </p>
+      <div class="hero-btns reveal reveal-delay-3">
+        <a href="#reservation" class="btn btn-gold">Reserve Your Table</a>
+        <a href="#dishes" class="btn btn-outline-cream">Explore Menu</a>
+      </div>
+    </div>
+    <div class="hero-badges reveal reveal-delay-4">
+      <div class="hero-badge">
+        <span class="badge-icon">🏆</span>
+        <div class="badge-info">
+          <span class="badge-title">Award-Winning Cuisine</span>
+          <span class="badge-desc">Nepal Food Awards 2024</span>
+        </div>
+      </div>
+      <div class="hero-badge">
+        <span class="badge-icon">🌿</span>
+        <div class="badge-info">
+          <span class="badge-title">Fresh Ingredients Daily</span>
+          <span class="badge-desc">Farm-to-table philosophy</span>
+        </div>
+      </div>
+      <div class="hero-badge">
+        <span class="badge-icon">⭐</span>
+        <div class="badge-info">
+          <span class="badge-title">5-Star Dining Experience</span>
+          <span class="badge-desc">4.9 · 2,800+ reviews</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-orb"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<section id="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-num" data-count="15" data-suffix="+">0+</div>
+        <div class="stat-label">Years Serving Guests</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-num" data-count="50" data-suffix="+">0+</div>
+        <div class="stat-label">Signature Dishes</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-num" data-count="10000" data-suffix="+">0+</div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-num" data-count="4.9" data-suffix="" data-decimal="1">0</div>
+        <div class="stat-label">Average Star Rating</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-stack reveal">
+        <div class="about-img-main"></div>
+        <div class="about-img-float"></div>
+        <div class="years-badge">
+          <span class="years-num">15</span>
+          <span class="years-label">Years</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="section-label reveal">Our Story</span>
+        <h2 class="section-title reveal reveal-delay-1">Crafting Memorable<br>Dining Experiences</h2>
+        <div class="gold-divider reveal reveal-delay-2"><span></span><i>✦</i><span></span></div>
+        <p class="section-sub reveal reveal-delay-2" style="margin-bottom:1.25rem">
+          Nestled in the vibrant lanes of Thamel, Himalayan Durbar was born from a passion for authentic Nepali flavors elevated to fine dining. Since 2009, we have been the culinary heart of Kathmandu, welcoming guests from across Nepal and the world.
+        </p>
+        <p class="section-sub reveal reveal-delay-3" style="font-size:0.875rem;margin-bottom:2rem">
+          Our kitchen blends centuries-old recipes from the Himalayas with contemporary culinary techniques, creating a dining journey that honours tradition while embracing innovation.
+        </p>
+        <div class="about-values reveal reveal-delay-3">
+          <div class="value-row">
+            <div class="value-dot"></div>
+            <div class="value-text">
+              <h4>Chef's Philosophy</h4>
+              <p>Every dish tells the story of Nepal's diverse regions — from the spice trails of the Terai to the pristine flavors of the high mountains.</p>
+            </div>
+          </div>
+          <div class="value-row">
+            <div class="value-dot"></div>
+            <div class="value-text">
+              <h4>Farm-to-Table Commitment</h4>
+              <p>We source seasonal produce directly from local Nepali farmers, ensuring freshness in every bite and supporting our communities.</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:2rem" class="reveal reveal-delay-4">
+          <a href="#reservation" class="btn btn-gold">Reserve a Table →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNATURE DISHES -->
+<section id="dishes">
+  <div class="container">
+    <div class="dishes-header">
+      <span class="section-label">Our Finest</span>
+      <h2 class="section-title">Signature Dishes</h2>
+      <div class="gold-divider"><span></span><i>✦</i><span></span></div>
+      <p class="section-sub" style="margin:0 auto">Handcrafted with the finest Himalayan ingredients and presented with artistic finesse.</p>
+    </div>
+    <div class="dishes-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="appetizer">Appetizers</button>
+      <button class="filter-btn" data-filter="main">Main Courses</button>
+      <button class="filter-btn" data-filter="dessert">Desserts</button>
+      <button class="filter-btn" data-filter="beverage">Beverages</button>
+    </div>
+    <div class="dishes-grid" id="dishes-grid">
+      <div class="dish-card reveal" data-cat="appetizer">
+        <div class="dish-img">
+          <div class="dish-img-bg" style="background-image:url('https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=500&q=80')"></div>
+          <span class="dish-badge badge-popular">Popular</span>
+          <button class="dish-fav" onclick="toggleFav(this)" aria-label="Add to favorites">♡</button>
+        </div>
+        <div class="dish-info">
+          <div class="dish-name">Sekuwa Platter</div>
+          <p class="dish-desc">Himalayan spiced grilled meat skewers with house-made achar and mustard dipping sauce.</p>
+          <div class="dish-footer">
+            <div class="dish-price">NPR 850</div>
+            <div class="dish-rating"><span class="stars">★★★★★</span> 4.9</div>
+          </div>
+        </div>
+      </div>
+      <div class="dish-card reveal reveal-delay-1" data-cat="appetizer">
+        <div class="dish-img">
+          <div class="dish-img-bg" style="background-image:url('https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=500&q=80')"></div>
+          <span class="dish-badge badge-chef">Chef's Pick</span>
+          <button class="dish-fav" onclick="toggleFav(this)" aria-label="Add to favorites">♡</button>
+        </div>
+        <div class="dish-info">
+          <div class="dish-name">Steam Momo Basket</div>
+          <p class="dish-desc">Delicate steamed dumplings filled with spiced yak meat and fresh ginger, with tomato chutney.</p>
+          <div class="dish-footer">
+            <div class="dish-price">NPR 650</div>
+            <div class="dish-rating"><span class="stars">★★★★★</span> 5.0</div>
+          </div>
+        </div>
+      </div>
+      <div class="dish-card reveal reveal-delay-2" data-cat="main">
+        <div class="dish-img">
+          <div class="dish-img-bg" style="background-image:url('https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?w=500&q=80')"></div>
+          <span class="dish-badge badge-popular">Popular</span>
+          <button class="dish-fav" onclick="toggleFav(this)" aria-label="Add to favorites">♡</button>
+        </div>
+        <div class="dish-info">
+          <div class="dish-name">Himalayan Dal Bhat Set</div>
+          <p class="dish-desc">Our signature thali — slow-cooked lentil soup, fragrant basmati rice, seasonal vegetables and achars.</p>
+          <div class="dish-footer">
+            <div class="dish-price">NPR 1,200</div>
+            <div class="dish-rating"><span class="stars">★★★★★</span> 4.8</div>
+          </div>
+        </div>
+      </div>
+      <div class="dish-card reveal" data-cat="main">
+        <div class="dish-img">
+          <div class="dish-img-bg" style="background-image:url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=500&q=80')"></div>
+          <span class="dish-badge badge-new">New</span>
+          <button class="dish-fav" onclick="toggleFav(this)" aria-label="Add to favorites">♡</button>
+        </div>
+        <div class="dish-info">
+          <div class="dish-name">Yak Tenderloin</div>
+          <p class="dish-desc">Pan-seared highland yak tenderloin with Himalayan black salt crust, roasted vegetables and red wine jus.</p>
+          <div class="dish-footer">
+            <div class="dish-price">NPR 2,800</div>
+            <div class="dish-rating"><span class="stars">★★★★★</span> 4.9</div>
+          </div>
+        </div>
+      </div>
+      <div class="dish-card reveal reveal-delay-1" data-cat="dessert">
+        <div class="dish-img">
+          <div class="dish-img-bg" style="background-image:url('https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500&q=80')"></div>
+          <span class="dish-badge badge-chef">Chef's Pick</span>
+          <button class="dish-fav" onclick="toggleFav(this)" aria-label="Add to favorites">♡</button>
+        </div>
+        <div class="dish-info">
+          <div class="dish-name">Sikarni & Sel Roti</div>
+          <p class="dish-desc">Traditional sweetened yoghurt parfait with aromatic spices, served with crispy rice doughnut rings.</p>
+          <div class="dish-footer">
+            <div class="dish-price">NPR 580</div>
+            <div class="dish-rating"><span class="stars">★★★★★</span> 4.7</div>
+          </div>
+        </div>
+      </div>
+      <div class="dish-card reveal reveal-delay-2" data-cat="beverage">
+        <div class="dish-img">
+          <div class="dish-img-bg" style="background-image:url('https://images.unsplash.com/photo-1544145945-f90425340c7e?w=500&q=80')"></div>
+          <span class="dish-badge badge-popular">Popular</span>
+          <button class="dish-fav" onclick="toggleFav(this)" aria-label="Add to favorites">♡</button>
+        </div>
+        <div class="dish-info">
+          <div class="dish-name">Himalayan Butter Tea</div>
+          <p class="dish-desc">Traditional Tibetan-style butter tea brewed with premium tea leaves, yak butter and Himalayan rock salt.</p>
+          <div class="dish-footer">
+            <div class="dish-price">NPR 280</div>
+            <div class="dish-rating"><span class="stars">★★★★☆</span> 4.6</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FULL MENU -->
+<section id="menu">
+  <div class="container">
+    <div class="menu-header">
+      <span class="section-label">Full Menu</span>
+      <h2 class="section-title dark">Our Complete Menu</h2>
+      <div class="gold-divider"><span></span><i>✦</i><span></span></div>
+      <p class="section-sub dark" style="margin:0 auto">Browse our entire selection, crafted fresh every day.</p>
+    </div>
+    <div class="menu-cats">
+      <button class="menu-cat-btn active" data-menu="all">All</button>
+      <button class="menu-cat-btn" data-menu="starters">Starters</button>
+      <button class="menu-cat-btn" data-menu="soups">Soups</button>
+      <button class="menu-cat-btn" data-menu="mains">Main Courses</button>
+      <button class="menu-cat-btn" data-menu="seafood">Seafood</button>
+      <button class="menu-cat-btn" data-menu="desserts">Desserts</button>
+      <button class="menu-cat-btn" data-menu="drinks">Drinks</button>
+    </div>
+    <div class="menu-items-wrap" id="menu-list">
+      <div class="menu-item" data-menu="starters"><div class="menu-item-icon">🥟</div><div class="menu-item-info"><div class="menu-item-name">Jhol Momo</div><div class="menu-item-desc">Momo in spiced tomato-sesame broth</div></div><div class="menu-item-right"><div class="menu-item-price">NPR 580</div><div class="menu-popular">Popular</div></div></div>
+      <div class="menu-item" data-menu="starters"><div class="menu-item-icon">🍢</div><div class="menu-item-info"><div class="menu-item-name">Choila</div><div class="menu-item-desc">Chargrilled spiced buffalo meat, Newari style</div></div><div class="menu-item-right"><div class="menu-item-price">NPR 720</div></div></div>
+      <div class="menu-item" data-menu="soups"><div class="menu-item-icon">🍲</div><div class="menu-item-info"><div class="menu-item-name">Thukpa</div><div class="menu-item-desc">Tibetan noodle soup with highland vegetables</div></div><div class="menu-item-right"><div class="menu-item-price">NPR 450</div></div></div>
+      <div class="menu-item" data-menu="soups"><div class="menu-item-icon">🥣</div><div class="menu-item-info"><div class="menu-item-name">Gundruk Soup</div><div class="menu-item-desc">Fermented leafy greens with mountain herbs</div></div><div class="menu-item-right"><div class="menu-item-price">NPR 350</div><div class="menu-popular">Popular</div></div></div>
+      <div class="menu-item" data-menu="mains"><div class="menu-item-icon">🍛</div><div class="menu-item-info"><div class="menu-item-name">Lamb Tareko</div><div class="menu-item-desc">Slow-braised lamb with timur spice and mustard greens</div></div><div class="menu-item-right"><div class="menu-item-price">NPR 1,850</div></div></div>
+      <div class="menu-item" data-menu="mains"><div class="menu-item-icon">🐔</div><div class="menu-item-info"><div class="menu-item-name">Kukhura ko Tarkari</div><div class="menu-item-desc">Traditional Nepali chicken curry, farmhouse style</div></div><div class="menu-item-right"><div class="menu-item-price">NPR 1,200</div><div class="menu-popular">Popular</div></div></div>
+      <div class="menu-item" data-menu="seafood"><div class="menu-item-icon">🐟</div><div class="menu-item-info"><div class="menu-item-name">Himalayan Trout</div><div class="menu-item-desc">River trout from Pokhara, mustard-turmeric marinated</div></div><div class="menu-item-right"><div class="menu-item-price">NPR 2,200</div></div></div>
+      <div class="menu-item" data-menu="seafood"><div class="menu-item-icon">🦐</div><div class="menu-item-info"><div class="menu-item-name">Prawn Masala</div><div class="menu-item-desc">Tiger prawns in spiced tomato and coconut sauce</div></div><div class="menu-item-right"><div class="menu-item-price">NPR 2,500</div><div class="menu-popular">Popular</div></div></div>
+      <div class="menu-item" data-menu="desserts"><div class="menu-item-icon">🍮</div><div class="menu-item-info"><div class="menu-item-name">Juju Dhau</div><div class="menu-item-desc">Royal Bhaktapur clay-pot yoghurt with honey</div></div><div class="menu-item-right"><div class="menu-item-price">NPR 380</div></div></div>
+      <div class="menu-item" data-menu="desserts"><div class="menu-item-icon">🍩</div><div class="menu-item-info"><div class="menu-item-name">Lakhamari</div><div class="menu-item-desc">Newari honey cake, warm with cardamom cream</div></div><div class="menu-item-right"><div class="menu-item-price">NPR 320</div></div></div>
+      <div class="menu-item" data-menu="drinks"><div class="menu-item-icon">🍵</div><div class="menu-item-info"><div class="menu-item-name">Ilam First Flush Tea</div><div class="menu-item-desc">Premium single-estate tea from Eastern Nepal</div></div><div class="menu-item-right"><div class="menu-item-price">NPR 220</div></div></div>
+      <div class="menu-item" data-menu="drinks"><div class="menu-item-icon">🥂</div><div class="menu-item-info"><div class="menu-item-name">Raksi Cocktail</div><div class="menu-item-desc">Traditional millet spirit, house mixology</div></div><div class="menu-item-right"><div class="menu-item-price">NPR 650</div><div class="menu-popular">Signature</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHEF -->
+<section id="chef">
+  <div class="container">
+    <div class="chef-grid">
+      <div class="chef-img reveal">
+        <div class="chef-img-overlay"></div>
+        <div class="chef-img-caption">
+          <div class="chef-caption-name">Chef Bikram Shrestha</div>
+          <div class="chef-caption-title">Executive Head Chef · 18 Years Experience</div>
+        </div>
+      </div>
+      <div>
+        <span class="section-label reveal">The Maestro</span>
+        <h2 class="section-title reveal reveal-delay-1">Meet Our<br>Master Chef</h2>
+        <div class="gold-divider reveal reveal-delay-2"><span></span><i>✦</i><span></span></div>
+        <p class="section-sub reveal reveal-delay-2" style="margin-bottom:1.25rem">
+          Chef Bikram Shrestha trained at the Culinary Institute of Asia in Bacolod before honing his skills across restaurants in London and Tokyo. Returning to Nepal with a renewed passion for his roots, he transformed Himalayan Durbar into an internationally acclaimed destination.
+        </p>
+        <p class="section-sub reveal reveal-delay-3" style="font-size:0.875rem;margin-bottom:2rem">
+          His philosophy is simple: the mountains give us everything we need. Every dish is a meditation on the Himalayan landscape — clean, bold, and deeply nourishing.
+        </p>
+        <div class="chef-awards reveal reveal-delay-3">
+          <div class="chef-award">
+            <div class="award-icon">🏆</div>
+            <div class="award-title">Nepal's Best Chef</div>
+            <div class="award-year">Culinary Awards · 2023</div>
+          </div>
+          <div class="chef-award">
+            <div class="award-icon">⭐</div>
+            <div class="award-title">Asia's 50 Best Rising</div>
+            <div class="award-year">Regional Recognition · 2022</div>
+          </div>
+          <div class="chef-award">
+            <div class="award-icon">🌿</div>
+            <div class="award-title">Sustainable Kitchen</div>
+            <div class="award-year">Green Dining Award · 2024</div>
+          </div>
+          <div class="chef-award">
+            <div class="award-icon">📰</div>
+            <div class="award-title">Featured in Bon Appétit</div>
+            <div class="award-year">International Press · 2023</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <div class="gallery-header">
+      <span class="section-label reveal">Visual Journey</span>
+      <h2 class="section-title reveal reveal-delay-1">Our Gallery</h2>
+      <div class="gold-divider reveal reveal-delay-2"><span></span><i>✦</i><span></span></div>
+    </div>
+    <div class="gallery-grid" id="gallery-grid">
+      <div class="gallery-item reveal" data-lb="0"><div class="gallery-bg" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80')"></div><div class="gallery-overlay"><span class="gallery-zoom">⊕</span></div></div>
+      <div class="gallery-item reveal reveal-delay-1" data-lb="1"><div class="gallery-bg" style="background-image:url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=500&q=80')"></div><div class="gallery-overlay"><span class="gallery-zoom">⊕</span></div></div>
+      <div class="gallery-item reveal reveal-delay-2" data-lb="2"><div class="gallery-bg" style="background-image:url('https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=500&q=80')"></div><div class="gallery-overlay"><span class="gallery-zoom">⊕</span></div></div>
+      <div class="gallery-item reveal reveal-delay-3" data-lb="3"><div class="gallery-bg" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80')"></div><div class="gallery-overlay"><span class="gallery-zoom">⊕</span></div></div>
+      <div class="gallery-item reveal" data-lb="4"><div class="gallery-bg" style="background-image:url('https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500&q=80')"></div><div class="gallery-overlay"><span class="gallery-zoom">⊕</span></div></div>
+      <div class="gallery-item reveal reveal-delay-1" data-lb="5"><div class="gallery-bg" style="background-image:url('https://images.unsplash.com/photo-1543353071-873f17a7a088?w=500&q=80')"></div><div class="gallery-overlay"><span class="gallery-zoom">⊕</span></div></div>
+      <div class="gallery-item reveal reveal-delay-2" data-lb="6"><div class="gallery-bg" style="background-image:url('https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=700&q=80')"></div><div class="gallery-overlay"><span class="gallery-zoom">⊕</span></div></div>
+      <div class="gallery-item reveal reveal-delay-3" data-lb="7"><div class="gallery-bg" style="background-image:url('https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=500&q=80')"></div><div class="gallery-overlay"><span class="gallery-zoom">⊕</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" id="lb-close">✕</button>
+  <button class="lightbox-prev" id="lb-prev">←</button>
+  <div class="lightbox-inner" id="lb-inner">
+    <div class="lightbox-placeholder">🖼</div>
+  </div>
+  <button class="lightbox-next" id="lb-next">→</button>
+</div>
+
+<!-- SPECIAL OFFERS -->
+<section id="offers">
+  <div class="container">
+    <div class="offers-header">
+      <span class="section-label reveal">Limited Time</span>
+      <h2 class="section-title reveal reveal-delay-1">Special Offers</h2>
+      <div class="gold-divider reveal reveal-delay-2"><span></span><i>✦</i><span></span></div>
+      <p class="section-sub reveal reveal-delay-2" style="margin:0 auto">Exclusive deals to make your dining experience even more memorable.</p>
+    </div>
+    <div class="offers-grid">
+      <div class="offer-card reveal">
+        <div class="offer-img" style="font-size:3rem">🌙
+          <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=60') center/cover;opacity:0.5"></div>
+          <span class="offer-discount">30% OFF</span>
+        </div>
+        <div class="offer-body">
+          <div class="offer-tag">Every Weekend</div>
+          <div class="offer-title">Weekend Gala Dinner</div>
+          <p class="offer-desc">5-course Nepali tasting menu every Friday & Saturday evening. Wine pairing available.</p>
+          <a href="#reservation" class="btn btn-gold" style="width:100%;justify-content:center">Book Now</a>
+        </div>
+      </div>
+      <div class="offer-card reveal reveal-delay-1">
+        <div class="offer-img" style="font-size:3rem">👨‍👩‍👧‍👦
+          <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=400&q=60') center/cover;opacity:0.5"></div>
+          <span class="offer-discount">KIDS FREE</span>
+        </div>
+        <div class="offer-body">
+          <div class="offer-tag">Family Special</div>
+          <div class="offer-title">Family Feast Package</div>
+          <p class="offer-desc">Sunday family lunches — children under 10 dine free with two paying adults. Traditional set menu.</p>
+          <a href="#reservation" class="btn btn-gold" style="width:100%;justify-content:center">Book Now</a>
+        </div>
+      </div>
+      <div class="offer-card reveal reveal-delay-2">
+        <div class="offer-img" style="font-size:3rem">🍹
+          <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&q=60') center/cover;opacity:0.5"></div>
+          <span class="offer-discount">BUY 1 GET 1</span>
+        </div>
+        <div class="offer-body">
+          <div class="offer-tag">Happy Hour</div>
+          <div class="offer-title">Cocktail Happy Hour</div>
+          <p class="offer-desc">Buy one get one on signature cocktails and mocktails. Monday–Thursday, 5PM – 7PM.</p>
+          <a href="#reservation" class="btn btn-gold" style="width:100%;justify-content:center">Reserve</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="test-header">
+      <span class="section-label reveal">Guest Reviews</span>
+      <h2 class="section-title reveal reveal-delay-1">What Our Guests Say</h2>
+      <div class="gold-divider reveal reveal-delay-2"><span></span><i>✦</i><span></span></div>
+    </div>
+    <div class="slider-wrap">
+      <div class="slider-track" id="slider-track">
+        <div class="test-slide">
+          <div class="test-card">
+            <div class="test-quote">"</div>
+            <p class="test-text">An extraordinary dining experience that transported me through Nepal's diverse culinary landscape. The yak tenderloin was unlike anything I have tasted — perfectly executed, soulful, and deeply satisfying. Himalayan Durbar is Kathmandu's finest.</p>
+            <div class="test-client">
+              <div class="test-avatar">RS</div>
+              <div><div class="test-name">Rohit Shrestha</div><div class="test-loc">Kathmandu, Nepal</div></div>
+              <div class="test-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-slide">
+          <div class="test-card">
+            <div class="test-quote">"</div>
+            <p class="test-text">We celebrated our anniversary here and it was magical. The ambiance, the food, the service — everything was flawless. Chef Bikram personally came to our table. The jhol momo and sikarni were absolutely divine. We will be back.</p>
+            <div class="test-client">
+              <div class="test-avatar">PM</div>
+              <div><div class="test-name">Priya & Manish Acharya</div><div class="test-loc">Lalitpur, Nepal</div></div>
+              <div class="test-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-slide">
+          <div class="test-card">
+            <div class="test-quote">"</div>
+            <p class="test-text">I travel extensively for food, and Himalayan Durbar left me speechless. The traditional dal bhat elevated to this level of sophistication is a genuine achievement. The Ilam tea service was a beautiful cultural experience in itself.</p>
+            <div class="test-client">
+              <div class="test-avatar">LM</div>
+              <div><div class="test-name">Lena Müller</div><div class="test-loc">Berlin, Germany</div></div>
+              <div class="test-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-slide">
+          <div class="test-card">
+            <div class="test-quote">"</div>
+            <p class="test-text">Our corporate dinner for 30 guests was handled impeccably. The private dining room is stunning, the staff is attentive without being intrusive, and the seasonal tasting menu was unanimously praised by our international team. Highly recommended.</p>
+            <div class="test-client">
+              <div class="test-avatar">SK</div>
+              <div><div class="test-name">Sanjay Kumar</div><div class="test-loc">Mumbai, India</div></div>
+              <div class="test-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button class="s-btn" id="prev-btn">←</button>
+      <div class="s-dots" id="s-dots">
+        <button class="s-dot active" data-i="0"></button>
+        <button class="s-dot" data-i="1"></button>
+        <button class="s-dot" data-i="2"></button>
+        <button class="s-dot" data-i="3"></button>
+      </div>
+      <button class="s-btn" id="next-btn">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVATION -->
+<section id="reservation">
+  <div class="container">
+    <div class="res-grid">
+      <div class="res-info">
+        <span class="section-label reveal">Make a Booking</span>
+        <h2 class="section-title reveal reveal-delay-1">Reserve Your<br>Table</h2>
+        <div class="gold-divider reveal reveal-delay-2"><span></span><i>✦</i><span></span></div>
+        <p class="section-sub reveal reveal-delay-2" style="margin-bottom:2rem">
+          Join us for an unforgettable dining experience. We recommend booking at least 48 hours in advance, especially for weekend evenings and special occasions.
+        </p>
+        <div class="reveal reveal-delay-3" style="display:flex;flex-direction:column;gap:1rem">
+          <div class="contact-info-item">
+            <div class="ci-icon">📞</div>
+            <div><span class="ci-label">Phone Reservation</span><div class="ci-val">+977 9844550537</div></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon">✉</div>
+            <div><span class="ci-label">Email</span><div class="ci-val">reserve@yourhotel.com.np</div></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon">🕐</div>
+            <div><span class="ci-label">Dining Hours</span><div class="ci-val">Daily 11:00 AM – 10:30 PM</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="res-form-wrap reveal reveal-delay-2">
+        <div class="res-form-title">Book a Table</div>
+        <div class="res-form-sub">Fill in the details and we'll confirm within 2 hours.</div>
+        <form id="res-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="rf-name">Full Name *</label>
+              <input type="text" id="rf-name" placeholder="Your name" required>
+              <div class="form-error-msg">Name is required.</div>
+            </div>
+            <div class="form-group">
+              <label for="rf-email">Email *</label>
+              <input type="email" id="rf-email" placeholder="you@email.com" required>
+              <div class="form-error-msg">Valid email required.</div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="rf-phone">Phone *</label>
+              <input type="tel" id="rf-phone" placeholder="+977 98XXXXXXXX" required>
+              <div class="form-error-msg">Phone number required.</div>
+            </div>
+            <div class="form-group">
+              <label for="rf-guests">No. of Guests *</label>
+              <select id="rf-guests" required>
+                <option value="">Select</option>
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option>3 Guests</option>
+                <option>4 Guests</option>
+                <option>5 Guests</option>
+                <option>6 Guests</option>
+                <option>7–10 Guests</option>
+                <option>Large Group (10+)</option>
+              </select>
+              <div class="form-error-msg">Please select guests.</div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="rf-date">Date *</label>
+              <input type="date" id="rf-date" required>
+              <div class="form-error-msg">Please select a date.</div>
+            </div>
+            <div class="form-group">
+              <label for="rf-time">Preferred Time *</label>
+              <select id="rf-time" required>
+                <option value="">Select time</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>1:00 PM</option>
+                <option>2:00 PM</option>
+                <option>6:00 PM</option>
+                <option>7:00 PM</option>
+                <option>7:30 PM</option>
+                <option>8:00 PM</option>
+                <option>8:30 PM</option>
+              </select>
+              <div class="form-error-msg">Please select a time.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="rf-requests">Special Requests</label>
+            <textarea id="rf-requests" placeholder="Dietary requirements, special occasions, seating preferences…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center">Confirm Reservation →</button>
+          <div class="form-success-msg" id="res-success">✦ Reservation received! We will confirm via email within 2 hours. Thank you.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <div class="container">
+    <div class="events-header">
+      <span class="section-label reveal">Private & Group Dining</span>
+      <h2 class="section-title dark reveal reveal-delay-1">Events & Private Dining</h2>
+      <div class="gold-divider reveal reveal-delay-2"><span></span><i>✦</i><span></span></div>
+    </div>
+    <div class="events-grid">
+      <div class="event-card reveal">
+        <div class="event-img" style="font-size:2.5rem">🎂
+          <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=300&q=60') center/cover;opacity:0.6"></div>
+        </div>
+        <div class="event-body">
+          <div class="event-tag">Celebrate</div>
+          <div class="event-name">Birthday Parties</div>
+          <p class="event-desc">Bespoke celebrations with custom cakes, personalized menus, and dedicated service staff. Create memories that last a lifetime.</p>
+          <div class="event-capacity">Capacity: <span>Up to 40 guests</span></div>
+          <a href="#contact" class="btn btn-red" style="padding:0.65rem 1.4rem;font-size:0.72rem">Enquire Now</a>
+        </div>
+      </div>
+      <div class="event-card reveal reveal-delay-1">
+        <div class="event-img" style="font-size:2.5rem">💼
+          <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?w=300&q=60') center/cover;opacity:0.6"></div>
+        </div>
+        <div class="event-body">
+          <div class="event-tag">Corporate</div>
+          <div class="event-name">Corporate Events</div>
+          <p class="event-desc">Professional settings for business dinners, product launches, team celebrations. AV equipment and dedicated coordinator available.</p>
+          <div class="event-capacity">Capacity: <span>Up to 80 guests</span></div>
+          <a href="#contact" class="btn btn-red" style="padding:0.65rem 1.4rem;font-size:0.72rem">Enquire Now</a>
+        </div>
+      </div>
+      <div class="event-card reveal">
+        <div class="event-img" style="font-size:2.5rem">💍
+          <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1519741497674-611481863552?w=300&q=60') center/cover;opacity:0.6"></div>
+        </div>
+        <div class="event-body">
+          <div class="event-tag">Weddings</div>
+          <div class="event-name">Wedding Receptions</div>
+          <p class="event-desc">Elegant wedding banquets blending Nepali tradition with contemporary dining. Full décor and catering coordination.</p>
+          <div class="event-capacity">Capacity: <span>Up to 150 guests</span></div>
+          <a href="#contact" class="btn btn-red" style="padding:0.65rem 1.4rem;font-size:0.72rem">Enquire Now</a>
+        </div>
+      </div>
+      <div class="event-card reveal reveal-delay-1">
+        <div class="event-img" style="font-size:2.5rem">🕯
+          <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=300&q=60') center/cover;opacity:0.6"></div>
+        </div>
+        <div class="event-body">
+          <div class="event-tag">Exclusive</div>
+          <div class="event-name">Private Dining Room</div>
+          <p class="event-desc">Intimate, secluded space for the most discerning guests. Chef's table experience available with bespoke tasting menu.</p>
+          <div class="event-capacity">Capacity: <span>Up to 12 guests</span></div>
+          <a href="#contact" class="btn btn-red" style="padding:0.65rem 1.4rem;font-size:0.72rem">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div style="margin-bottom:3.5rem">
+      <span class="section-label reveal">Get in Touch</span>
+      <h2 class="section-title reveal reveal-delay-1">Visit Us in Thamel</h2>
+      <div class="gold-divider reveal reveal-delay-2"><span></span><i>✦</i><span></span></div>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-info-item">
+          <div class="ci-icon">📍</div>
+          <div><span class="ci-label">Address</span><div class="ci-val">Thamel Chowk, Near iFiCode Inclusive<br>Kathmandu 44600, Bagmati Province, Nepal</div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ci-icon">📞</div>
+          <div><span class="ci-label">Phone</span><div class="ci-val">+977 9844550537<br>+977 9844550537</div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ci-icon">✉</div>
+          <div><span class="ci-label">Email</span><div class="ci-val">info@yourhotel.com.np<br>reserve@yourhotel.com.np</div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ci-icon">🕐</div>
+          <div>
+            <span class="ci-label">Opening Hours</span>
+            <div class="hours-grid">
+              <div class="hours-item"><div class="hours-day">Mon – Thu</div><div class="hours-time">11:00 AM – 10:00 PM</div></div>
+              <div class="hours-item"><div class="hours-day">Fri – Sat</div><div class="hours-time">11:00 AM – 12:00 AM</div></div>
+              <div class="hours-item"><div class="hours-day">Sunday</div><div class="hours-time">12:00 PM – 9:00 PM</div></div>
+              <div class="hours-item"><div class="hours-day">Holidays</div><div class="hours-time">Special Hours</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="map-placeholder">
+          <div class="map-icon">🗺</div>
+          <span>Thamel Chowk, Kathmandu, Nepal</span>
+        </div>
+      </div>
+      <div class="contact-form-wrap reveal reveal-delay-2">
+        <div style="margin-bottom:1.5rem">
+          <div style="font-family:var(--font-display);font-size:1.3rem;color:var(--cream);margin-bottom:0.25rem">Send Us a Message</div>
+          <div style="font-size:0.8rem;color:rgba(250,247,240,0.4)">We respond within 24 hours.</div>
+        </div>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="cf-name">Full Name *</label>
+            <input type="text" id="cf-name" placeholder="Your name" required>
+            <div class="form-error-msg">Name is required.</div>
+          </div>
+          <div class="form-group">
+            <label for="cf-email">Email *</label>
+            <input type="email" id="cf-email" placeholder="you@email.com" required>
+            <div class="form-error-msg">Valid email required.</div>
+          </div>
+          <div class="form-group">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" placeholder="How can we help?">
+          </div>
+          <div class="form-group">
+            <label for="cf-msg">Message *</label>
+            <textarea id="cf-msg" placeholder="Your message…" required></textarea>
+            <div class="form-error-msg">Please enter a message.</div>
+          </div>
+          <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center">Send Message →</button>
+          <div class="form-success-msg" id="cf-success">✦ Thank you! We'll be in touch within 24 hours.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section id="instagram">
+  <div class="container">
+    <div class="insta-header">
+      <span class="section-label reveal">Social</span>
+      <h2 class="section-title reveal reveal-delay-1" style="margin-bottom:0.5rem">Follow Our Journey</h2>
+      <p class="section-sub reveal reveal-delay-2" style="margin:0 auto;text-align:center">@himalayandurbar.ktm</p>
+    </div>
+    <div class="insta-grid reveal">
+      <div class="insta-item"><div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=200&q=70') center/cover"></div></div>
+      <div class="insta-item"><div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1551024601-bec78aea704b?w=200&q=70') center/cover"></div></div>
+      <div class="insta-item"><div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=200&q=70') center/cover"></div></div>
+      <div class="insta-item"><div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=200&q=70') center/cover"></div></div>
+      <div class="insta-item"><div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=200&q=70') center/cover"></div></div>
+      <div class="insta-item"><div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=200&q=70') center/cover"></div></div>
+    </div>
+    <div class="insta-footer reveal">
+      <a href="#" class="btn btn-outline-gold">Follow on Instagram ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo" style="margin-bottom:1.25rem;display:flex;flex-direction:column">
+          <span class="logo-name">Himalayan <em>Durbar</em></span>
+          <span class="logo-tag">Fine Dining · Kathmandu</span>
+        </a>
+        <p class="footer-about">Kathmandu's premier fine dining destination, celebrating the rich culinary heritage of Nepal with contemporary artistry. Every meal is a journey through the Himalayas.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Instagram">📷</a>
+          <a href="#" class="social-link" aria-label="Facebook">f</a>
+          <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-link" aria-label="TripAdvisor">✈</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <div class="footer-links">
+          <a href="#about">About Us</a>
+          <a href="#chef">Our Chef</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#events">Private Events</a>
+          <a href="#offers">Special Offers</a>
+          <a href="#reservation">Reservations</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Our Menu</div>
+        <div class="footer-links">
+          <a href="#dishes">Signature Dishes</a>
+          <a href="#menu">Starters</a>
+          <a href="#menu">Main Courses</a>
+          <a href="#menu">Seafood</a>
+          <a href="#menu">Desserts</a>
+          <a href="#menu">Drinks</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Newsletter</div>
+        <p style="font-size:0.8rem;color:rgba(250,247,240,0.4);line-height:1.65;margin-bottom:1rem">Subscribe for seasonal menus, special offers, and culinary events.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="your@email.com">
+          <button>→</button>
+        </div>
+        <div style="margin-top:1.5rem">
+          <div class="footer-col-title" style="margin-bottom:0.75rem">Contact</div>
+          <div style="font-size:0.8rem;color:rgba(250,247,240,0.4);line-height:1.9">
+            Thamel Chowk, Kathmandu<br>
+            +977 9844550537<br>
+            info@yourhotel.com.np
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Himalayan Durbar. All Rights Reserved. · Kathmandu, Nepal</div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="back-top" aria-label="Back to top">↑</button>
+
+<script>
+// ─── HEADER SCROLL ───
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 80);
+  document.getElementById('back-top').classList.toggle('visible', window.scrollY > 400);
+});
+
+// ─── MOBILE MENU ───
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileClose = document.getElementById('mobile-close');
+hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); mobileMenu.classList.toggle('open'); document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : ''; });
+mobileClose.addEventListener('click', closeMenu);
+document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', closeMenu));
+function closeMenu() { hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }
+
+// ─── BACK TO TOP ───
+document.getElementById('back-top').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// ─── SCROLL REVEAL ───
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+// ─── COUNTERS ───
+function animCounter(el) {
+  const target = parseFloat(el.dataset.count);
+  const decimals = parseInt(el.dataset.decimal || 0);
+  const suffix = el.dataset.suffix || '';
+  const dur = 1800;
+  const start = performance.now();
+  const tick = now => {
+    const p = Math.min((now - start) / dur, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = (eased * target).toFixed(decimals) + suffix;
+    if (p < 1) requestAnimationFrame(tick);
+    else el.textContent = target.toFixed(decimals) + suffix;
+  };
+  requestAnimationFrame(tick);
+}
+const cObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting && !e.target.dataset.animated) { e.target.dataset.animated = 1; animCounter(e.target); cObs.unobserve(e.target); } });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-count]').forEach(el => cObs.observe(el));
+
+// ─── DISH FILTER ───
+const filterBtns = document.querySelectorAll('.filter-btn');
+const dishCards = document.querySelectorAll('.dish-card');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    dishCards.forEach(c => {
+      const show = f === 'all' || c.dataset.cat === f;
+      c.style.display = show ? '' : 'none';
+    });
+  });
+});
+
+// ─── MENU FILTER ───
+const menuCatBtns = document.querySelectorAll('.menu-cat-btn');
+const menuItems = document.querySelectorAll('#menu-list .menu-item');
+menuCatBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    menuCatBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.menu;
+    menuItems.forEach(item => {
+      item.classList.toggle('hidden', cat !== 'all' && item.dataset.menu !== cat);
+    });
+  });
+});
+
+// ─── FAV TOGGLE ───
+function toggleFav(btn) { btn.classList.toggle('active'); btn.textContent = btn.classList.contains('active') ? '♥' : '♡'; }
+
+// ─── TESTIMONIAL SLIDER ───
+const track = document.getElementById('slider-track');
+const dots = document.querySelectorAll('.s-dot');
+let cur = 0, auto;
+function goTo(i) {
+  cur = i;
+  track.style.transform = `translateX(-${cur * 100}%)`;
+  dots.forEach((d, j) => d.classList.toggle('active', j === cur));
+}
+document.getElementById('prev-btn').addEventListener('click', () => { goTo((cur - 1 + dots.length) % dots.length); reset(); });
+document.getElementById('next-btn').addEventListener('click', () => { goTo((cur + 1) % dots.length); reset(); });
+dots.forEach(d => d.addEventListener('click', () => { goTo(parseInt(d.dataset.i)); reset(); }));
+function reset() { clearInterval(auto); auto = setInterval(() => goTo((cur + 1) % dots.length), 5500); }
+reset();
+
+// ─── GALLERY LIGHTBOX ───
+const galleryItems = document.querySelectorAll('.gallery-item');
+const lightbox = document.getElementById('lightbox');
+const lbInner = document.getElementById('lb-inner');
+let lbCurrent = 0;
+const lbImages = [
+  'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=90',
+  'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=90',
+  'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=1200&q=90',
+  'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=90',
+  'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=1200&q=90',
+  'https://images.unsplash.com/photo-1543353071-873f17a7a088?w=1200&q=90',
+  'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=1200&q=90',
+  'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=1200&q=90',
+];
+function openLb(i) {
+  lbCurrent = i;
+  lbInner.innerHTML = `<img src="${lbImages[i]}" class="lightbox-img" alt="Gallery image ${i+1}">`;
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+galleryItems.forEach(item => item.addEventListener('click', () => openLb(parseInt(item.dataset.lb))));
+document.getElementById('lb-close').addEventListener('click', () => { lightbox.classList.remove('open'); document.body.style.overflow = ''; });
+document.getElementById('lb-prev').addEventListener('click', () => openLb((lbCurrent - 1 + lbImages.length) % lbImages.length));
+document.getElementById('lb-next').addEventListener('click', () => openLb((lbCurrent + 1) % lbImages.length));
+lightbox.addEventListener('click', e => { if (e.target === lightbox) { lightbox.classList.remove('open'); document.body.style.overflow = ''; } });
+
+// ─── RESERVATION FORM ───
+document.getElementById('res-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  let ok = true;
+  [{ id: 'rf-name', v: v => v.trim().length >= 2 },
+   { id: 'rf-email', v: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
+   { id: 'rf-phone', v: v => v.trim().length >= 7 },
+   { id: 'rf-guests', v: v => v !== '' },
+   { id: 'rf-date', v: v => v !== '' },
+   { id: 'rf-time', v: v => v !== '' }].forEach(f => {
+    const el = document.getElementById(f.id);
+    const grp = el.closest('.form-group');
+    const valid = f.v(el.value);
+    grp.classList.toggle('error', !valid);
+    if (!valid) ok = false;
+  });
+  if (ok) { this.style.display = 'none'; document.getElementById('res-success').style.display = 'block'; }
+});
+
+// ─── CONTACT FORM ───
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  let ok = true;
+  [{ id: 'cf-name', v: v => v.trim().length >= 2 },
+   { id: 'cf-email', v: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
+   { id: 'cf-msg', v: v => v.trim().length >= 10 }].forEach(f => {
+    const el = document.getElementById(f.id);
+    const grp = el.closest('.form-group');
+    const valid = f.v(el.value);
+    grp.classList.toggle('error', !valid);
+    if (!valid) ok = false;
+  });
+  if (ok) { this.style.display = 'none'; document.getElementById('cf-success').style.display = 'block'; }
+});
+document.querySelectorAll('form input, form select, form textarea').forEach(el => {
+  el.addEventListener('input', () => el.closest('.form-group')?.classList.remove('error'));
+});
+
+// ─── ACTIVE NAV ───
+const navObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      document.querySelectorAll('.nav-links a').forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+    }
+  });
+}, { threshold: 0.35 });
+document.querySelectorAll('section[id]').forEach(s => navObs.observe(s));
+
+// Set minimum date for reservation
+const today = new Date().toISOString().split('T')[0];
+const rfDate = document.getElementById('rf-date');
+if (rfDate) rfDate.min = today;
+</script>
+</body>
+</html>
