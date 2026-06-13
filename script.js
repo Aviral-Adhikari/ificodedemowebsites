@@ -18,6 +18,30 @@ const eyeIcon = `
 `;
 
 const demoProjects = [
+  
+  {
+    title: "Travel Agency Sample",
+    category: "Travel Agency Website",
+    filter: "Travel",
+    description: "A folder-based premium Nepal travel agency demo with refined sections and destination-focused browsing.",
+    tags: ["Travel", "Nepal", "Agency"],
+    features: ["Travel landing page", "Destination-led layout", "Inquiry sections", "Responsive presentation"],
+    technologies: ["HTML", "CSS", "JavaScript"],
+    previewUrl: "TravelAgency/index.html",
+    thumbnail: "images/projects/travelagencysample.webp"
+  },
+  {
+    title: "Travel Agency Sample 2",
+    category: "Travel Agency Website",
+    filter: "Travel",
+    description: "A complete multi-page travel agency demo with destinations, packages, blog, FAQs, gallery, and contact pages.",
+    tags: ["Multi-page", "Travel", "Packages"],
+    features: ["Multi-page navigation", "Package detail pages", "Blog and gallery", "Contact and map page"],
+    technologies: ["HTML", "CSS", "JavaScript"],
+    previewUrl: "TravelAgency2/index.html",
+    thumbnail: "images/projects/travelagencysample3.png"
+  },
+
   {
     title: "Banquet Palace Sample",
     category: "Event Venue Website",
@@ -172,28 +196,6 @@ const demoProjects = [
     technologies: ["HTML", "CSS", "JavaScript"],
     previewUrl: "Portfolio/index.html",
     thumbnail: "Portfolio/assets/images/project-showcase.png"
-  },
-  {
-    title: "Localify Premium Nepal Travel",
-    category: "Travel Website",
-    filter: "Travel",
-    description: "A folder-based premium Nepal travel agency demo with refined sections and destination-focused browsing.",
-    tags: ["Travel", "Nepal", "Agency"],
-    features: ["Travel landing page", "Destination-led layout", "Inquiry sections", "Responsive presentation"],
-    technologies: ["HTML", "CSS", "JavaScript"],
-    previewUrl: "TravelAgency/index.html",
-    thumbnail: "images/projects/travelagencysample.webp"
-  },
-  {
-    title: "Localify Multi-page Travel",
-    category: "Travel Website",
-    filter: "Travel",
-    description: "A complete multi-page travel agency demo with destinations, packages, blog, FAQs, gallery, and contact pages.",
-    tags: ["Multi-page", "Travel", "Packages"],
-    features: ["Multi-page navigation", "Package detail pages", "Blog and gallery", "Contact and map page"],
-    technologies: ["HTML", "CSS", "JavaScript"],
-    previewUrl: "TravelAgency2/index.html",
-    thumbnail: "images/projects/travelagencysample3.png"
   }
 ];
 
