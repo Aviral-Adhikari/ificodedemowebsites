@@ -1,13 +1,13 @@
 const categories = [
   "All",
   "Business",
-  "Mobile",
-  "Portfolio",
-  "School",
+  "Travel",
   "Restaurant",
-  "Hospital",
+  "Cafe",
+  "Clinic",
   "Lawyer",
-  "E-commerce"
+  "Portfolio",
+  "Fitness"
 ];
 
 const eyeIcon = `
@@ -19,62 +19,40 @@ const eyeIcon = `
 
 const demoProjects = [
   {
-    title: "Consultifi",
-    category: "Business Platform",
+    title: "Banquet Palace Sample",
+    category: "Event Venue Website",
     filter: "Business",
-    description: "A professional consultancy interface with clear service presentation, lead flow, and a focused business-first content structure.",
-    tags: ["Business UX", "Dashboard", "Lead Flow"],
-    features: ["Consultancy-focused homepage", "Strong hero conversion area", "Service sections", "Contact-ready structure"],
+    description: "A banquet and party palace website for events, weddings, venue presentation, and booking-focused visitors.",
+    tags: ["Events", "Venue", "Booking"],
+    features: ["Venue presentation", "Event package sections", "Booking call-to-action", "Large visual showcase"],
     technologies: ["HTML", "CSS", "JavaScript"],
-    previewUrl: "lawfirmsample.html",
-    thumbnail: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1400&q=84"
+    previewUrl: "banquet.html",
+    thumbnail: "images/projects/banquet.webp"
   },
   {
-    title: "Localify",
-    category: "Mobile Platform",
-    filter: "Mobile",
-    description: "A mobile platform concept made for explorers, built to help users discover local places, routes, and experiences.",
-    tags: ["React Native", "Firebase", "Mobile UX"],
-    features: ["Mobile-first presentation", "Travel discovery sections", "Destination browsing", "Clean platform showcase"],
+    title: "Cafe Sample",
+    category: "Cafe Website",
+    filter: "Cafe",
+    description: "A warm cafe website for coffee menus, local storytelling, product highlights, and contact-driven visits.",
+    tags: ["Cafe", "Menu", "Local Brand"],
+    features: ["Cafe hero section", "Menu preview", "Brand story content", "Location call-to-action"],
     technologies: ["HTML", "CSS", "JavaScript"],
-    previewUrl: "TravelAgency2/index.html",
-    thumbnail: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=84"
+    previewUrl: "cafesample.html",
+    thumbnail: "images/projects/cafesample.webp"
   },
   {
-    title: "Restaurant Website",
-    category: "Restaurant Website",
-    filter: "Restaurant",
-    description: "A refined restaurant demo with large food imagery, menu highlights, reservation prompts, and hospitality-focused sections.",
-    tags: ["Menu", "Booking", "Hospitality"],
-    features: ["Premium dining hero", "Menu and offer sections", "Reservation call-to-action", "Responsive restaurant layout"],
+    title: "Cafe Sample 2",
+    category: "Cafe Website",
+    filter: "Cafe",
+    description: "A premium cafe website with crafted coffee positioning, elegant content sections, and polished visual flow.",
+    tags: ["Coffee", "Cafe", "Premium"],
+    features: ["Premium cafe hero", "Product storytelling", "Gallery-style sections", "Responsive contact flow"],
     technologies: ["HTML", "CSS", "JavaScript"],
-    previewUrl: "restaurant.html",
-    thumbnail: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1400&q=84"
+    previewUrl: "cafesample2.html",
+    thumbnail: "images/projects/cafesample2.png"
   },
   {
-    title: "School Website",
-    category: "School Website",
-    filter: "School",
-    description: "An education website concept for schools, admissions, academic programs, notices, and parent-friendly information.",
-    tags: ["Admissions", "Programs", "Academic"],
-    features: ["School homepage structure", "Admissions-focused sections", "Program cards", "Notice-ready layout"],
-    technologies: ["HTML", "CSS", "JavaScript"],
-    previewUrl: "t1.html",
-    thumbnail: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1400&q=84"
-  },
-  {
-    title: "Hospital Website",
-    category: "Hospital Website",
-    filter: "Hospital",
-    description: "A healthcare clinic website built for service clarity, patient trust, appointment calls, and responsive medical content.",
-    tags: ["Healthcare", "Clinic", "Patient UI"],
-    features: ["Healthcare hero", "Service overview", "Appointment pathway", "Trust-focused content"],
-    technologies: ["HTML", "CSS", "JavaScript"],
-    previewUrl: "Clinic/index.html",
-    thumbnail: "Clinic/assets/clinic-hero.png"
-  },
-  {
-    title: "Lawyer Website",
+    title: "Legal Heart",
     category: "Law Firm Website",
     filter: "Lawyer",
     description: "A polished law firm website with professional practice areas, consultation messaging, and credibility-focused design.",
@@ -82,51 +60,140 @@ const demoProjects = [
     features: ["Practice area sections", "Attorney-style content", "Consultation CTA", "Professional service layout"],
     technologies: ["HTML", "CSS", "JavaScript"],
     previewUrl: "lawfirmsample.html",
-    thumbnail: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1400&q=84"
+    thumbnail: "images/projects/lawfirmsample.png"
   },
   {
-    title: "E-commerce Website",
-    category: "E-commerce Website",
-    filter: "E-commerce",
-    description: "A storefront-style demo structure for product highlights, offers, category browsing, and conversion-focused pages.",
-    tags: ["Products", "Offers", "Storefront"],
-    features: ["Product showcase sections", "Offer-focused layout", "Category browsing concept", "Mobile-ready storefront"],
-    technologies: ["HTML", "CSS", "JavaScript"],
-    previewUrl: "cafesample2.html",
-    thumbnail: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=84"
-  },
-  {
-    title: "Personal Portfolio Website",
+    title: "Cybersecurity Professional Portfolio",
     category: "Portfolio Website",
     filter: "Portfolio",
-    description: "A personal portfolio website for presenting skills, projects, resume links, and a clear professional profile.",
+    description: "A personal portfolio for a cybersecurity learner and UI/UX designer with a tech-forward presentation.",
+    tags: ["Portfolio", "Cybersecurity", "UI UX"],
+    features: ["Tech-focused hero", "Skills and projects", "Professional summary", "Contact pathway"],
+    technologies: ["HTML", "CSS", "JavaScript"],
+    previewUrl: "p1.html",
+    thumbnail: "images/projects/portfoliosample1.png"
+  },
+  {
+    title: "Tech Professional Portfolio",
+    category: "Portfolio Website",
+    filter: "Portfolio",
+    description: "A clean professional portfolio layout for cybersecurity, technology skills, and personal brand presentation.",
+    tags: ["Portfolio", "Tech", "Resume"],
+    features: ["Profile sections", "Skill highlights", "Project blocks", "Responsive portfolio layout"],
+    technologies: ["HTML", "CSS", "JavaScript"],
+    previewUrl: "p2.html",
+    thumbnail: "images/projects/portfoliosample2.png"
+  },
+  {
+    title: "Himalayan Durbar",
+    category: "Restaurant Website",
+    filter: "Restaurant",
+    description: "A refined restaurant demo with large food imagery, menu highlights, reservation prompts, and hospitality-focused sections.",
+    tags: ["Menu", "Booking", "Hospitality"],
+    features: ["Premium dining hero", "Menu and offer sections", "Reservation call-to-action", "Responsive restaurant layout"],
+    technologies: ["HTML", "CSS", "JavaScript"],
+    previewUrl: "restaurant.html",
+    thumbnail: "images/projects/restrosample.webp"
+  },
+
+  {
+    title: "Premium Travel Agency",
+    category: "Travel Website",
+    filter: "Travel",
+    description: "A premium travel agency demo with polished destination sections, tour packages, and travel inquiry flow.",
+    tags: ["Travel", "Packages", "Premium"],
+    features: ["Destination hero", "Package highlights", "Inquiry structure", "Gallery and service flow"],
+    technologies: ["HTML", "CSS", "JavaScript"],
+    previewUrl: "t2.html",
+    thumbnail: "images/projects/travelsample2.png"
+  },
+  {
+    title: "Cybersecurity Professional Portfolio",
+    category: "Portfolio Website",
+    filter: "Portfolio",
+    description: "A professional portfolio for a cybersecurity enthusiast with a focus on skills, projects, and career development.",
+    tags: ["Professional", "Portfolio", "Cybersecurity"],
+    features: ["Professional profile", "Skill highlights", "Project showcases", "Contact information"],
+    technologies: ["HTML", "CSS", "JavaScript"],
+    previewUrl: "https://aviraladhikari.com.np",
+    thumbnail: "images/projects/portfoliosample3.png"
+  },
+  {
+    title: "PawCare Veterinary Clinic",
+    category: "Clinic Website",
+    filter: "Clinic",
+    description: "A friendly veterinary clinic website for pet care services, appointments, and trust-building local content.",
+    tags: ["Veterinary", "Clinic", "Pet Care"],
+    features: ["Pet care hero", "Veterinary services", "Appointment CTA", "Responsive clinic layout"],
+    technologies: ["HTML", "CSS", "JavaScript"],
+    previewUrl: "trial.html",
+    thumbnail: "images/projects/vetsample1.png"
+  },
+  {
+    title: "Harmony Veterinary Clinic",
+    category: "Clinic Website",
+    filter: "Clinic",
+    description: "A calm veterinary website with pet care services, local clinic trust, and clear appointment messaging.",
+    tags: ["Veterinary", "Services", "Local Clinic"],
+    features: ["Service overview", "Trust-focused sections", "Contact prompts", "Responsive pet clinic layout"],
+    technologies: ["HTML", "CSS", "JavaScript"],
+    previewUrl: "vetsample.html",
+    thumbnail: "images/projects/vetsample2.png"
+  },
+  {
+    title: "EverCare Medical Clinic",
+    category: "Clinic Website",
+    filter: "Clinic",
+    description: "A healthcare clinic website for appointments, services, doctors, and patient trust.",
+    tags: ["Healthcare", "Clinic", "Patient UI"],
+    features: ["Clinic hero", "Healthcare services", "Appointment CTA", "Accessible responsive layout"],
+    technologies: ["HTML", "CSS", "JavaScript"],
+    previewUrl: "Clinic/index.html",
+    thumbnail: "images/projects/clinicsample.webp"
+  },
+  {
+    title: "Madhyapur VR Fitness",
+    category: "Fitness Website",
+    filter: "Fitness",
+    description: "A local fitness website for gym branding, programs, schedules, and membership-focused calls to action.",
+    tags: ["Gym", "Fitness", "Membership"],
+    features: ["Fitness hero", "Program sections", "Membership CTA", "Responsive gym layout"],
+    technologies: ["HTML", "CSS", "JavaScript"],
+    previewUrl: "Gym/index.html",
+    thumbnail: "images/projects/gym.png"
+  },
+  {
+    title: "Sobisha Agrawal Portfolio",
+    category: "Portfolio Website",
+    filter: "Portfolio",
+    description: "A complete personal portfolio folder project with profile sections, work samples, and resume access.",
     tags: ["Portfolio", "Resume", "Projects"],
-    features: ["Personal hero section", "Skills and project blocks", "Resume pathway", "Contact-ready layout"],
+    features: ["Personal brand hero", "Skills sections", "Project showcase", "Resume link"],
     technologies: ["HTML", "CSS", "JavaScript"],
     previewUrl: "Portfolio/index.html",
     thumbnail: "Portfolio/assets/images/project-showcase.png"
   },
   {
-    title: "Premium Travel Agency",
-    category: "Business Website",
-    filter: "Business",
-    description: "A travel agency demo with destination-led storytelling, package browsing, and high-converting inquiry sections.",
-    tags: ["Travel", "Packages", "Leads"],
-    features: ["Destination hero", "Package highlights", "Inquiry structure", "Gallery and service flow"],
+    title: "Localify Premium Nepal Travel",
+    category: "Travel Website",
+    filter: "Travel",
+    description: "A folder-based premium Nepal travel agency demo with refined sections and destination-focused browsing.",
+    tags: ["Travel", "Nepal", "Agency"],
+    features: ["Travel landing page", "Destination-led layout", "Inquiry sections", "Responsive presentation"],
     technologies: ["HTML", "CSS", "JavaScript"],
     previewUrl: "TravelAgency/index.html",
-    thumbnail: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1400&q=84"
+    thumbnail: "images/projects/travelagencysample.webp"
   },
   {
-    title: "Cafe Website",
-    category: "Restaurant Website",
-    filter: "Restaurant",
-    description: "A warm cafe website demo for coffee menus, local storytelling, product highlights, and contact-driven visits.",
-    tags: ["Cafe", "Menu", "Local Brand"],
-    features: ["Cafe hero section", "Menu preview", "Brand story content", "Location call-to-action"],
+    title: "Localify Multi-page Travel",
+    category: "Travel Website",
+    filter: "Travel",
+    description: "A complete multi-page travel agency demo with destinations, packages, blog, FAQs, gallery, and contact pages.",
+    tags: ["Multi-page", "Travel", "Packages"],
+    features: ["Multi-page navigation", "Package detail pages", "Blog and gallery", "Contact and map page"],
     technologies: ["HTML", "CSS", "JavaScript"],
-    previewUrl: "cafesample.html",
-    thumbnail: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1400&q=84"
+    previewUrl: "TravelAgency2/index.html",
+    thumbnail: "images/projects/travelagencysample3.png"
   }
 ];
 
