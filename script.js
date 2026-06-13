@@ -121,6 +121,17 @@ const demoProjects = [
   },
 
   {
+    title: "Localify Discover Nepal",
+    category: "Travel Website",
+    filter: "Travel",
+    description: "A Nepal travel landing page with local experiences, destination sections, and adventure-focused storytelling.",
+    tags: ["Travel", "Nepal", "Landing Page"],
+    features: ["Tourism hero", "Destination sections", "Experience highlights", "Responsive travel layout"],
+    technologies: ["HTML", "CSS", "JavaScript"],
+    previewUrl: "t1.html",
+    thumbnail: "images/projects/localify.webp"
+  },
+  {
     title: "Premium Travel Agency",
     category: "Travel Website",
     filter: "Travel",
@@ -132,14 +143,14 @@ const demoProjects = [
     thumbnail: "images/projects/travelsample2.png"
   },
   {
-    title: "Cybersecurity Professional Portfolio",
+    title: "BScIT Student Portfolio",
     category: "Portfolio Website",
     filter: "Portfolio",
-    description: "A professional portfolio for a cybersecurity enthusiast with a focus on skills, projects, and career development.",
-    tags: ["Professional", "Portfolio", "Cybersecurity"],
-    features: ["Professional profile", "Skill highlights", "Project showcases", "Contact information"],
+    description: "A student portfolio for a BScIT learner with cybersecurity interests, career sections, and contact prompts.",
+    tags: ["Student", "Portfolio", "Cybersecurity"],
+    features: ["Student profile", "Learning journey sections", "Project highlights", "Contact pathway"],
     technologies: ["HTML", "CSS", "JavaScript"],
-    previewUrl: "https://aviraladhikari.com.np",
+    previewUrl: "t3.html",
     thumbnail: "images/projects/portfoliosample3.png"
   },
   {
@@ -213,6 +224,8 @@ const modalTech = document.querySelector("[data-modal-tech]");
 const modalLink = document.querySelector("[data-modal-link]");
 const newsletterForm = document.querySelector("[data-newsletter-form]");
 const newsletterNote = document.querySelector("[data-newsletter-note]");
+const menuToggle = document.querySelector("[data-menu-toggle]");
+const mainNav = document.querySelector(".main-nav");
 
 let activeCategory = "All";
 
@@ -311,6 +324,10 @@ newsletterForm.addEventListener("submit", (event) => {
   event.preventDefault();
   newsletterNote.textContent = "Thanks. iFiCode will keep you updated.";
   newsletterForm.reset();
+});
+
+menuToggle.addEventListener("click", () => {
+  mainNav.classList.toggle("active");
 });
 
 demoCount.textContent = `${demoProjects.length}+`;
