@@ -2220,18 +2220,33 @@ h3 {
     place-content: center;
     gap: 20px;
     color: #fff;
-    background: rgba(6, 35, 31, 0.96);
-    transform: translateY(-100%);
-    transition: transform 300ms ease;
+    background: #031f1a;
+    transform: translateY(-110vh);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 1;
+    min-height: 100svh;
+    overflow-y: auto;
+    transition: transform 300ms ease, opacity 220ms ease, visibility 220ms ease;
   }
 
   .nav-links.open {
     transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .nav-toggle {
-    z-index: 2;
+    position: relative;
+    z-index: 3;
     display: block;
+  }
+
+  .site-nav .brand {
+    position: relative;
+    z-index: 3;
   }
 
   .site-nav.menu-open .nav-toggle span:first-child {
@@ -2487,15 +2502,16 @@ h3 {
   }
 
   .nav-links {
-    padding: 96px 28px 40px;
-    place-content: start;
+    padding: 110px 28px 40px;
+    place-content: center;
     align-content: center;
     text-align: center;
   }
 
   .nav-links a {
     font-family: var(--serif);
-    font-size: 30px;
+    font-size: clamp(28px, 9vw, 42px);
+    line-height: 1;
   }
 
   .nav-links .book-link {
@@ -2725,39 +2741,147 @@ h3 {
     gap: 18px;
   }
 
+  .wizard-main,
+  .wizard-step,
+  .menu-designer,
+  .accordion-list,
+  .accordion-section {
+    min-width: 0;
+    max-width: 100%;
+  }
+
   .wizard-summary {
     order: -1;
     padding: 20px;
+    background:
+      linear-gradient(180deg, rgba(3,31,26,0.92), rgba(3,31,26,0.82)),
+      url("banquetimages/table1.webp") center/cover;
   }
 
   .wizard-summary h3 {
     font-size: 34px;
   }
 
+  .wizard-summary dl {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 14px;
+  }
+
+  .wizard-summary dt,
+  .wizard-summary dd {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
   .step-heading h3 {
     font-size: clamp(32px, 10vw, 46px);
   }
 
-  .hall-card img,
-  .menu-tier img {
-    height: 230px;
+  .menu-package-grid,
+  .custom-choice {
+    grid-template-columns: 1fr;
   }
 
-  .hall-card > div,
+  .menu-tier {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: stretch;
+  }
+
+  .menu-tier img {
+    height: 100%;
+    min-height: 230px;
+  }
+
   .menu-tier > div {
     padding: 20px;
+    min-width: 0;
+  }
+
+  .menu-tier h4 {
+    font-size: 26px;
+  }
+
+  .menu-tier p,
+  .included p {
+    font-size: 14px;
+  }
+
+  .package-facts,
+  .feature-list {
+    gap: 7px;
+  }
+
+  .package-facts span,
+  .feature-list span,
+  .badge {
+    font-size: 11px;
+    padding: 6px 9px;
+  }
+
+  .designer-tools {
+    position: sticky;
+    top: 76px;
+    z-index: 5;
+    margin: 0 -2px 14px;
+    padding: 12px;
+    border: 1px solid rgba(200, 169, 106, 0.18);
+    border-radius: 8px;
+    background: rgba(3, 31, 26, 0.94);
+    backdrop-filter: blur(14px);
   }
 
   .accordion-head {
     grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 18px 16px;
+  }
+
+  .accordion-head span {
+    min-width: 0;
+  }
+
+  .accordion-head h4 {
+    font-size: 24px;
+    overflow-wrap: anywhere;
+  }
+
+  .accordion-head p {
+    font-size: 13px;
+    line-height: 1.55;
   }
 
   .accordion-progress {
     text-align: left;
+    min-width: 0;
+  }
+
+  .accordion-body {
+    padding: 0 14px 16px;
+  }
+
+  .chip-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
   }
 
   .menu-chip {
-    padding: 11px 13px;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 9px;
+    border-radius: 8px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.25;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .menu-subtitle {
+    grid-column: 1 / -1;
+    margin-top: 10px;
   }
 
   .checkout-actions .btn,
@@ -2838,8 +2962,42 @@ h3 {
     flex-basis: 205px;
   }
 
+  .wizard-summary {
+    padding: 16px;
+  }
+
   .wizard-summary dl {
     grid-template-columns: 1fr;
+  }
+
+  .menu-tier {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-tier img {
+    height: 185px;
+    min-height: 185px;
+  }
+
+  .menu-tier > div {
+    padding: 17px;
+  }
+
+  .chip-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .designer-tools {
+    top: 68px;
+    padding: 10px;
+  }
+
+  .accordion-head {
+    padding: 16px 14px;
+  }
+
+  .accordion-body {
+    padding: 0 12px 14px;
   }
 }
 
