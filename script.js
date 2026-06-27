@@ -27,7 +27,7 @@ const demoProjects = [
     tags: ["Events", "Venue", "Booking"],
     features: ["Venue presentation", "Event package sections", "Booking call-to-action", "Large visual showcase"],
     technologies: ["HTML", "CSS", "JavaScript"],
-    previewUrl: "Banquet/index.html",
+    previewUrl: "../Banquet/index.html",
     thumbnail: "images/projects/banquet.webp"
   },
   
@@ -62,8 +62,8 @@ const demoProjects = [
     tags: ["Events", "Venue", "Booking"],
     features: ["Venue presentation", "Event package sections", "Booking call-to-action", "Large visual showcase"],
     technologies: ["HTML", "CSS", "JavaScript"],
-    previewUrl: "banquet.html",
-    thumbnail: "images/projects/banquet.webp"
+    previewUrl: "banquetsample.html",
+    thumbnail: "images/projects/banquet3.png"
   },
   {
     title: "Cafe Sample",
