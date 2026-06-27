@@ -19,6 +19,18 @@ const eyeIcon = `
 
 const demoProjects = [
   
+    {
+    title: "Banquet Palace Sample",
+    category: "Event Venue Website",
+    filter: "Business",
+    description: "A banquet and party palace website for events, weddings, venue presentation, and booking-focused visitors.",
+    tags: ["Events", "Venue", "Booking"],
+    features: ["Venue presentation", "Event package sections", "Booking call-to-action", "Large visual showcase"],
+    technologies: ["HTML", "CSS", "JavaScript"],
+    previewUrl: "Banquet/index.html",
+    thumbnail: "images/projects/banquet.webp"
+  },
+  
   {
     title: "Travel Agency Sample",
     category: "Travel Agency Website",

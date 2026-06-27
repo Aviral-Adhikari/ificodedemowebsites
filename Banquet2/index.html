@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Celebration Starts Here</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="curtain" aria-hidden="true"></div>
+  <div class="cursor-light" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a href="#story">Story</a>
+    <a href="#builder">Occasion</a>
+    <a href="#venue">Venue</a>
+    <a href="#booking">Book</a>
+  </nav>
+
+  <header class="hero section-panel" id="top">
+    <img class="hero-image" src="assets/hero-wedding-night.png" alt="A dark luxury banquet hall glowing with golden wedding lights">
+    <div class="hero-vignette"></div>
+    <div class="hero-content reveal">
+      <p class="eyebrow">Your Celebration Starts Here</p>
+      <h1>Every Beautiful Story Begins With One "Yes."</h1>
+      <p class="lead">Whether it is your wedding, reception, birthday or corporate celebration, let us create memories that never fade.</p>
+      <a class="begin-link" href="#story" aria-label="Begin the journey">Begin the Journey</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="story section-panel" id="story" aria-labelledby="story-title">
+      <div class="story-still story-still-main reveal" aria-hidden="true">
+        <img src="assets/hall-transformation.png" alt="">
+      </div>
+      <div class="story-still story-still-small reveal" aria-hidden="true">
+        <img src="assets/floating-memories.png" alt="">
+      </div>
+      <div class="section-intro story-intro reveal">
+        <p class="eyebrow">The Opening Scene</p>
+        <h2 id="story-title">This is not our timeline. It is yours.</h2>
+      </div>
+      <div class="timeline story-script" aria-label="Celebration story timeline">
+        <article class="story-step reveal chapter-one">
+          <span>01</span>
+          <h3>You Found The Perfect Venue</h3>
+          <p>The first image becomes clear: warm lights, open doors, and a hall ready to hold everyone you love.</p>
+        </article>
+        <article class="story-step reveal chapter-two">
+          <span>02</span>
+          <h3>You Shared Your Dream</h3>
+          <p>Our planners translate colors, rituals, music, food, and feeling into one calm, beautiful plan.</p>
+        </article>
+        <article class="story-step reveal chapter-three">
+          <span>03</span>
+          <h3>We Designed Every Detail</h3>
+          <p>Flowers rise, tables glow, stage lights warm, and the room slowly becomes your celebration.</p>
+        </article>
+        <article class="story-step reveal chapter-four">
+          <span>04</span>
+          <h3>Guests Arrive</h3>
+          <p>Valet, welcome drinks, photography, dinner, music, and farewell all move like one elegant sequence.</p>
+        </article>
+        <article class="story-step reveal chapter-five">
+          <span>05</span>
+          <h3>The Celebration Begins</h3>
+          <p>The doors open, the music lifts, and the room turns into the first scene everyone remembers.</p>
+        </article>
+        <article class="story-step reveal chapter-six">
+          <span>06</span>
+          <h3>Memories Forever</h3>
+          <p>Every smile, entrance, toast, and dance becomes a photograph you will keep returning to.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="builder section-panel" id="builder" aria-labelledby="builder-title">
+      <div class="builder-photo reveal" aria-hidden="true">
+        <img src="assets/hero-wedding-night.png" alt="">
+      </div>
+      <div class="section-intro builder-intro reveal">
+        <p class="eyebrow">Interactive Story Builder</p>
+        <h2 id="builder-title">What are you celebrating?</h2>
+        <p>Choose a chapter and watch the mood, package, gallery, and details shift around your event.</p>
+      </div>
+      <div class="occasion-grid occasion-constellation reveal" role="list" aria-label="Occasion selector">
+        <button class="occasion-card active" data-occasion="wedding">Wedding</button>
+        <button class="occasion-card" data-occasion="reception">Reception</button>
+        <button class="occasion-card" data-occasion="birthday">Birthday</button>
+        <button class="occasion-card" data-occasion="corporate">Corporate</button>
+        <button class="occasion-card" data-occasion="anniversary">Anniversary</button>
+        <button class="occasion-card" data-occasion="engagement">Engagement</button>
+      </div>
+      <div class="occasion-stage reveal">
+        <div>
+          <p class="eyebrow" id="occasion-kicker">Wedding Premiere</p>
+          <h3 id="occasion-title">A candlelit entrance, floral stage, and dinner designed like a film set.</h3>
+          <p id="occasion-copy">Includes ceremony flow, reception dinner, bridal suite support, photography corners, and late-night celebration styling.</p>
+        </div>
+        <div class="package-card dream-note">
+          <span>Dream Scale</span>
+          <strong id="occasion-price">From $8,500</strong>
+          <small id="occasion-detail">Best for 250-500 guests</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="venue section-panel" id="venue" aria-labelledby="venue-title">
+      <img src="assets/hall-transformation.png" alt="A luxury wedding hall transformed with flowers, tables, and golden lighting">
+      <div class="venue-copy reveal">
+        <p class="eyebrow">Live Venue Map</p>
+        <h2 id="venue-title">Explore the backdrop for your future memory.</h2>
+        <p>Tap a glowing point to preview how each part of the palace supports the guest journey.</p>
+      </div>
+      <div class="hotspot h1" data-label="Main Hall: cinematic seating for grand celebrations"></div>
+      <div class="hotspot h2" data-label="Stage: floral, LED, classic, or modern luxury backdrops"></div>
+      <div class="hotspot h3" data-label="VIP Lounge: quiet private hosting before the entrance"></div>
+      <div class="hotspot h4" data-label="Garden: portraits, welcome drinks, and outdoor rituals"></div>
+      <div class="hotspot-tooltip" role="status" aria-live="polite">Select a glowing venue point</div>
+    </section>
+
+    <section class="transform section-panel" aria-labelledby="transform-title">
+      <div class="section-intro reveal">
+        <p class="eyebrow">Live Venue Transformation</p>
+        <h2 id="transform-title">One hall. Every kind of celebration.</h2>
+      </div>
+      <div class="transform-frame reveal">
+        <img src="assets/hall-transformation.png" alt="Banquet hall transformation preview">
+        <div class="transform-overlay" id="transform-overlay"></div>
+        <div class="transform-caption">
+          <span id="transform-label">Luxury Wedding</span>
+          <input id="transform-range" type="range" min="0" max="4" value="1" aria-label="Choose venue transformation style">
+        </div>
+      </div>
+    </section>
+
+    <section class="experience section-panel" aria-labelledby="experience-title">
+      <div class="experience-line" aria-hidden="true"></div>
+      <div class="section-intro experience-intro reveal">
+        <p class="eyebrow">Guest Experience</p>
+        <h2 id="experience-title">From arrival to farewell, every feeling is planned.</h2>
+      </div>
+      <div class="feeling-grid guest-journey reveal">
+        <article><span>Arrival</span><p>Valet, welcome lighting, and a calm first impression.</p></article>
+        <article><span>Welcome Drink</span><p>Refreshments served before the room reveal.</p></article>
+        <article><span>Photography</span><p>Designed portrait points for families and guests.</p></article>
+        <article><span>Dining</span><p>Service paced around speeches, rituals, and music.</p></article>
+        <article><span>Dance Floor</span><p>Lights deepen as the evening becomes a celebration.</p></article>
+        <article><span>Farewell</span><p>The final scene feels graceful, not rushed.</p></article>
+      </div>
+    </section>
+
+    <section class="memories section-panel" aria-labelledby="memories-title">
+      <img src="assets/floating-memories.png" alt="Floating wedding photographs glowing in candlelight">
+      <div class="memory-copy reveal">
+        <p class="eyebrow">Floating Memories</p>
+        <h2 id="memories-title">The gallery behaves like photographs drifting through the night.</h2>
+      </div>
+      <div class="memory-wall" aria-hidden="true">
+        <figure class="memory-print print-one reveal"><img src="assets/hero-wedding-night.png" alt=""></figure>
+        <figure class="memory-print print-two reveal"><img src="assets/hall-transformation.png" alt=""></figure>
+        <figure class="memory-print print-three reveal"><img src="assets/floating-memories.png" alt=""></figure>
+      </div>
+      <div class="review-card keepsake reveal">
+        <button id="review-toggle">Open Invitation Review</button>
+        <p id="review-text">"They made our reception feel like a private film premiere. Every guest still talks about the entrance."</p>
+      </div>
+    </section>
+
+    <section class="premium section-panel" aria-labelledby="premium-title">
+      <div class="section-intro premium-intro reveal">
+        <p class="eyebrow">Premium Planning Tools</p>
+        <h2 id="premium-title">A booking experience that already feels personal.</h2>
+      </div>
+      <div class="tools-grid planning-atelier">
+        <form class="estimator reveal">
+          <h3>AI Event Cost Estimator</h3>
+          <label>Guests <input id="guests" type="number" min="50" value="300"></label>
+          <label>Decoration <input id="decor" type="range" min="1" max="5" value="3"></label>
+          <label>Dining <input id="food" type="range" min="1" max="5" value="4"></label>
+          <output id="estimate">$18,900</output>
+        </form>
+        <div class="countdown reveal">
+          <h3>Celebration Countdown</h3>
+          <strong id="days-left">128</strong>
+          <span>Days Until Your Dream Wedding</span>
+        </div>
+        <form class="invitation reveal">
+          <h3>Digital Invitation Preview</h3>
+          <input id="name-one" type="text" value="Aarav">
+          <input id="name-two" type="text" value="Mira">
+          <div class="invite-preview">
+            <small>Together with their families</small>
+            <strong><span id="preview-one">Aarav</span> &amp; <span id="preview-two">Mira</span></strong>
+            <em>request your presence</em>
+          </div>
+        </form>
+        <div class="capacity reveal">
+          <h3>Guest Capacity Visualizer</h3>
+          <div class="dot-field" id="dot-field" aria-label="500 glowing guest capacity dots"></div>
+          <span>500 guests visualized as light.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking section-panel" id="booking" aria-labelledby="booking-title">
+      <div class="booking-card reveal">
+        <p class="eyebrow">Reserve Your Date</p>
+        <h2 id="booking-title">Send us the first details of your celebration.</h2>
+        <form>
+          <input type="text" placeholder="Name" aria-label="Name">
+          <input type="date" aria-label="Event date">
+          <input type="number" placeholder="Guests" aria-label="Guests">
+          <select aria-label="Occasion">
+            <option>Wedding</option>
+            <option>Reception</option>
+            <option>Birthday</option>
+            <option>Corporate</option>
+            <option>Anniversary</option>
+          </select>
+          <textarea placeholder="Tell us the scene you imagine" aria-label="Message"></textarea>
+          <button type="submit">Begin My Celebration</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Your Celebration Starts Here</p>
+    <a href="#top">Back to Opening Scene</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
