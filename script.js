@@ -31,6 +31,18 @@ const demoProjects = [
     thumbnail: "images/projects/banquet.webp"
   },
   
+      {
+    title: "Banquet Palace Sample 2",
+    category: "Event Venue Website",
+    filter: "Business",
+    description: "A banquet and party palace website for events, weddings, venue presentation, and booking-focused visitors.",
+    tags: ["Events", "Venue", "Booking"],
+    features: ["Venue presentation", "Event package sections", "Booking call-to-action", "Large visual showcase"],
+    technologies: ["HTML", "CSS", "JavaScript"],
+    previewUrl: "../Banquet4/index.html",
+    thumbnail: "images/projects/banquet2.webp"
+  },
+
   {
     title: "Travel Agency Sample",
     category: "Travel Agency Website",

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aurelia Grand Palace is a cinematic luxury banquet venue for weddings, receptions, rituals, and private events."
+    />
+    <title>Aurelia Grand Palace | Luxury Banquet Venue</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#home">Aurelia Grand</a>
+      <nav aria-label="Main navigation">
+        <a href="#spaces">Spaces</a>
+        <a href="#celebrations">Celebrations</a>
+        <a href="#feast">Feast</a>
+        <a href="#memories">Memories</a>
+        <a href="#reserve">Reserve</a>
+      </nav>
+      <a class="topbar-cta" href="#reserve">Book Date</a>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow">Luxury Banquet Palace</p>
+          <h1>Make the entrance feel unforgettable.</h1>
+          <p>
+            A grand celebration venue shaped around cinematic light, generous dining,
+            floral staging, and a guest experience that feels effortless from arrival to farewell.
+          </p>
+          <div class="hero-actions">
+            <a href="#spaces">Explore the Palace</a>
+            <a href="#reserve">Reserve Your Date</a>
+          </div>
+        </div>
+
+        <div class="hero-composition" aria-label="Venue preview">
+          <img class="hero-main" src="banquetimages/lux entry.webp" alt="Luxury red-carpet entrance staircase" />
+          <img class="hero-float hero-float-a" src="banquetimages/hall3.webp" alt="Grand chandelier banquet hall" />
+          <img class="hero-float hero-float-b" src="banquetimages/stage2.webp" alt="Floral celebration stage" />
+        </div>
+
+        <div class="hero-metrics">
+          <span><b>20+</b> years</span>
+          <span><b>800+</b> events</span>
+          <span><b>15k+</b> guests</span>
+        </div>
+      </section>
+
+      <section class="spaces" id="spaces">
+        <div class="section-heading">
+          <p class="eyebrow">Explore Venue</p>
+          <h2>Choose the room. Feel the atmosphere change.</h2>
+        </div>
+
+        <div class="space-stage">
+          <div class="space-image">
+            <img src="banquetimages/hall1.webp" alt="Main Hall" data-space-image />
+            <span data-space-label>Main Hall</span>
+          </div>
+          <div class="space-info">
+            <p class="eyebrow">Selected Space</p>
+            <h3 data-space-title>Main Hall</h3>
+            <p data-space-copy>
+              A chandelier-led main hall for weddings and receptions with a strong entrance aisle,
+              royal seating, and a large stage presence.
+            </p>
+            <div class="space-facts" data-space-facts>
+              <span>450-700 guests</span>
+              <span>Grand aisle</span>
+              <span>Stage ready</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-tabs" aria-label="Venue spaces">
+          <button class="active" data-space="Main Hall" data-image="banquetimages/hall1.webp" data-copy="A chandelier-led main hall for weddings and receptions with a strong entrance aisle, royal seating, and a large stage presence." data-facts="450-700 guests|Grand aisle|Stage ready">Main Hall</button>
+          <button data-space="Reception Hall" data-image="banquetimages/reception.webp" data-copy="A warm evening space for speeches, portraits, music, and a reception flow that feels intimate without feeling small." data-facts="280-520 guests|Evening lighting|Dance flow">Reception Hall</button>
+          <button data-space="Dining Area" data-image="banquetimages/table (2).webp" data-copy="A polished dining setting with styled tables, coordinated service, and space for guests to move comfortably." data-facts="Styled tables|Service route|Family seating">Dining Area</button>
+          <button data-space="Stage" data-image="banquetimages/stage2.webp" data-copy="A floral stage for rituals, portraits, and ceremonial moments that need graceful framing." data-facts="Floral frame|Portrait light|Ceremony ready">Stage</button>
+          <button data-space="VIP Lounge" data-image="banquetimages/table1.webp" data-copy="A quieter lounge for close family, elders, and private hosting during the celebration." data-facts="Private seating|Calm service|Guest comfort">VIP Lounge</button>
+          <button data-space="Kitchen" data-image="banquetimages/serving.webp" data-copy="The working heart of the venue, built around timing, warm service, and smooth plating." data-facts="Live service|Timed plating|Chef team">Kitchen</button>
+        </div>
+      </section>
+
+      <section class="celebrations" id="celebrations">
+        <div class="celebration-panel">
+          <p class="eyebrow">Plan Celebration</p>
+          <h2>Start with the occasion.</h2>
+          <p>
+            Select an event type and the palace suggests the mood, hall, guest range, and visual direction.
+          </p>
+          <div class="celebration-choices">
+            <button class="active" data-event="Wedding" data-image="banquetimages/wedding.webp" data-hall="Imperial Hall" data-guests="450-700 guests" data-palette="Champagne gold, jasmine white, candlelight, floral aisle.">Wedding</button>
+            <button data-event="Reception" data-image="banquetimages/weeding2.webp" data-hall="Amber Lounge" data-guests="280-520 guests" data-palette="Amber light, velvet shadows, mirror glow, evening music.">Reception</button>
+            <button data-event="Corporate" data-image="banquetimages/corporateevent.webp" data-hall="Main Hall" data-guests="120-420 guests" data-palette="Deep green, focused lighting, polished seating, executive service.">Corporate</button>
+            <button data-event="Birthday" data-image="banquetimages/birthday.webp" data-hall="Floral Court" data-guests="80-260 guests" data-palette="Soft blush, playful florals, cake theatre, family tables.">Birthday</button>
+            <button data-event="Engagement" data-image="banquetimages/engagement.webp" data-hall="Floral Court" data-guests="100-300 guests" data-palette="Ivory florals, ring ceremony light, intimate family seating.">Engagement</button>
+            <button data-event="Anniversary" data-image="banquetimages/wedding4.webp" data-hall="VIP Lounge" data-guests="60-180 guests" data-palette="Warm ivory, portrait lighting, private supper, handwritten details.">Anniversary</button>
+          </div>
+        </div>
+
+        <div class="celebration-preview">
+          <img src="banquetimages/wedding.webp" alt="Wedding celebration mood" data-event-image />
+          <div class="event-card">
+            <span data-event-name>Wedding</span>
+            <h3 data-event-hall>Imperial Hall</h3>
+            <p data-event-palette>Champagne gold, jasmine white, candlelight, floral aisle.</p>
+            <strong data-event-guests>450-700 guests</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="feast" id="feast">
+        <div class="feast-gallery">
+          <img src="banquetimages/food2.webp" alt="Premium banquet cuisine spread" />
+          <img src="banquetimages/food1.webp" alt="Plated cuisine" />
+          <img src="banquetimages/babyshower.webp" alt="Dessert ceremony detail" />
+        </div>
+
+        <div class="feast-builder">
+          <p class="eyebrow">Design Your Feast</p>
+          <h2>Build the menu like a private tasting.</h2>
+          <div class="guest-control">
+            <div>
+              <span>Guests</span>
+              <strong data-guest-output>260</strong>
+            </div>
+            <input type="range" min="80" max="800" value="260" data-guests />
+          </div>
+
+          <div class="course-list">
+            <button class="active" data-course="Saffron Welcome Drink" data-price="180">Saffron Welcome Drink <span>NPR 180</span></button>
+            <button data-course="Royal Nepali Thali" data-price="950">Royal Nepali Thali <span>NPR 950</span></button>
+            <button data-course="Live Grill Counter" data-price="720">Live Grill Counter <span>NPR 720</span></button>
+            <button data-course="Dessert Ceremony" data-price="420">Dessert Ceremony <span>NPR 420</span></button>
+          </div>
+
+          <div class="menu-summary">
+            <span>Selected Menu</span>
+            <ul data-selected-courses>
+              <li>Saffron Welcome Drink</li>
+            </ul>
+            <strong data-total>NPR 46,800</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-strip">
+        <img src="banquetimages/haldi.webp" alt="Haldi ceremony" />
+        <img src="banquetimages/couplephoto.webp" alt="Couple portrait" />
+        <img src="banquetimages/weeding3.webp" alt="Wedding celebration memory" />
+        <img src="banquetimages/weeding4.webp" alt="Wedding decor memory" />
+      </section>
+
+      <section class="gallery" id="memories">
+        <div class="section-heading">
+          <p class="eyebrow">Memories</p>
+          <h2>Real rooms, real rituals, real evenings.</h2>
+        </div>
+        <div class="gallery-grid">
+          <img src="banquetimages/hall.webp" alt="Banquet hall lighting" />
+          <img src="banquetimages/hall2.webp" alt="Decorated banquet hall" />
+          <img src="banquetimages/hall4.webp" alt="Warm banquet hall" />
+          <img src="banquetimages/table.webp" alt="Banquet table setting" />
+          <img src="banquetimages/birthday (2).webp" alt="Birthday celebration" />
+          <img src="banquetimages/weeding4.webp" alt="Elegant wedding setup" />
+        </div>
+      </section>
+
+      <section class="reserve" id="reserve">
+        <div>
+          <p class="eyebrow">Reserve Date</p>
+          <h2>Hold the room before the date disappears.</h2>
+        </div>
+        <div class="reserve-card">
+          <p>Private walkthroughs, package planning, menu tasting, and decor direction are handled by the venue team.</p>
+          <a href="tel:+9779800000000">Call Concierge</a>
+          <a href="https://wa.me/9779800000000">WhatsApp</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <strong>Aurelia Grand Palace</strong>
+      <span>Luxury banquet experiences in Kathmandu</span>
+      <span>Crafted by iFiCode Inclusive</span>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
